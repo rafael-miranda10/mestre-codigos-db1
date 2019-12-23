@@ -1,4 +1,4 @@
-# Repositório destinado ao projeto mestre dos código promovido pela DB1 Group nível escudeiro
+# Repositório destinado ao projeto mestre dos código promovido pela DB1 Group - Nível escudeiro
 
 # Perguntas teóricas de introdução
 
