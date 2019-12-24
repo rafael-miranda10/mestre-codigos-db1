@@ -2,6 +2,8 @@
 using System;
 using TrabalhandoNoConsole.Exercicio_1.Implementacao;
 using TrabalhandoNoConsole.Exercicio_1.Interface;
+using TrabalhandoNoConsole.Exercicio_2.Implementacao;
+using TrabalhandoNoConsole.Exercicio_2.Interface;
 
 namespace Principal
 {
@@ -69,10 +71,18 @@ namespace Principal
                         {
                             ShowMenuConsoleEx1 = _menuEx1Console.MenuExercicio1Console(valorA, valorB);
                         }
-                    }                 
+                    }
                     return true;
                 case "2":
-                    // RemoveWhitespace();
+                    using (ServiceProvider container = RegistrarServices())
+                    {
+                        bool ShowMenuConsoleEx2 = true;
+                        var _menuEx1Console = container.GetRequiredService<MenusConsole>();
+                        while (ShowMenuConsoleEx2)
+                        {
+                            ShowMenuConsoleEx2 = _menuEx1Console.MenuExercicio2Console();
+                        }
+                    }
                     return true;
                 case "0":
                     return false;
@@ -96,6 +106,7 @@ namespace Principal
             var services = new ServiceCollection();
             services.AddSingleton<ICalculo, Calculo>();
             services.AddSingleton<IExercicio1, Exercicio1>();
+            services.AddSingleton<IEmpresa, Empresa>();
             services.AddTransient<MenusConsole>();
 
             #endregion
@@ -107,69 +118,3 @@ namespace Principal
 
 
 
-//private static bool MenuExercicio1Console(double valorA, double valorB)
-//{
-//    Console.Clear();
-//    Console.WriteLine($"*** Os números informados são {valorA} e {valorB} ***\n\n");
-//    Console.WriteLine("*** Menu ***\n");
-//    Console.WriteLine("1) Somar");
-//    Console.WriteLine("2) Subtrair");
-//    Console.WriteLine("3) Dividir");
-//    Console.WriteLine("4) Multiplicar");
-//    Console.WriteLine("5) É Par?");
-//    Console.WriteLine("0) Sair");
-//    Console.Write("\r\nEscolha uma opção: ");
-
-//    switch (Console.ReadLine())
-//    {
-//        case "1":
-//            Console.Clear();
-//            using (ServiceProvider container = RegistrarServices())
-//            {
-//                var _exercicio1 = container.GetRequiredService<Exercicio1>();
-//                _exercicio1.Somar(valorA, valorB);
-//            }
-//            Console.ReadKey();
-//            return true;
-//        case "2":
-//            Console.Clear();
-//            using (ServiceProvider container = RegistrarServices())
-//            {
-//                var _exercicio1 = container.GetRequiredService<Exercicio1>();
-//                _exercicio1.Subtrair(valorA, valorB);
-//            }
-//            Console.ReadKey();
-//            return true;
-//        case "3":
-//            Console.Clear();
-//            using (ServiceProvider container = RegistrarServices())
-//            {
-//                var _exercicio1 = container.GetRequiredService<Exercicio1>();
-//                _exercicio1.Dividir(valorA, valorB);
-//            }
-//            Console.ReadKey();
-//            return true;
-//        case "4":
-//            Console.Clear();
-//            using (ServiceProvider container = RegistrarServices())
-//            {
-//                var _exercicio1 = container.GetRequiredService<Exercicio1>();
-//                _exercicio1.Multiplicar(valorA, valorB);
-//            }
-//            Console.ReadKey();
-//            return true;
-//        case "5":
-//            Console.Clear();
-//            using (ServiceProvider container = RegistrarServices())
-//            {
-//                var _exercicio1 = container.GetRequiredService<Exercicio1>();
-//                _exercicio1.VerificarPar(valorA, valorB);
-//            }
-//            Console.ReadKey();
-//            return true;
-//        case "0":
-//            return false;
-//        default:
-//            return true;
-//    }
-//}
