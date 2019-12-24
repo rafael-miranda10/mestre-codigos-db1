@@ -2,6 +2,7 @@
 using TrabalhandoNoConsole.Exercicio_1.Interface;
 using TrabalhandoNoConsole.Exercicio_2.Interface;
 using TrabalhandoNoConsole.Exercicio_3.Interface;
+using TrabalhandoNoConsole.Exercicio_4.Interface;
 
 namespace Principal
 {
@@ -10,12 +11,14 @@ namespace Principal
         private readonly IExercicio1 _exercicio1;
         private readonly IEmpresa _exercicio2;
         private readonly IMultiplos _exercicio3;
+        private readonly INotas _exercicio4;
 
-        public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2, IMultiplos exercicio3)
+        public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2, IMultiplos exercicio3, INotas exercicio4)
         {
             _exercicio1 = exercicio1;
             _exercicio2 = exercicio2;
             _exercicio3 = exercicio3;
+            _exercicio4 = exercicio4;
         }
 
         public bool MenuExercicio1Console(double valorA, double valorB)
@@ -145,6 +148,50 @@ namespace Principal
                 Salario = Convert.ToDouble(aux);
             else
                 Salario = 0;
+        }
+
+        private void CapturarInputAluno(out string Nome, out double Nota1, out double Nota2)
+        {
+            // deve-se informar os valores de nota com virgula , para a correta conversão para double
+            Console.Clear();
+            Console.Write("Informe o nome do aluno: ");
+            Nome = Console.ReadLine();
+            Console.Write($"Informe o nota 1 do {Nome}: ");
+            // Nota1 = Convert.ToDouble(Console.ReadLine());
+            var aux1 = Console.ReadLine();
+            Nota1 = string.IsNullOrEmpty(aux1) ? 0 : Convert.ToDouble(aux1);
+            Console.Write($"Informe o nota 2 do {Nome}: ");
+            var aux2 = Console.ReadLine();
+            Nota2 = string.IsNullOrEmpty(aux2) ? 0 : Convert.ToDouble(aux2);
+        }
+
+        public bool MenuExercicio4Console()
+        {
+            string Nome = ""; double Nota1 = 0, Nota2=0;
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Adicionar Aluno");
+            Console.WriteLine("2) Exibir Alunos Com Média Superior a 7");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Clear();
+                    CapturarInputAluno(out Nome, out Nota1, out Nota2);
+                    _exercicio4.IncluirAluno(Nome, Nota1, Nota2);
+                    return true;
+                case "2":
+                    Console.Clear();
+                    _exercicio4.ExibirAprovados();
+                    Console.ReadKey();
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
         }
     }
 }
