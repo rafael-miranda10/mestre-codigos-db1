@@ -3,6 +3,7 @@ using TrabalhandoNoConsole.Exercicio_1.Interface;
 using TrabalhandoNoConsole.Exercicio_2.Interface;
 using TrabalhandoNoConsole.Exercicio_3.Interface;
 using TrabalhandoNoConsole.Exercicio_4.Interface;
+using TrabalhandoNoConsole.Exercicio_5.Interface;
 
 namespace Principal
 {
@@ -12,13 +13,16 @@ namespace Principal
         private readonly IEmpresa _exercicio2;
         private readonly IMultiplos _exercicio3;
         private readonly INotas _exercicio4;
+        private readonly IFormula _exercicio5;
 
-        public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2, IMultiplos exercicio3, INotas exercicio4)
+        public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2, IMultiplos exercicio3, INotas exercicio4,
+                           IFormula exercicio5)
         {
             _exercicio1 = exercicio1;
             _exercicio2 = exercicio2;
             _exercicio3 = exercicio3;
             _exercicio4 = exercicio4;
+            _exercicio5 = exercicio5;
         }
 
         public bool MenuExercicio1Console(double valorA, double valorB)
@@ -165,6 +169,22 @@ namespace Principal
             Nota2 = string.IsNullOrEmpty(aux2) ? 0 : Convert.ToDouble(aux2);
         }
 
+        private void CapturarInputBhaskara(out double a, out double b, out double c)
+        {
+            // deve-se informar os valores de nota com virgula , para a correta conversão para double
+            Console.Clear();
+            Console.Write("Informe o valor de A: ");
+            var auxA = Console.ReadLine();
+            a = string.IsNullOrEmpty(auxA) ? 0 : Convert.ToDouble(auxA);
+            Console.Write("Informe o valor de B: ");
+            var auxB = Console.ReadLine();
+            b = string.IsNullOrEmpty(auxB) ? 0 : Convert.ToDouble(auxB);
+            Console.Write("Informe o valor de C: ");
+            var auxC = Console.ReadLine();
+            c = string.IsNullOrEmpty(auxC) ? 0 : Convert.ToDouble(auxC);
+
+        }
+
         public bool MenuExercicio4Console()
         {
             string Nome = ""; double Nota1 = 0, Nota2=0;
@@ -185,6 +205,31 @@ namespace Principal
                 case "2":
                     Console.Clear();
                     _exercicio4.ExibirAprovados();
+                    Console.ReadKey();
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
+        public bool MenuExercicio5Console()
+        {
+            double a = 0, b = 0, c = 0;
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Informar os valores de A, B, C para calcular a formula de Bhaskara");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Clear();
+                    CapturarInputBhaskara(out a, out b, out c);
+                    Console.Clear();
+                    _exercicio5.CalcularBhaskara(a, b, c);
                     Console.ReadKey();
                     return true;
                 case "0":
