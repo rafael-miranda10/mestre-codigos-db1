@@ -1,6 +1,7 @@
 ﻿using System;
 using TrabalhandoNoConsole.Exercicio_1.Interface;
 using TrabalhandoNoConsole.Exercicio_2.Interface;
+using TrabalhandoNoConsole.Exercicio_3.Interface;
 
 namespace Principal
 {
@@ -8,11 +9,13 @@ namespace Principal
     {
         private readonly IExercicio1 _exercicio1;
         private readonly IEmpresa _exercicio2;
+        private readonly IMultiplos _exercicio3;
 
-        public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2)
+        public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2, IMultiplos exercicio3)
         {
             _exercicio1 = exercicio1;
             _exercicio2 = exercicio2;
+            _exercicio3 = exercicio3;
         }
 
         public bool MenuExercicio1Console(double valorA, double valorB)
@@ -94,6 +97,34 @@ namespace Principal
                 case "4":
                     Console.Clear();
                     _exercicio2.MaiorMenorBubbleSort();
+                    Console.ReadKey();
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
+        public bool MenuExercicio3Console()
+        {
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Exibir Multiplos de 3 Por Divisão Exata");
+            Console.WriteLine("2) Exibir Multiplos de 3 Por Progressão Aritimética");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Clear();
+                    _exercicio3.Multiplo3Divisao();
+                    Console.ReadKey();
+                    return true;
+                case "2":
+                    Console.Clear();
+                    _exercicio3.Multiplo3Progressao();
                     Console.ReadKey();
                     return true;
                 case "0":

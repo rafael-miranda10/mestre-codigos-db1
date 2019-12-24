@@ -4,6 +4,8 @@ using TrabalhandoNoConsole.Exercicio_1.Implementacao;
 using TrabalhandoNoConsole.Exercicio_1.Interface;
 using TrabalhandoNoConsole.Exercicio_2.Implementacao;
 using TrabalhandoNoConsole.Exercicio_2.Interface;
+using TrabalhandoNoConsole.Exercicio_3.Implementacao;
+using TrabalhandoNoConsole.Exercicio_3.Interface;
 
 namespace Principal
 {
@@ -84,6 +86,17 @@ namespace Principal
                         }
                     }
                     return true;
+                case "3":
+                    using (ServiceProvider container = RegistrarServices())
+                    {
+                        bool ShowMenuConsoleEx3 = true;
+                        var _menuEx1Console = container.GetRequiredService<MenusConsole>();
+                        while (ShowMenuConsoleEx3)
+                        {
+                            ShowMenuConsoleEx3 = _menuEx1Console.MenuExercicio3Console();
+                        }
+                    }
+                    return true;
                 case "0":
                     return false;
                 default:
@@ -107,6 +120,7 @@ namespace Principal
             services.AddSingleton<ICalculo, Calculo>();
             services.AddSingleton<IExercicio1, Exercicio1>();
             services.AddSingleton<IEmpresa, Empresa>();
+            services.AddSingleton<IMultiplos, Multiplos>();
             services.AddTransient<MenusConsole>();
 
             #endregion

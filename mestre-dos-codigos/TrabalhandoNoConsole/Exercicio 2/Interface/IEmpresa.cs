@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using TrabalhandoNoConsole.Exercicio_2.Implementacao;
-
-namespace TrabalhandoNoConsole.Exercicio_2.Interface
+﻿namespace TrabalhandoNoConsole.Exercicio_2.Interface
 {
     public interface IEmpresa
     {
