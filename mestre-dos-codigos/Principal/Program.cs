@@ -10,6 +10,8 @@ using TrabalhandoNoConsole.Exercicio_4.Implementacao;
 using TrabalhandoNoConsole.Exercicio_4.Interface;
 using TrabalhandoNoConsole.Exercicio_5.Implementacao;
 using TrabalhandoNoConsole.Exercicio_5.Interface;
+using TrabalhandoNoConsole.Exercicio_6.Implementacao;
+using TrabalhandoNoConsole.Exercicio_6.Interface;
 
 namespace Principal
 {
@@ -64,6 +66,7 @@ namespace Principal
             Console.WriteLine("3) Exercício 3");
             Console.WriteLine("4) Exercício 4");
             Console.WriteLine("5) Exercício 5");
+            Console.WriteLine("6) Exercício 6");
             Console.WriteLine("0) Sair");
             Console.Write("\r\nEscolha uma opção: ");
 
@@ -85,10 +88,10 @@ namespace Principal
                     using (ServiceProvider container = RegistrarServices())
                     {
                         bool ShowMenuConsoleEx2 = true;
-                        var _menuEx1Console = container.GetRequiredService<MenusConsole>();
+                        var _menuEx2Console = container.GetRequiredService<MenusConsole>();
                         while (ShowMenuConsoleEx2)
                         {
-                            ShowMenuConsoleEx2 = _menuEx1Console.MenuExercicio2Console();
+                            ShowMenuConsoleEx2 = _menuEx2Console.MenuExercicio2Console();
                         }
                     }
                     return true;
@@ -96,10 +99,10 @@ namespace Principal
                     using (ServiceProvider container = RegistrarServices())
                     {
                         bool ShowMenuConsoleEx3 = true;
-                        var _menuEx1Console = container.GetRequiredService<MenusConsole>();
+                        var _menuEx3Console = container.GetRequiredService<MenusConsole>();
                         while (ShowMenuConsoleEx3)
                         {
-                            ShowMenuConsoleEx3 = _menuEx1Console.MenuExercicio3Console();
+                            ShowMenuConsoleEx3 = _menuEx3Console.MenuExercicio3Console();
                         }
                     }
                     return true;
@@ -107,10 +110,10 @@ namespace Principal
                     using (ServiceProvider container = RegistrarServices())
                     {
                         bool ShowMenuConsoleEx4 = true;
-                        var _menuEx1Console = container.GetRequiredService<MenusConsole>();
+                        var _menuEx4Console = container.GetRequiredService<MenusConsole>();
                         while (ShowMenuConsoleEx4)
                         {
-                            ShowMenuConsoleEx4 = _menuEx1Console.MenuExercicio4Console();
+                            ShowMenuConsoleEx4 = _menuEx4Console.MenuExercicio4Console();
                         }
                     }
                     return true;
@@ -118,10 +121,21 @@ namespace Principal
                     using (ServiceProvider container = RegistrarServices())
                     {
                         bool ShowMenuConsoleEx5 = true;
-                        var _menuEx1Console = container.GetRequiredService<MenusConsole>();
+                        var _menuEx5Console = container.GetRequiredService<MenusConsole>();
                         while (ShowMenuConsoleEx5)
                         {
-                            ShowMenuConsoleEx5 = _menuEx1Console.MenuExercicio5Console();
+                            ShowMenuConsoleEx5 = _menuEx5Console.MenuExercicio5Console();
+                        }
+                    }
+                    return true;
+                case "6":
+                    using (ServiceProvider container = RegistrarServices())
+                    {
+                        bool ShowMenuConsoleEx6 = true;
+                        var _menuEx6Console = container.GetRequiredService<MenusConsole>();
+                        while (ShowMenuConsoleEx6)
+                        {
+                            ShowMenuConsoleEx6 = _menuEx6Console.MenuExercicio6Console();
                         }
                     }
                     return true;
@@ -151,6 +165,7 @@ namespace Principal
             services.AddSingleton<IMultiplos, Multiplos>();
             services.AddSingleton<INotas, Notas>();
             services.AddSingleton<IFormula, Formula>();
+            services.AddSingleton<IParametros, Parametros>();
             services.AddTransient<MenusConsole>();
 
             #endregion

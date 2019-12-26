@@ -4,6 +4,7 @@ using TrabalhandoNoConsole.Exercicio_2.Interface;
 using TrabalhandoNoConsole.Exercicio_3.Interface;
 using TrabalhandoNoConsole.Exercicio_4.Interface;
 using TrabalhandoNoConsole.Exercicio_5.Interface;
+using TrabalhandoNoConsole.Exercicio_6.Interface;
 
 namespace Principal
 {
@@ -14,15 +15,17 @@ namespace Principal
         private readonly IMultiplos _exercicio3;
         private readonly INotas _exercicio4;
         private readonly IFormula _exercicio5;
+        private readonly IParametros _exercicio6;
 
         public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2, IMultiplos exercicio3, INotas exercicio4,
-                           IFormula exercicio5)
+                           IFormula exercicio5, IParametros exercicio6)
         {
             _exercicio1 = exercicio1;
             _exercicio2 = exercicio2;
             _exercicio3 = exercicio3;
             _exercicio4 = exercicio4;
             _exercicio5 = exercicio5;
+            _exercicio6 = exercicio6;
         }
 
         public bool MenuExercicio1Console(double valorA, double valorB)
@@ -230,6 +233,44 @@ namespace Principal
                     CapturarInputBhaskara(out a, out b, out c);
                     Console.Clear();
                     _exercicio5.CalcularBhaskara(a, b, c);
+                    Console.ReadKey();
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
+        public bool MenuExercicio6Console()
+        {
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Exibir Texto Teorico");
+            Console.WriteLine("2) Exemplo com Ref");
+            Console.WriteLine("3) Exemplo Out");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Clear();
+                    _exercicio6.ExibirExplicacao();
+                    Console.ReadKey();
+                    return true;
+                case "2":
+                    Console.Clear();
+                    int valueR = 5;
+                    _exercicio6.ExemploRef(ref valueR);
+                    Console.WriteLine($"O valor da variavel foi alterada pelo modificador 'Ref' recebendo um número inteiro, cujo valor é:  {valueR}");
+                    Console.ReadKey();
+                    return true;
+                case "3":
+                    Console.Clear();
+                    int valueO;
+                    _exercicio6.ExemploOut(out valueO);
+                    Console.WriteLine($"O valor da variavel foi alterada pelo modificador 'Out' recebendo um número inteiro, cujo valor é:  {valueO}");
                     Console.ReadKey();
                     return true;
                 case "0":
