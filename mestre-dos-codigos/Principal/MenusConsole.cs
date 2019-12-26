@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using TrabalhandoNoConsole.Exercicio_1.Interface;
 using TrabalhandoNoConsole.Exercicio_2.Interface;
 using TrabalhandoNoConsole.Exercicio_3.Interface;
 using TrabalhandoNoConsole.Exercicio_4.Interface;
 using TrabalhandoNoConsole.Exercicio_5.Interface;
 using TrabalhandoNoConsole.Exercicio_6.Interface;
+using TrabalhandoNoConsole.Exercicio_7.Interface;
 
 namespace Principal
 {
@@ -16,9 +18,10 @@ namespace Principal
         private readonly INotas _exercicio4;
         private readonly IFormula _exercicio5;
         private readonly IParametros _exercicio6;
+        private readonly ISomaPar _exercicio7;
 
         public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2, IMultiplos exercicio3, INotas exercicio4,
-                           IFormula exercicio5, IParametros exercicio6)
+                           IFormula exercicio5, IParametros exercicio6, ISomaPar exercicio7)
         {
             _exercicio1 = exercicio1;
             _exercicio2 = exercicio2;
@@ -26,6 +29,7 @@ namespace Principal
             _exercicio4 = exercicio4;
             _exercicio5 = exercicio5;
             _exercicio6 = exercicio6;
+            _exercicio7 = exercicio7;
         }
 
         public bool MenuExercicio1Console(double valorA, double valorB)
@@ -188,6 +192,21 @@ namespace Principal
 
         }
 
+        private void CapturarInput4Inteiros(List<int> inteiros)
+        {
+            for(int i = 0; i< 4; i++)
+            {
+                int resultado;
+                do
+                {
+                    Console.WriteLine($"Informe o {i+1} números inteiro: ");
+                }
+                while (!int.TryParse(Console.ReadLine(), out resultado));
+                inteiros.Add(resultado);
+            }
+
+        }
+
         public bool MenuExercicio4Console()
         {
             string Nome = ""; double Nota1 = 0, Nota2=0;
@@ -271,6 +290,47 @@ namespace Principal
                     int valueO;
                     _exercicio6.ExemploOut(out valueO);
                     Console.WriteLine($"O valor da variavel foi alterada pelo modificador 'Out' recebendo um número inteiro, cujo valor é:  {valueO}");
+                    Console.ReadKey();
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
+        public bool MenuExercicio7Console(List<int> inteiros)
+        {
+            
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Inserir 4 Números Inteiros");
+            Console.WriteLine("2) Calcular os Números Pares por Divisão Exata");
+            Console.WriteLine("3) Calcular os Números Pares por Divisão");
+            Console.WriteLine("4) Calcular os Números Pares com Linq");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Clear();
+                    CapturarInput4Inteiros(inteiros);
+                   // Console.ReadKey();
+                    return true;
+                case "2":
+                    Console.Clear();
+                    _exercicio7.SomarParDivisaoExata(inteiros);
+                    Console.ReadKey();
+                    return true;
+                case "3":
+                    Console.Clear();
+                    _exercicio7.SomarParDivisao(inteiros);
+                    Console.ReadKey();
+                    return true;
+                case "4":
+                    Console.Clear();
+                    _exercicio7.SomarParLinq(inteiros);
                     Console.ReadKey();
                     return true;
                 case "0":

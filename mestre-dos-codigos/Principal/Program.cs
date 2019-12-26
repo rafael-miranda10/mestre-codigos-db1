@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Collections.Generic;
 using TrabalhandoNoConsole.Exercicio_1.Implementacao;
 using TrabalhandoNoConsole.Exercicio_1.Interface;
 using TrabalhandoNoConsole.Exercicio_2.Implementacao;
@@ -12,6 +13,8 @@ using TrabalhandoNoConsole.Exercicio_5.Implementacao;
 using TrabalhandoNoConsole.Exercicio_5.Interface;
 using TrabalhandoNoConsole.Exercicio_6.Implementacao;
 using TrabalhandoNoConsole.Exercicio_6.Interface;
+using TrabalhandoNoConsole.Exercicio_7.Implementacao;
+using TrabalhandoNoConsole.Exercicio_7.Interface;
 
 namespace Principal
 {
@@ -67,6 +70,9 @@ namespace Principal
             Console.WriteLine("4) Exercício 4");
             Console.WriteLine("5) Exercício 5");
             Console.WriteLine("6) Exercício 6");
+            Console.WriteLine("6) Exercício 7");
+            Console.WriteLine("6) Exercício 8");
+            Console.WriteLine("6) Exercício 9");
             Console.WriteLine("0) Sair");
             Console.Write("\r\nEscolha uma opção: ");
 
@@ -139,6 +145,18 @@ namespace Principal
                         }
                     }
                     return true;
+                case "7":
+                    using (ServiceProvider container = RegistrarServices())
+                    {
+                        List<int> inteiros = new List<int>();
+                        bool ShowMenuConsoleEx7 = true;
+                        var _menuEx7Console = container.GetRequiredService<MenusConsole>();
+                        while (ShowMenuConsoleEx7)
+                        {
+                            ShowMenuConsoleEx7 = _menuEx7Console.MenuExercicio7Console(inteiros);
+                        }
+                    }
+                    return true;
                 case "0":
                     return false;
                 default:
@@ -166,6 +184,7 @@ namespace Principal
             services.AddSingleton<INotas, Notas>();
             services.AddSingleton<IFormula, Formula>();
             services.AddSingleton<IParametros, Parametros>();
+            services.AddSingleton<ISomaPar, SomaPar>();
             services.AddTransient<MenusConsole>();
 
             #endregion
