@@ -7,10 +7,11 @@ using TrabalhandoNoConsole.Exercicio_4.Interface;
 using TrabalhandoNoConsole.Exercicio_5.Interface;
 using TrabalhandoNoConsole.Exercicio_6.Interface;
 using TrabalhandoNoConsole.Exercicio_7.Interface;
+using TrabalhandoNoConsole.Exercicio_8.Interface;
 
 namespace Principal
 {
-    public class MenusConsole 
+    public class MenusConsole
     {
         private readonly IExercicio1 _exercicio1;
         private readonly IEmpresa _exercicio2;
@@ -19,9 +20,10 @@ namespace Principal
         private readonly IFormula _exercicio5;
         private readonly IParametros _exercicio6;
         private readonly ISomaPar _exercicio7;
+        private readonly IOrdenacao _exercicio8;
 
         public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2, IMultiplos exercicio3, INotas exercicio4,
-                           IFormula exercicio5, IParametros exercicio6, ISomaPar exercicio7)
+                           IFormula exercicio5, IParametros exercicio6, ISomaPar exercicio7, IOrdenacao exercicio8)
         {
             _exercicio1 = exercicio1;
             _exercicio2 = exercicio2;
@@ -30,6 +32,7 @@ namespace Principal
             _exercicio5 = exercicio5;
             _exercicio6 = exercicio6;
             _exercicio7 = exercicio7;
+            _exercicio8 = exercicio8;
         }
 
         public bool MenuExercicio1Console(double valorA, double valorB)
@@ -192,24 +195,33 @@ namespace Principal
 
         }
 
-        private void CapturarInput4Inteiros(List<int> inteiros)
+        private void CapturarInputListInteiros(List<int> inteiros, int tamanho)
         {
-            for(int i = 0; i< 4; i++)
+            for (int i = 0; i < tamanho; i++)
             {
                 int resultado;
                 do
                 {
-                    Console.WriteLine($"Informe o {i+1} números inteiro: ");
+                    Console.WriteLine($"Informe o {i + 1} números inteiro: ");
                 }
                 while (!int.TryParse(Console.ReadLine(), out resultado));
-                inteiros.Add(resultado);
+
+                if (resultado == -1)
+                {
+                    i = tamanho;
+                }
+                else
+                {
+                    inteiros.Add(resultado);
+                }
+
             }
 
         }
 
         public bool MenuExercicio4Console()
         {
-            string Nome = ""; double Nota1 = 0, Nota2=0;
+            string Nome = ""; double Nota1 = 0, Nota2 = 0;
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
             Console.WriteLine("1) Adicionar Aluno");
@@ -301,7 +313,7 @@ namespace Principal
 
         public bool MenuExercicio7Console(List<int> inteiros)
         {
-            
+
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
             Console.WriteLine("1) Inserir 4 Números Inteiros");
@@ -315,8 +327,8 @@ namespace Principal
             {
                 case "1":
                     Console.Clear();
-                    CapturarInput4Inteiros(inteiros);
-                   // Console.ReadKey();
+                    CapturarInputListInteiros(inteiros, 4);
+                    // Console.ReadKey();
                     return true;
                 case "2":
                     Console.Clear();
@@ -331,6 +343,64 @@ namespace Principal
                 case "4":
                     Console.Clear();
                     _exercicio7.SomarParLinq(inteiros);
+                    Console.ReadKey();
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
+        public bool MenuExercicio8Console(List<int> inteiros)
+        {
+
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Inserir N Números Inteiros");
+            Console.WriteLine("2) Ordenação Manual Crescente");
+            Console.WriteLine("3) Ordenação Manual Decrescente");
+            Console.WriteLine("4) Ordenação Array Sort Crescente");
+            Console.WriteLine("5) Ordenação Array Sort Decrescente");
+            Console.WriteLine("6) Ordenação Linq Sort Crescente");
+            Console.WriteLine("7) Ordenação Linq Sort Decrescente");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Clear();
+                    CapturarInputListInteiros(inteiros, 9999);
+                    return true;
+                case "2":
+                    Console.Clear();
+                    _exercicio8.OrdenacaoManualCrescente(inteiros);
+                    Console.ReadKey();
+                    return true;
+                case "3":
+                    Console.Clear();
+                    _exercicio8.OrdenacaoManualDeCrescente(inteiros);
+                    Console.ReadKey();
+                    return true;
+                case "4":
+                    Console.Clear();
+                    _exercicio8.OrdenacaoArraySortCrescente(inteiros);
+                    Console.ReadKey();
+                    return true;
+                case "5":
+                    Console.Clear();
+                    _exercicio8.OrdenacaoArraySortDeCrescente(inteiros);
+                    Console.ReadKey();
+                    return true;
+                case "6":
+                    Console.Clear();
+                    _exercicio8.OrdenacaoLinqCrescente(inteiros);
+                    Console.ReadKey();
+                    return true;
+                case "7":
+                    Console.Clear();
+                    _exercicio8.OrdenacaoLinqDeCrescente(inteiros);
                     Console.ReadKey();
                     return true;
                 case "0":

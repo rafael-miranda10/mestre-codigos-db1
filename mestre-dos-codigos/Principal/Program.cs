@@ -15,6 +15,8 @@ using TrabalhandoNoConsole.Exercicio_6.Implementacao;
 using TrabalhandoNoConsole.Exercicio_6.Interface;
 using TrabalhandoNoConsole.Exercicio_7.Implementacao;
 using TrabalhandoNoConsole.Exercicio_7.Interface;
+using TrabalhandoNoConsole.Exercicio_8.Implementacao;
+using TrabalhandoNoConsole.Exercicio_8.Interface;
 
 namespace Principal
 {
@@ -157,6 +159,18 @@ namespace Principal
                         }
                     }
                     return true;
+                case "8":
+                    using (ServiceProvider container = RegistrarServices())
+                    {
+                        List<int> inteiros = new List<int>();
+                        bool ShowMenuConsoleEx8 = true;
+                        var _menuEx8Console = container.GetRequiredService<MenusConsole>();
+                        while (ShowMenuConsoleEx8)
+                        {
+                            ShowMenuConsoleEx8 = _menuEx8Console.MenuExercicio8Console(inteiros);
+                        }
+                    }
+                    return true;
                 case "0":
                     return false;
                 default:
@@ -185,6 +199,7 @@ namespace Principal
             services.AddSingleton<IFormula, Formula>();
             services.AddSingleton<IParametros, Parametros>();
             services.AddSingleton<ISomaPar, SomaPar>();
+            services.AddSingleton<IOrdenacao, Ordencao>();
             services.AddTransient<MenusConsole>();
 
             #endregion
