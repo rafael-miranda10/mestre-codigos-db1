@@ -8,6 +8,7 @@ using TrabalhandoNoConsole.Exercicio_5.Interface;
 using TrabalhandoNoConsole.Exercicio_6.Interface;
 using TrabalhandoNoConsole.Exercicio_7.Interface;
 using TrabalhandoNoConsole.Exercicio_8.Interface;
+using TrabalhandoNoConsole.Exercicio_9.Interface;
 
 namespace Principal
 {
@@ -21,9 +22,11 @@ namespace Principal
         private readonly IParametros _exercicio6;
         private readonly ISomaPar _exercicio7;
         private readonly IOrdenacao _exercicio8;
+        private readonly ILinq _exercicio9;
 
         public MenusConsole(IExercicio1 exercicio1, IEmpresa exercicio2, IMultiplos exercicio3, INotas exercicio4,
-                           IFormula exercicio5, IParametros exercicio6, ISomaPar exercicio7, IOrdenacao exercicio8)
+                           IFormula exercicio5, IParametros exercicio6, ISomaPar exercicio7, IOrdenacao exercicio8,
+                           ILinq exercicio9)
         {
             _exercicio1 = exercicio1;
             _exercicio2 = exercicio2;
@@ -33,6 +36,7 @@ namespace Principal
             _exercicio6 = exercicio6;
             _exercicio7 = exercicio7;
             _exercicio8 = exercicio8;
+            _exercicio9 = exercicio9;
         }
 
         public bool MenuExercicio1Console(double valorA, double valorB)
@@ -219,6 +223,15 @@ namespace Principal
 
         }
 
+        private void CapturarInputInteiro(out int value)
+        {
+            do
+            {
+                Console.WriteLine("Informe o número desejado: ");
+            }
+            while (!int.TryParse(Console.ReadLine(), out value));
+        }
+
         public bool MenuExercicio4Console()
         {
             string Nome = ""; double Nota1 = 0, Nota2 = 0;
@@ -401,6 +414,98 @@ namespace Principal
                 case "7":
                     Console.Clear();
                     _exercicio8.OrdenacaoLinqDeCrescente(inteiros);
+                    Console.ReadKey();
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
+        public bool MenuExercicio9Console(List<int> inteiros)
+        {
+            int value;
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Inserir N Números Inteiros");
+            Console.WriteLine("2) Ordenação Crescente");
+            Console.WriteLine("3) Ordenação Decrescente");
+            Console.WriteLine("4) Primeiro Elemento da Lista");
+            Console.WriteLine("5) Ultimo Elemento da Lista");
+            Console.WriteLine("6) Remover o Primeiro elemento da Lista");
+            Console.WriteLine("7) Remover o ultimo elemento da Lista");
+            Console.WriteLine("8) Apenas os Números Pares da Lista");
+            Console.WriteLine("9) Lista tranformada em Array");
+            Console.WriteLine("10) Pesquisar um números da lista");
+            Console.WriteLine("11) Inserir um número no Inicio da Lista");
+            Console.WriteLine("12) Inserir um número no Final da Lista");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Clear();
+                    CapturarInputListInteiros(inteiros, 9999);
+                    _exercicio9.SetLista(inteiros);
+                    return true;
+                case "2":
+                    Console.Clear();
+                    _exercicio9.ExibirOrdemCrescente();
+                    Console.ReadKey();
+                    return true;
+                case "3":
+                    Console.Clear();
+                    _exercicio9.ExibirOrdemDecrescente();
+                    Console.ReadKey();
+                    return true;
+                case "4":
+                    Console.Clear();
+                    _exercicio9.ExibirPrimeiroDaLista();
+                    Console.ReadKey();
+                    return true;
+                case "5":
+                    Console.Clear();
+                    _exercicio9.ExibirUltimoDaLista();
+                    Console.ReadKey();
+                    return true;
+                case "6":
+                    Console.Clear();
+                    _exercicio9.RemoverPrimeiroDaLista();
+                    Console.ReadKey();
+                    return true;
+                case "7":
+                    Console.Clear();
+                    _exercicio9.RemoverUltimoDaLista();
+                    Console.ReadKey();
+                    return true;
+                case "8":
+                    Console.Clear();
+                    _exercicio9.SomenteNumerosPar();
+                    Console.ReadKey();
+                    return true;
+                case "9":
+                    Console.Clear();
+                    _exercicio9.TransformarListaEmArray();
+                    Console.ReadKey();
+                    return true;
+                case "10":
+                    Console.Clear();
+                    CapturarInputInteiro(out value);
+                    _exercicio9.PesquisarElemento(value);
+                    Console.ReadKey();
+                    return true;
+                case "11":
+                    Console.Clear();
+                    CapturarInputInteiro(out value);
+                    _exercicio9.InserirPrimeiroDaLista(value);
+                    Console.ReadKey();
+                    return true;
+                case "12":
+                    Console.Clear();
+                    CapturarInputInteiro(out value);
+                    _exercicio9.InserirUltimoDaLista(value);
                     Console.ReadKey();
                     return true;
                 case "0":
