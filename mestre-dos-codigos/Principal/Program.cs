@@ -66,6 +66,11 @@ namespace Principal
         private static bool MenuConsole()
         {
             double valorA = 0, valorB = 0;
+            bool ShowMenu = true;
+            List<int> inteiros;
+            ServiceProvider container = RegistrarServices();
+            var _menuConsole = container.GetRequiredService<MenusConsole>();
+
             Console.Clear();
             Console.WriteLine("*** Mestre dos Códigos da DB1 Group - Trabalhando no Console ***\n");
             Console.WriteLine("1) Exercício 1");
@@ -84,105 +89,60 @@ namespace Principal
             {
                 case "1":
                     CapturarInputAB(out valorA, out valorB);
-                    using (ServiceProvider container = RegistrarServices())
+                    while (ShowMenu)
                     {
-                        bool ShowMenuConsoleEx1 = true;
-                        var _menuEx1Console = container.GetRequiredService<MenusConsole>();
-                        while (ShowMenuConsoleEx1)
-                        {
-                            ShowMenuConsoleEx1 = _menuEx1Console.MenuExercicio1Console(valorA, valorB);
-                        }
+                        ShowMenu = _menuConsole.MenuExercicio1Console(valorA, valorB);
                     }
                     return true;
                 case "2":
-                    using (ServiceProvider container = RegistrarServices())
+                    while (ShowMenu)
                     {
-                        bool ShowMenuConsoleEx2 = true;
-                        var _menuEx2Console = container.GetRequiredService<MenusConsole>();
-                        while (ShowMenuConsoleEx2)
-                        {
-                            ShowMenuConsoleEx2 = _menuEx2Console.MenuExercicio2Console();
-                        }
+                        ShowMenu = _menuConsole.MenuExercicio2Console();
                     }
                     return true;
                 case "3":
-                    using (ServiceProvider container = RegistrarServices())
+                    while (ShowMenu)
                     {
-                        bool ShowMenuConsoleEx3 = true;
-                        var _menuEx3Console = container.GetRequiredService<MenusConsole>();
-                        while (ShowMenuConsoleEx3)
-                        {
-                            ShowMenuConsoleEx3 = _menuEx3Console.MenuExercicio3Console();
-                        }
+                        ShowMenu = _menuConsole.MenuExercicio3Console();
                     }
                     return true;
                 case "4":
-                    using (ServiceProvider container = RegistrarServices())
+                    while (ShowMenu)
                     {
-                        bool ShowMenuConsoleEx4 = true;
-                        var _menuEx4Console = container.GetRequiredService<MenusConsole>();
-                        while (ShowMenuConsoleEx4)
-                        {
-                            ShowMenuConsoleEx4 = _menuEx4Console.MenuExercicio4Console();
-                        }
+                        ShowMenu = _menuConsole.MenuExercicio4Console();
                     }
                     return true;
                 case "5":
-                    using (ServiceProvider container = RegistrarServices())
+                    while (ShowMenu)
                     {
-                        bool ShowMenuConsoleEx5 = true;
-                        var _menuEx5Console = container.GetRequiredService<MenusConsole>();
-                        while (ShowMenuConsoleEx5)
-                        {
-                            ShowMenuConsoleEx5 = _menuEx5Console.MenuExercicio5Console();
-                        }
+                        ShowMenu = _menuConsole.MenuExercicio5Console();
                     }
                     return true;
                 case "6":
-                    using (ServiceProvider container = RegistrarServices())
+                    while (ShowMenu)
                     {
-                        bool ShowMenuConsoleEx6 = true;
-                        var _menuEx6Console = container.GetRequiredService<MenusConsole>();
-                        while (ShowMenuConsoleEx6)
-                        {
-                            ShowMenuConsoleEx6 = _menuEx6Console.MenuExercicio6Console();
-                        }
+                        ShowMenu = _menuConsole.MenuExercicio6Console();
                     }
                     return true;
                 case "7":
-                    using (ServiceProvider container = RegistrarServices())
+                    inteiros = new List<int>();
+                    while (ShowMenu)
                     {
-                        List<int> inteiros = new List<int>();
-                        bool ShowMenuConsoleEx7 = true;
-                        var _menuEx7Console = container.GetRequiredService<MenusConsole>();
-                        while (ShowMenuConsoleEx7)
-                        {
-                            ShowMenuConsoleEx7 = _menuEx7Console.MenuExercicio7Console(inteiros);
-                        }
+                        ShowMenu = _menuConsole.MenuExercicio7Console(inteiros);
                     }
                     return true;
                 case "8":
-                    using (ServiceProvider container = RegistrarServices())
+                    inteiros = new List<int>();
+                    while (ShowMenu)
                     {
-                        List<int> inteiros = new List<int>();
-                        bool ShowMenuConsoleEx8 = true;
-                        var _menuEx8Console = container.GetRequiredService<MenusConsole>();
-                        while (ShowMenuConsoleEx8)
-                        {
-                            ShowMenuConsoleEx8 = _menuEx8Console.MenuExercicio8Console(inteiros);
-                        }
+                        ShowMenu = _menuConsole.MenuExercicio8Console(inteiros);
                     }
                     return true;
                 case "9":
-                    using (ServiceProvider container = RegistrarServices())
+                    inteiros = new List<int>();
+                    while (ShowMenu)
                     {
-                        List<int> inteiros = new List<int>();
-                        bool ShowMenuConsoleEx9 = true;
-                        var _menuEx9Console = container.GetRequiredService<MenusConsole>();
-                        while (ShowMenuConsoleEx9)
-                        {
-                            ShowMenuConsoleEx9 = _menuEx9Console.MenuExercicio9Console(inteiros);
-                        }
+                        ShowMenu = _menuConsole.MenuExercicio9Console(inteiros);
                     }
                     return true;
                 case "0":
