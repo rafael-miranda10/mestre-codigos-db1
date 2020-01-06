@@ -120,4 +120,8 @@ https://www.devmedia.com.br/os-4-pilares-da-programacao-orientada-a-objetos/9264
 
 https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos
 
+https://www.devmedia.com.br/interfaces-x-classes-abstratas/13337
+
+https://www.devmedia.com.br/polimorfismo-classes-abstratas-e-interfaces-fundamentos-da-poo-em-java/26387
+
 
