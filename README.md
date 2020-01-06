@@ -84,6 +84,11 @@
    de getters e setters, evitando assim o acesso direto a propriedade do objeto, com uma camada de segurança na aplicação.
    
 ## 5 - Quando usar uma classe abstrata e quando devo usar uma interface?
+   Resumidamente utilizamos uma interface quando necessitamos que classes de diferentes origens (Herança) tenham em comum métodos e que
+   possam ser acessados através de uma mesma variável. Uma classe abstrata é usada quando ha a necessidade que uma classe herde dela e
+   implemente alguns métodos, mas que também poassma ter métodos implementados na própria classe abstrata.
+   
+   
 ## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
 ## 7 - Existe herança múltipla (de classes) em C#?
    Não. Herdar muitas classes concretas é um grande problema do ponto de vista do design de uma linguagem de programação. Se as
