@@ -16,7 +16,7 @@
    
    O C# surgiu com a finalidade de possibilitar a criação de soluções executáveis sobre a plataforma .NET Framework, com o intuito de
    flexibilizar o desenvolvimento de aplicativos. Dessa maneira, o desenvolvedor não cria soluções para um dispositivo 
-   eletrônicoespecífico, e sim para a plataforma .NET Framework.
+   eletrônico específico, e sim para a plataforma .NET Framework.
    
 ## 3 - Quais os principais motivos para a Microsoft ter migrado para o Core?
 ## 4 - Cite as principais diferenças entre .Net Full Framework e .Net Core.
