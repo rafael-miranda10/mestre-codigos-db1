@@ -19,6 +19,19 @@
    eletrônico específico, e sim para a plataforma .NET Framework.
    
 ## 3 - Quais os principais motivos para a Microsoft ter migrado para o Core?
+   O Core é um framework completamente novo, é outra arquitetura. A microsoft ampliou o alcance do .Net e tornou possível implantar
+   aplicativos ASP.NET Core em um conjunto maior de ambientes com uma ampla variedade de distribuições Linux, macOS e containers.
+   
+   Os principais motivos para a mudança são:
+    * Extensível: 
+      Foi construido por uma série de componentes e interfaces independentes e com características bem definidas. Os
+      componentes core implementam uma interface ou herdam de classes abstratas. É possível substituir os principais componentes ou 
+      extender seu comportamentos por outros de sua própria implementação.
+    
+    * Testável:
+     Por ter mantido sua arquitetura MVC o ASP.NET Core, a controller pode ser facilmente isolada. Facilmente testável por frameworks
+     populares
+   
 ## 4 - Cite as principais diferenças entre .Net Full Framework e .Net Core.
 
 # Referências
