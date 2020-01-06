@@ -11,8 +11,9 @@
    
 ## 2 - Inicialmente o C# foi criado para qual finalidade?
    Inicialmente a microsoft tinha um projeto chamado de J++ (uma versão Java que só podia ser executado no ambiente microsoft), porém 
-   por motivos de violação de licenciamento, a microsoft foi obrigada a repensar sobre como lifar com diferentes linguagens e tecnologias
+   por motivos de violação de licenciamento, a microsoft foi obrigada a repensar sobre como lidar com diferentes linguagens e tecnologias
    e assim começou a trabalhar em uma nova plataforma que seria base de todas as suas soluções, que posteriormente foi chamada de .NET.
+   
    O C# surgiu com a finalidade de possibilitar a criação de soluções executáveis sobre a plataforma .NET Framework, com o intuito de
    flexibilizar o desenvolvimento de aplicativos. Dessa maneira, o desenvolvedor não cria soluções para um dispositivo 
    eletrônicoespecífico, e sim para a plataforma .NET Framework.
