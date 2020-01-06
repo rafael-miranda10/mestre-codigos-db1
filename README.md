@@ -100,6 +100,18 @@
      Essa interface é implementada por tipos cujos valores podem ser ordenados ou classificados. Requer que a implementação defina um
      único método "CompareTo(Object)" que indica se a ordem de classificação anterior, posterior ou igual a um segundo objeto do mesmo 
      tipo. A implementação de IComparable é chamada automaticamente por métodos Array.Sprt e ArrayList.Sort. 
+     
+   * ICloneable: 
+     Cria uma nova instância d uma classe com o mesmo valor de uma instãncia existente. Simplismente requer a implementação do método
+     Clone() para retornrar uma cópia da instâancia do objeto atual.
+   
+   * IEnumerable:
+     Dá suporte a uma iteração simples em uma coleção não genérica. É uma interface que marca as classes que desejam implementá-la para
+     que se saiba que ela pode ser iterável através de um iterador. O método "GetEnumerator()" é usado para obter o iterador. Na maioria 
+     das vezes a implementação deste método é igual ou muito parecida.
+     
+     Sempre que implementar a IEnumerable terá que implementar de alguma forma, na classe ou em outro local a interface IEnumerator.
+     
 
 ## 7 - Existe herança múltipla (de classes) em C#?
    Não. Herdar muitas classes concretas é um grande problema do ponto de vista do design de uma linguagem de programação. Se as
@@ -136,5 +148,11 @@ https://www.devmedia.com.br/interfaces-x-classes-abstratas/13337
 https://www.devmedia.com.br/polimorfismo-classes-abstratas-e-interfaces-fundamentos-da-poo-em-java/26387
 
 https://docs.microsoft.com/pt-br/dotnet/api/system.idisposable?view=netframework-4.8
+
+https://docs.microsoft.com/pt-br/dotnet/api/system.icloneable?view=netframework-4.8
+
+https://docs.microsoft.com/pt-br/dotnet/api/system.collections.ienumerable?view=netframework-4.8
+
+https://pt.stackoverflow.com/questions/191582/o-que-%C3%A9-e-pra-que-serve-ienumerable-e-ienumerator
 
 
