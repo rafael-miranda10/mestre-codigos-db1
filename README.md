@@ -21,9 +21,9 @@
 ## 3 - Quais os principais motivos para a Microsoft ter migrado para o Core?
 ## 4 - Cite as principais diferenças entre .Net Full Framework e .Net Core.
 
-#Referências
+# Referências
 
-## Perguntas teóricas de introdução
+### Perguntas teóricas de introdução
 https://docs.microsoft.com/pt-br/dotnet/csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework#feedback
 https://www.caelum.com.br/download/caelum-csharp-dotnet-fn13.pdf
 https://www.devmedia.com.br/a-evolucao-da-linguagem-de-programacao-csharp/28639
