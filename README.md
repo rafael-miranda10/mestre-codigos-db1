@@ -61,7 +61,6 @@
    é uma especificação para implementar a BCL. A relação entre o .NET Standard e uma implementação .NET é a mesma entre a especificação
    HTML e um navegador. O segundo é uma implementação da primeira.
 
-
 # Perguntas Utilizando POO
 
 ## 1 - O que é POO?
