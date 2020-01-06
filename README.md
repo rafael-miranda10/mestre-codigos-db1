@@ -61,6 +61,19 @@
    é uma especificação para implementar a BCL. A relação entre o .NET Standard e uma implementação .NET é a mesma entre a especificação
    HTML e um navegador. O segundo é uma implementação da primeira.
 
+
+# Perguntas Utilizando POO
+
+## O que é POO?
+## O que é polimorfismo?
+## O que é abstração?
+## O que é encapsulamento?
+## Quando usar uma classe abstrata e quando devo usar uma interface?
+## O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
+## Existe herança múltipla (de classes) em C#?
+
+
+
 # Referências
 
 ### Perguntas teóricas de introdução
