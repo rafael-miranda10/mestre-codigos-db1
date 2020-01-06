@@ -32,6 +32,17 @@
    * Testável:
      Por ter mantido sua arquitetura MVC o ASP.NET Core, a controller pode ser facilmente isolada. Facilmente testável por frameworks
      populares
+    
+   * Multiplataforma:
+     Independente de ambiente windows e está disponível em diferentes plataformas como Linus e macOS. Pode ser desenvolvido utilizando
+     o Visual Studio Code, uma IDE multiplataforma.
+     
+   * OpenSource:
+     O Core passou a ser open source e é possível baixar o código-fonte no GitHub.
+     
+   * Performance:
+     O pipeline de solicitação HTTP é leve e de alto desenpenho.
+     
    
 ## 4 - Cite as principais diferenças entre .Net Full Framework e .Net Core.
 
@@ -43,5 +54,9 @@ https://docs.microsoft.com/pt-br/dotnet/csharp/getting-started/introduction-to-t
 https://www.caelum.com.br/download/caelum-csharp-dotnet-fn13.pdf
 
 https://www.devmedia.com.br/a-evolucao-da-linguagem-de-programacao-csharp/28639
+
+https://www.brunobrito.net.br/asp-net-core/
+
+https://docs.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-3.1
 
 ### Perguntas utilizando POO
