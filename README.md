@@ -64,13 +64,13 @@
 
 # Perguntas Utilizando POO
 
-## O que é POO?
-## O que é polimorfismo?
-## O que é abstração?
-## O que é encapsulamento?
-## Quando usar uma classe abstrata e quando devo usar uma interface?
-## O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
-## Existe herança múltipla (de classes) em C#?
+## 1 - O que é POO?
+## 2 - O que é polimorfismo?
+## 3 - O que é abstração?
+## 4 - O que é encapsulamento?
+## 5 - Quando usar uma classe abstrata e quando devo usar uma interface?
+## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
+## 7 - Existe herança múltipla (de classes) em C#?
 
 
 
