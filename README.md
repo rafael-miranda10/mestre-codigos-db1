@@ -79,9 +79,16 @@
    caracteristicas prórias (propriedades) e por fim, as ações ou eventos (métodos).
    
 ## 4 - O que é encapsulamento?
+   Também é um dos quatro pilares da POO. Podemos dizer que é o elemento que adiciona segurança a uma aplicação escondendo as 
+   propriedades, e criando uma "caixa preta". O encapsulamento é baseado em propriedades privadas ligadas a métodos especiais chamados
+   de getters e setters, evitando assim o acesso direto a propriedade do objeto, com uma camada de segurança na aplicação.
+   
 ## 5 - Quando usar uma classe abstrata e quando devo usar uma interface?
 ## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
 ## 7 - Existe herança múltipla (de classes) em C#?
+   Não. Herdar muitas classes concretas é um grande problema do ponto de vista do design de uma linguagem de programação. Se as
+   superclasses tiverem métodos e variáveis com o mesmo nome? qual versão do método seria chamada? qual variável seria definida?
+   Dessa forma, o C# preferiu deixar as coisas mais simples e permitir apenas herança simples de classes concretas.
 
 
 
