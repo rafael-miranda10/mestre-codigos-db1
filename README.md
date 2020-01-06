@@ -64,8 +64,20 @@
 # Perguntas Utilizando POO
 
 ## 1 - O que é POO?
+   A programação orientada a objetos - POO é um paradigma (padrão) baseado no conceito de objetos, tais objetos são representações do 
+   mundo real onde contém comportamentos e atributos (métodos e propriedades). Em POO os programas de computadores são projetados pela
+   composição de objetos que interagem uns com os outros.
+   
 ## 2 - O que é polimorfismo?
+   É um dos quatro pilares da programação orientada a objetos. A palavra polimorfismo é um substantivo masculino que se refere a
+   qualidade ou estado de ser capaz de assumir diferentes formas e isso é lavado para dentro da programação. Objetos filhos herdam as
+   as características e ações de seus "ancestrais" e em alguns casos, é necessário que as ações para um mesmo método seja diferente, ou
+   seja, consiste na alteração do funcionamento interno de um método herdado de um objeto pai.
+
 ## 3 - O que é abstração?
+   Faz parte dos quatro pilares da POO e é a representação de um objeto real. Tal objeto deve conter uma identidade única,
+   caracteristicas prórias (propriedades) e por fim, as ações ou eventos (métodos).
+   
 ## 4 - O que é encapsulamento?
 ## 5 - Quando usar uma classe abstrata e quando devo usar uma interface?
 ## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
@@ -91,3 +103,9 @@ https://www.infoq.com/br/news/2017/11/dotnet-core-standard-difference/
 https://luizpauloprado.com.br/2017/03/24/net-framework-ou-net-core/
 
 ### Perguntas utilizando POO
+
+https://www.devmedia.com.br/os-4-pilares-da-programacao-orientada-a-objetos/9264
+
+https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos
+
+
