@@ -90,6 +90,17 @@
    
    
 ## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
+   * IDisposable: 
+     O principal objetivo dessa interface é fornecer um mecanismo para liberar recursos não gerenciaveis. Existe um coletor de lixo que
+     liberar automaticamente a memória alocada para um objeto, porém, não é possivel saber quando essa liberação irá ocorrer. Assim, 
+     utilize o método Dispose dessa interface para liberar o recurso quando o mesmo não for mais utilizado. O consumidor do objeto deve
+     realizar essa ação.
+     
+   * IComparable:
+     Essa interface é implementada por tipos cujos valores podem ser ordenados ou classificados. Requer que a implementação defina um
+     único método "CompareTo(Object)" que indica se a ordem de classificação anterior, posterior ou igual a um segundo objeto do mesmo 
+     tipo. A implementação de IComparable é chamada automaticamente por métodos Array.Sprt e ArrayList.Sort. 
+
 ## 7 - Existe herança múltipla (de classes) em C#?
    Não. Herdar muitas classes concretas é um grande problema do ponto de vista do design de uma linguagem de programação. Se as
    superclasses tiverem métodos e variáveis com o mesmo nome? qual versão do método seria chamada? qual variável seria definida?
@@ -123,5 +134,7 @@ https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_orientada_a_objetos
 https://www.devmedia.com.br/interfaces-x-classes-abstratas/13337
 
 https://www.devmedia.com.br/polimorfismo-classes-abstratas-e-interfaces-fundamentos-da-poo-em-java/26387
+
+https://docs.microsoft.com/pt-br/dotnet/api/system.idisposable?view=netframework-4.8
 
 
