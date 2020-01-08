@@ -161,11 +161,7 @@ namespace Principal
             Console.Write("Informe o nome do funcionário: ");
             Nome = Console.ReadLine();
             Console.Write("Informe o salário do funcionário: ");
-            var aux = Console.ReadLine();
-            if (!string.IsNullOrEmpty(aux))
-                Salario = Convert.ToDouble(aux);
-            else
-                Salario = 0;
+            Double.TryParse(Console.ReadLine(), out Salario);
         }
 
         private void CapturarInputAluno(out string Nome, out double Nota1, out double Nota2)
@@ -210,13 +206,37 @@ namespace Principal
                 }
                 while (!int.TryParse(Console.ReadLine(), out resultado));
 
-                if (resultado == -1)
+                if (resultado == 0)
                 {
                     i = tamanho;
                 }
                 else
                 {
                     inteiros.Add(resultado);
+                }
+
+            }
+
+        }
+
+        private void CapturarInputListDecimais(List<decimal> decimais, int tamanho)
+        {
+            for (int i = 0; i < tamanho; i++)
+            {
+                decimal resultado;
+                do
+                {
+                    Console.WriteLine($"Informe o {i + 1} número decimal: ");
+                }
+                while (!Decimal.TryParse(Console.ReadLine(), out resultado));
+
+                if (resultado == 0)
+                {
+                    i = tamanho;
+                }
+                else
+                {
+                    decimais.Add(resultado);
                 }
 
             }
@@ -365,18 +385,18 @@ namespace Principal
             }
         }
 
-        public bool MenuExercicio8Console(List<int> inteiros)
+        public bool MenuExercicio8Console(List<decimal> decimais)
         {
 
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
-            Console.WriteLine("1) Inserir N Números Inteiros");
+            Console.WriteLine("1) Inserir N Números Decimais");
             Console.WriteLine("2) Ordenação Manual Crescente");
             Console.WriteLine("3) Ordenação Manual Decrescente");
             Console.WriteLine("4) Ordenação Array Sort Crescente");
             Console.WriteLine("5) Ordenação Array Sort Decrescente");
-            Console.WriteLine("6) Ordenação Linq Sort Crescente");
-            Console.WriteLine("7) Ordenação Linq Sort Decrescente");
+            Console.WriteLine("6) Ordenação Linq Crescente");
+            Console.WriteLine("7) Ordenação Linq Decrescente");
             Console.WriteLine("0) Sair");
             Console.Write("\r\nEscolha uma opção: ");
 
@@ -384,36 +404,36 @@ namespace Principal
             {
                 case "1":
                     Console.Clear();
-                    CapturarInputListInteiros(inteiros, 9999);
+                    CapturarInputListDecimais(decimais, 9999);
                     return true;
                 case "2":
                     Console.Clear();
-                    _exercicio8.OrdenacaoManualCrescente(inteiros);
+                    _exercicio8.OrdenacaoManualCrescente(decimais);
                     Console.ReadKey();
                     return true;
                 case "3":
                     Console.Clear();
-                    _exercicio8.OrdenacaoManualDeCrescente(inteiros);
+                    _exercicio8.OrdenacaoManualDeCrescente(decimais);
                     Console.ReadKey();
                     return true;
                 case "4":
                     Console.Clear();
-                    _exercicio8.OrdenacaoArraySortCrescente(inteiros);
+                    _exercicio8.OrdenacaoArraySortCrescente(decimais);
                     Console.ReadKey();
                     return true;
                 case "5":
                     Console.Clear();
-                    _exercicio8.OrdenacaoArraySortDeCrescente(inteiros);
+                    _exercicio8.OrdenacaoArraySortDeCrescente(decimais);
                     Console.ReadKey();
                     return true;
                 case "6":
                     Console.Clear();
-                    _exercicio8.OrdenacaoLinqCrescente(inteiros);
+                    _exercicio8.OrdenacaoLinqCrescente(decimais);
                     Console.ReadKey();
                     return true;
                 case "7":
                     Console.Clear();
-                    _exercicio8.OrdenacaoLinqDeCrescente(inteiros);
+                    _exercicio8.OrdenacaoLinqDeCrescente(decimais);
                     Console.ReadKey();
                     return true;
                 case "0":

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using TrabalhandoNoConsole.Exercicio_2.Interface;
 
 namespace TrabalhandoNoConsole.Exercicio_2.Implementacao
@@ -50,10 +51,11 @@ namespace TrabalhandoNoConsole.Exercicio_2.Implementacao
                         }
                     }
                 }
-                Console.WriteLine($"O funcionário: {funcionarios[0].Nome} tem o menor salário: {funcionarios[0].Salario}");
-                Console.WriteLine($"O funcionário: {funcionarios[tamanho-1].Nome} tem o maior salário: {funcionarios[tamanho-1].Salario}");
+                Console.WriteLine($"O funcionário: {funcionarios[0].Nome} tem o menor salário: {FormatarStringSalario(funcionarios[0].Salario)}");
+                Console.WriteLine($"O funcionário: {funcionarios[tamanho-1].Nome} tem o maior salário: {FormatarStringSalario(funcionarios[tamanho-1].Salario)}");
             }
         }
+
 
         public void MaiorMenorFor()
         {
@@ -79,8 +81,8 @@ namespace TrabalhandoNoConsole.Exercicio_2.Implementacao
                         maior = funcionarios[i].Salario;
                     }
                 }
-                Console.WriteLine($"O funcionário: {funcionarios[indexMenor].Nome} tem o menor salário: {funcionarios[indexMenor].Salario}");
-                Console.WriteLine($"O funcionário: {funcionarios[indexMaior].Nome} tem o maior salário: {funcionarios[indexMaior].Salario}");
+                Console.WriteLine($"O funcionário: {funcionarios[indexMenor].Nome} tem o menor salário: {FormatarStringSalario(funcionarios[indexMenor].Salario)}");
+                Console.WriteLine($"O funcionário: {funcionarios[indexMaior].Nome} tem o maior salário: {FormatarStringSalario(funcionarios[indexMaior].Salario)}");
             }
 
         }
@@ -110,10 +112,15 @@ namespace TrabalhandoNoConsole.Exercicio_2.Implementacao
                     }
                     i++;
                 }
-                Console.WriteLine($"O funcionário: {funcionarios[indexMenor].Nome} tem o menor salário: {funcionarios[indexMenor].Salario}");
-                Console.WriteLine($"O funcionário: {funcionarios[indexMaior].Nome} tem o maior salário: {funcionarios[indexMaior].Salario}");
+                Console.WriteLine($"O funcionário: {funcionarios[indexMenor].Nome} tem o menor salário: {FormatarStringSalario(funcionarios[indexMenor].Salario)}");
+                Console.WriteLine($"O funcionário: {funcionarios[indexMaior].Nome} tem o maior salário: {FormatarStringSalario(funcionarios[indexMaior].Salario)}");
             }
 
+        }
+
+        private string FormatarStringSalario(double Salario)
+        {
+            return string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", Salario);
         }
     }
 }

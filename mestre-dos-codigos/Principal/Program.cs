@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using TrabalhandoNoConsole.Exercicio_1.Implementacao;
 using TrabalhandoNoConsole.Exercicio_1.Interface;
 using TrabalhandoNoConsole.Exercicio_2.Implementacao;
@@ -68,6 +69,7 @@ namespace Principal
             double valorA = 0, valorB = 0;
             bool ShowMenu = true;
             List<int> inteiros;
+            List<decimal> decimais;
             ServiceProvider container = RegistrarServices();
             var _menuConsole = container.GetRequiredService<MenusConsole>();
 
@@ -79,9 +81,9 @@ namespace Principal
             Console.WriteLine("4) Exercício 4");
             Console.WriteLine("5) Exercício 5");
             Console.WriteLine("6) Exercício 6");
-            Console.WriteLine("6) Exercício 7");
-            Console.WriteLine("6) Exercício 8");
-            Console.WriteLine("6) Exercício 9");
+            Console.WriteLine("7) Exercício 7");
+            Console.WriteLine("8) Exercício 8");
+            Console.WriteLine("9) Exercício 9");
             Console.WriteLine("0) Sair");
             Console.Write("\r\nEscolha uma opção: ");
 
@@ -132,10 +134,10 @@ namespace Principal
                     }
                     return true;
                 case "8":
-                    inteiros = new List<int>();
+                    decimais = new List<decimal>();
                     while (ShowMenu)
                     {
-                        ShowMenu = _menuConsole.MenuExercicio8Console(inteiros);
+                        ShowMenu = _menuConsole.MenuExercicio8Console(decimais);
                     }
                     return true;
                 case "9":
@@ -155,10 +157,11 @@ namespace Principal
         private static void CapturarInputAB(out double valorA, out double valorB)
         {
             Console.Clear();
+            CultureInfo cultura = new CultureInfo("pt-br");
             Console.Write("Informe o valor de a: ");
-            valorA = Convert.ToDouble(Console.ReadLine());
+            Double.TryParse(Console.ReadLine(), out valorA);
             Console.Write("Informe o valor de b: ");
-            valorB = Convert.ToDouble(Console.ReadLine());
+            Double.TryParse(Console.ReadLine(), out valorB);
         }
 
         private static ServiceProvider RegistrarServices()

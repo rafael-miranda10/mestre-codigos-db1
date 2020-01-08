@@ -90,7 +90,7 @@ namespace TrabalhandoNoConsole.Exercicio_9.Implementacao
             string str = "A lista tranformada em Array: ";
             for(int i = 0; i< _array.Length; i++)
             {
-                str += _array[i] + ";";
+                str += _array[i] + "| ";
             }
             Console.WriteLine(str);
         }
@@ -100,7 +100,7 @@ namespace TrabalhandoNoConsole.Exercicio_9.Implementacao
             string str = texto;
             foreach (var item in lista)
             {
-                str += item + ";";
+                str += item + "| ";
             }
             Console.WriteLine(str);
         }

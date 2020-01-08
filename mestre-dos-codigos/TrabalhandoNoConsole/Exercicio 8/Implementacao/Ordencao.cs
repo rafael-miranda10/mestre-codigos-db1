@@ -7,36 +7,36 @@ namespace TrabalhandoNoConsole.Exercicio_8.Implementacao
 {
     public class Ordencao : IOrdenacao
     {
-        public void OrdenacaoArraySortCrescente(List<int> inteiros)
+        public void OrdenacaoArraySortCrescente(List<decimal> decimais)
         {
-            int[] vet = inteiros.ToArray();
+            decimal[] vet = decimais.ToArray();
             Array.Sort(vet);
             ExibirVetor(vet.ToList());
         }
 
-        public void OrdenacaoArraySortDeCrescente(List<int> inteiros)
+        public void OrdenacaoArraySortDeCrescente(List<decimal> decimais)
         {
-            int[] vet = inteiros.ToArray();
+            decimal[] vet = decimais.ToArray();
             Array.Reverse(vet);
             ExibirVetor(vet.ToList());
         }
 
-        public void OrdenacaoLinqCrescente(List<int> inteiros)
+        public void OrdenacaoLinqCrescente(List<decimal> decimais)
         {
-            List<int> vet = inteiros.OrderBy(x => x).ToList();
+            List<decimal> vet = decimais.OrderBy(x => x).ToList();
             ExibirVetor(vet);
         }
 
-        public void OrdenacaoLinqDeCrescente(List<int> inteiros)
+        public void OrdenacaoLinqDeCrescente(List<decimal> decimais)
         {
-            List<int> vet = inteiros.OrderByDescending(x => x).ToList();
+            List<decimal> vet = decimais.OrderByDescending(x => x).ToList();
             ExibirVetor(vet);
         }
 
-        public void OrdenacaoManualCrescente(List<int> inteiros)
+        public void OrdenacaoManualCrescente(List<decimal> decimais)
         {
-            int aux = 0;
-            List<int> vet = inteiros;
+            decimal aux = 0;
+            List<decimal> vet = decimais;
 
             for (int i = 0; i < vet.Count; i++)
             {
@@ -53,10 +53,10 @@ namespace TrabalhandoNoConsole.Exercicio_8.Implementacao
             ExibirVetor(vet);
         }
 
-        public void OrdenacaoManualDeCrescente(List<int> inteiros)
+        public void OrdenacaoManualDeCrescente(List<decimal> decimais)
         {
-            int aux = 0;
-            List<int> vet = inteiros;
+            decimal aux = 0;
+            List<decimal> vet = decimais;
 
             for (int i = 0; i < vet.Count; i++)
             {
@@ -73,12 +73,12 @@ namespace TrabalhandoNoConsole.Exercicio_8.Implementacao
             ExibirVetor(vet);
         }
 
-        private void ExibirVetor(List<int> inteiros)
+        private void ExibirVetor(List<decimal> decimais)
         {
             string str = "Vetor ordenado: ";
-            foreach(var item in inteiros)
+            foreach(var item in decimais)
             {
-                str += item + ";";
+                str += item + "| ";
             }
 
             Console.WriteLine(str);
