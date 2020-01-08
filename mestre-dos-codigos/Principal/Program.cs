@@ -157,7 +157,6 @@ namespace Principal
         private static void CapturarInputAB(out double valorA, out double valorB)
         {
             Console.Clear();
-            CultureInfo cultura = new CultureInfo("pt-br");
             Console.Write("Informe o valor de a: ");
             Double.TryParse(Console.ReadLine(), out valorA);
             Console.Write("Informe o valor de b: ");
