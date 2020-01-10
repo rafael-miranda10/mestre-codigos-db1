@@ -87,22 +87,26 @@ namespace TrabalhandoNoConsole.Exercicio_9.Implementacao
         public void TransformarListaEmArray()
         {
             int[] _array = Inteirios.ToArray();
-            string str = "A lista tranformada em Array: ";
-            for(int i = 0; i< _array.Length; i++)
-            {
-                str += _array[i] + "| ";
-            }
-            Console.WriteLine(str);
+            //string str = "A lista tranformada em Array: ";
+            //for(int i = 0; i< _array.Length; i++)
+            //{
+            //    str += _array[i] + "| ";
+            //}
+            //Console.WriteLine(str);
+            Console.WriteLine("A lista tranformada em Array: ");
+            Console.WriteLine(string.Join("| ", _array));
         }
 
         private void ExibirLista(string texto, List<int> lista)
         {
-            string str = texto;
-            foreach (var item in lista)
-            {
-                str += item + "| ";
-            }
-            Console.WriteLine(str);
+            //string str = texto;
+            //foreach (var item in lista)
+            //{
+            //    str += item + "| ";
+            //}
+            //Console.WriteLine(str);
+            Console.WriteLine(texto);
+            Console.WriteLine(string.Join("| ", lista));
         }
     }
 }
