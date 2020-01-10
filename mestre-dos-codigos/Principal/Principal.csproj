@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TrabalhandoNoConsole\TrabalhandoNoConsole.csproj" />
+    <ProjectReference Include="..\UtilizandoPOO\UtilizandoPOO.csproj" />
   </ItemGroup>
 
 </Project>

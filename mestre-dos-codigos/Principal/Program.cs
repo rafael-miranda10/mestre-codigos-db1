@@ -55,7 +55,12 @@ namespace Principal
                     }
                     return true;
                 case "2":
-                    // RemoveWhitespace();
+                    bool ShowMenuPOO = true;
+                    while (ShowMenuPOO)
+                    {
+                        ShowMenuPOO = MenuPOO();
+                    }
+                    return true;
                     return true;
                 case "0":
                     return false;
@@ -154,6 +159,43 @@ namespace Principal
             }
         }
 
+        private static bool MenuPOO()
+        {
+            bool ShowMenu = true;
+            ServiceProvider container = RegistrarServices();
+            var _menuPOO = container.GetRequiredService<MenusPOO>();
+
+            Console.Clear();
+            Console.WriteLine("*** Mestre dos Códigos da DB1 Group - Utilizando POO ***\n");
+            Console.WriteLine("1) Exercício 1");
+            Console.WriteLine("2) Exercício 2");
+            Console.WriteLine("3) Exercício 3");
+            Console.WriteLine("4) Exercício 4");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    _menuPOO.MenuExercicio1POO();
+                    return true;
+                case "2":
+                //while (ShowMenu)
+                //{
+                //    ShowMenu = _menuPOO.MenuExercicio2Console();
+                //}
+                //return true;
+                case "3":
+                    return true;
+                case "4":
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
         private static void CapturarInputAB(out double valorA, out double valorB)
         {
             Console.Clear();
@@ -178,6 +220,7 @@ namespace Principal
             services.AddSingleton<IOrdenacao, Ordencao>();
             services.AddSingleton<ILinq, Linq>();
             services.AddTransient<MenusConsole>();
+            services.AddTransient<MenusPOO>();
 
             #endregion
 
