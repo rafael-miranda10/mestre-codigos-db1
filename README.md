@@ -9,8 +9,8 @@
  Quando estiver digitando uma lista de valores e desejar parar o processo de inserção basta digitar 0 (zero). Lembre-se que dessa forma
  o núemro zero não fará parte da lista.
  
- Quando solicitado que digite um valor e você desejar informar um valor decimal, o projeto está ajustado para a cultura brasileira, ou
- seja, utilize virgula para a representação. Ex: 1,2.
+ Quando solicitado que digite um valor e você desejar informar um valor decimal, o projeto está trabalhando com a cultura brasileira, ou
+ seja, utilize virgula para a representação de valores decimais. Ex: 1,2.
 
 
 
