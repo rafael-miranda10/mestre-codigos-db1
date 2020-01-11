@@ -61,7 +61,6 @@ namespace Principal
                         ShowMenuPOO = MenuPOO();
                     }
                     return true;
-                    return true;
                 case "0":
                     return false;
                 default:
@@ -161,7 +160,7 @@ namespace Principal
 
         private static bool MenuPOO()
         {
-            bool ShowMenu = true;
+           // bool ShowMenu = true;
             ServiceProvider container = RegistrarServices();
             var _menuPOO = container.GetRequiredService<MenusPOO>();
 
@@ -180,11 +179,8 @@ namespace Principal
                     _menuPOO.MenuExercicio1POO();
                     return true;
                 case "2":
-                //while (ShowMenu)
-                //{
-                //    ShowMenu = _menuPOO.MenuExercicio2Console();
-                //}
-                //return true;
+                     _menuPOO.MenuExercicio2POO();
+                    return true;
                 case "3":
                     return true;
                 case "4":
