@@ -214,7 +214,7 @@ namespace Principal
         }
         private bool ValidarData(string data)
         {
-            Regex r = new Regex(@"(\d{2}\/\d{2}\/\d{4} \d{2}:\d{2})");
+            Regex r = new Regex(@"(\d{2}\/\d{2}\/\d{4} \d{2}:\d{2}:\d{2})");
             return r.Match(data).Success;
         }
     }
