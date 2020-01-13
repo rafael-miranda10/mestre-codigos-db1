@@ -4,16 +4,19 @@ using System.Text.RegularExpressions;
 using UtilizandoPOO.Exercicio_1;
 using UtilizandoPOO.Exercicio_2;
 using UtilizandoPOO.Exercicio_3;
+using UtilizandoPOO.Exercicio_4;
 
 namespace Principal
 {
     public class MenusPOO
     {
         private readonly IBanco _banco;
+        private readonly ITelespectador _telespectador;
 
-        public MenusPOO(IBanco banco)
+        public MenusPOO(IBanco banco, ITelespectador telespectador)
         {
             _banco = banco;
+            _telespectador = telespectador;
         }
         public bool MenuExercicio1POO()
         {
@@ -216,6 +219,67 @@ namespace Principal
             }
         }
 
+        public bool MenuExercicio4POO()
+        {
+            int canal = 0, volume = 0;
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Ligar a Televisão");
+            Console.WriteLine("2) Aumentar Volume");
+            Console.WriteLine("3) Diminuir Volune");
+            Console.WriteLine("4) Proximo Canal");
+            Console.WriteLine("5) Canal Anterior");
+            Console.WriteLine("6) Ir Para o Canal");
+            Console.WriteLine("7) O Que Estou Assistindo?");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Clear();
+                    CapturarInputTelevisao(out canal, out volume);
+                    _telespectador.LigarTelevisao( canal, volume);
+                    Console.ReadKey();
+                    return true;
+                case "2":
+                    Console.Clear();
+                    _telespectador.AumentarVolume();
+                    Console.ReadKey();
+                    return true;
+                case "3":
+                    Console.Clear();
+                    _telespectador.DiminuirVolume();
+                    Console.ReadKey();
+                    return true;
+                case "4":
+                    Console.Clear();
+                    _telespectador.ProximoCanal();
+                    Console.ReadKey();
+                    return true;
+                case "5":
+                    Console.Clear();
+                    _telespectador.CanalAnterior();
+                    Console.ReadKey();
+                    return true;
+                case "6":
+                    Console.Clear();
+                    CapturarInputCanal(out canal);
+                    _telespectador.IrParaCanal(canal);
+                    Console.ReadKey();
+                    return true;
+                case "7":
+                    Console.Clear();
+                    _telespectador.OQuesEstouAssistindo();
+                    Console.ReadKey();
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
         private void CapturarInputDouble(string prompt, out double valor)
         {
             do
@@ -223,6 +287,20 @@ namespace Principal
                 Console.WriteLine(prompt);
             }
             while (!double.TryParse(Console.ReadLine(), out valor));
+        }
+
+        private void CapturarInputTelevisao(out int canal, out int volume)
+        {
+            Console.Write("Para ligar a televisão informe o canal e o valume. \n");
+            Console.Write("Informe o canal: ");
+            int.TryParse(Console.ReadLine(), out canal);
+            Console.Write("Informe o volume: ");
+            int.TryParse(Console.ReadLine(), out volume);
+        }
+        private void CapturarInputCanal(out int canal)
+        {
+            Console.Write("Informe o canal: ");
+            int.TryParse(Console.ReadLine(), out canal);
         }
 
         private void ExibirAreaForma(Forma forma, string escolha)

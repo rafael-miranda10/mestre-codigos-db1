@@ -22,6 +22,7 @@ using TrabalhandoNoConsole.Exercicio_9.Implementacao;
 using TrabalhandoNoConsole.Exercicio_9.Interface;
 using UtilizandoPOO.Exercicio_2;
 using UtilizandoPOO.Exercicio_3;
+using UtilizandoPOO.Exercicio_4;
 
 namespace Principal
 {
@@ -195,6 +196,10 @@ namespace Principal
                     }
                     return true;
                 case "4":
+                    while (ShowMenu)
+                    {
+                        ShowMenu = _menuPOO.MenuExercicio4POO();
+                    }
                     return true;
                 case "0":
                     return false;
@@ -227,6 +232,7 @@ namespace Principal
             services.AddSingleton<IOrdenacao, Ordencao>();
             services.AddSingleton<ILinq, Linq>();
             services.AddSingleton<IBanco, Banco>();
+            services.AddSingleton<ITelespectador, Telespectador>();
             services.AddTransient<MenusConsole>();
             services.AddTransient<MenusPOO>();
 
