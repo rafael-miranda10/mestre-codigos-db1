@@ -187,6 +187,10 @@ namespace Principal
                     }
                     return true;
                 case "3":
+                    while (ShowMenu)
+                    {
+                        ShowMenu = _menuPOO.MenuExercicio3POO();
+                    }
                     return true;
                 case "4":
                     return true;

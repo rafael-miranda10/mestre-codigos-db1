@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UtilizandoPOO.Exercicio_1;
 using UtilizandoPOO.Exercicio_2;
+using UtilizandoPOO.Exercicio_3;
 
 namespace Principal
 {
@@ -162,6 +163,50 @@ namespace Principal
                     Console.Clear();
                     if (ValidaPessoa(pessoa.Nome, pessoa.Altura, pessoa.DaTaNasc))
                         Console.WriteLine(pessoa);
+                    Console.ReadKey();
+                    return true;
+                case "0":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
+        public bool MenuExercicio3POO()
+        {
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Informar os dados da conta bancaria.");
+            Console.WriteLine("2) Realizar Saque da conta");
+            Console.WriteLine("3) Realizar Depósito na conta");
+            Console.WriteLine("4) Exibir dados");
+            Console.WriteLine("0) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Clear();
+                    ContaBancaria[] vet = new ContaBancaria[4];
+                    var conta = new ContaCorrente(1234567899,852.95);
+                    conta.MostraDados();
+                    conta.Sacar(52.95);
+                    conta.MostraDados();
+                    conta.Depositar(100);
+                    conta.MostraDados();
+
+                    var contaEspec = new ContaEspecial(987654312,458.00);
+                    contaEspec.MostraDados();
+                    contaEspec.Sacar(560);
+                    contaEspec.MostraDados();
+                    contaEspec.Depositar(1);
+                    contaEspec.MostraDados();
+
+                    vet[0] = contaEspec;
+                    Console.ReadKey();
+                    return true;
+                case "2":
+                    Console.Clear();
                     Console.ReadKey();
                     return true;
                 case "0":
