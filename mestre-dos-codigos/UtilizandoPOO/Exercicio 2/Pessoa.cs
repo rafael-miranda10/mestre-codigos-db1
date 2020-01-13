@@ -33,8 +33,6 @@ namespace UtilizandoPOO.Exercicio_2
 
         private int CalcularIdade(DateTime dataNasc)
         {
-            //http://www.macoratti.net/19/01/cshp_calcidade.htm
-
             int idade = DateTime.Now.Year - dataNasc.Year;
             if(DateTime.Now.DayOfYear < dataNasc.DayOfYear)
             {
@@ -45,7 +43,7 @@ namespace UtilizandoPOO.Exercicio_2
 
         public override string ToString()
         {
-            return $"Nome: {_Nome} possui a altura de : {_Altura} metros, nascida em: {_DataNasc} com {CalcularIdade(_DataNasc)} anos de idade.";
+            return $"Nome: {_Nome} possui a altura de : {_Altura} metros, nascida em: {_DataNasc.ToShortDateString()} com {CalcularIdade(_DataNasc)} anos de idade.";
         }
     }
 }

@@ -20,6 +20,7 @@ using TrabalhandoNoConsole.Exercicio_8.Implementacao;
 using TrabalhandoNoConsole.Exercicio_8.Interface;
 using TrabalhandoNoConsole.Exercicio_9.Implementacao;
 using TrabalhandoNoConsole.Exercicio_9.Interface;
+using UtilizandoPOO.Exercicio_2;
 
 namespace Principal
 {
@@ -160,7 +161,7 @@ namespace Principal
 
         private static bool MenuPOO()
         {
-           // bool ShowMenu = true;
+           bool ShowMenu = true;
             ServiceProvider container = RegistrarServices();
             var _menuPOO = container.GetRequiredService<MenusPOO>();
 
@@ -179,7 +180,11 @@ namespace Principal
                     _menuPOO.MenuExercicio1POO();
                     return true;
                 case "2":
-                     _menuPOO.MenuExercicio2POO();
+                    Pessoa pessoa = new Pessoa();
+                    while (ShowMenu)
+                    {
+                        ShowMenu = _menuPOO.MenuExercicio2POO(pessoa);
+                    }
                     return true;
                 case "3":
                     return true;

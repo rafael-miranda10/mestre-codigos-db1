@@ -132,12 +132,11 @@ namespace Principal
             }
         }
 
-        public bool MenuExercicio2POO()
+        public bool MenuExercicio2POO(Pessoa pessoa)
         {
             string Nome;
             DateTime Datanasc;
             double Altura;
-            Pessoa pessoa = null;
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
             Console.WriteLine("1) Informar os dados da pessoa.");
@@ -153,19 +152,16 @@ namespace Principal
                     var flag = ValidaPessoa(Nome, Altura, Datanasc);
                     if (flag)
                     {
-                        pessoa = new Pessoa();
                         pessoa.Nome = Nome;
                         pessoa.Altura = Altura;
                         pessoa.DaTaNasc = Datanasc;
                     }
                     Console.ReadKey();
-                    return false;
+                    return true;
                 case "2":
                     Console.Clear();
-                    if (pessoa != null)
+                    if (ValidaPessoa(pessoa.Nome, pessoa.Altura, pessoa.DaTaNasc))
                         Console.WriteLine(pessoa);
-                    else
-                        Console.WriteLine("Pessoa inválida! por favor informe os dados");
                     Console.ReadKey();
                     return true;
                 case "0":
@@ -204,7 +200,7 @@ namespace Principal
 
         private bool ValidaPessoa(string Nome, double Altura, DateTime DataNasc)
         {
-            if (string.IsNullOrEmpty(Nome) || Altura <= 0 || ValidarData(DataNasc.ToString()))
+            if (string.IsNullOrEmpty(Nome) || Altura <= 0 || !ValidarData(DataNasc.ToString()))
             {
                 Console.Write("Dados da pessoa incorretos! Volte oa menu e insira novamente!");
                 return false;
@@ -212,6 +208,7 @@ namespace Principal
 
             return true;
         }
+
         private bool ValidarData(string data)
         {
             Regex r = new Regex(@"(\d{2}\/\d{2}\/\d{4} \d{2}:\d{2}:\d{2})");
