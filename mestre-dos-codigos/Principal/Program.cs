@@ -21,6 +21,7 @@ using TrabalhandoNoConsole.Exercicio_8.Interface;
 using TrabalhandoNoConsole.Exercicio_9.Implementacao;
 using TrabalhandoNoConsole.Exercicio_9.Interface;
 using UtilizandoPOO.Exercicio_2;
+using UtilizandoPOO.Exercicio_3;
 
 namespace Principal
 {
@@ -187,9 +188,10 @@ namespace Principal
                     }
                     return true;
                 case "3":
+                    ContaBancaria[] bancoDB1 = new ContaBancaria[4];
                     while (ShowMenu)
                     {
-                        ShowMenu = _menuPOO.MenuExercicio3POO();
+                        ShowMenu = _menuPOO.MenuExercicio3POO(bancoDB1);
                     }
                     return true;
                 case "4":
@@ -224,6 +226,7 @@ namespace Principal
             services.AddSingleton<ISomaPar, SomaPar>();
             services.AddSingleton<IOrdenacao, Ordencao>();
             services.AddSingleton<ILinq, Linq>();
+            services.AddSingleton<IBanco, Banco>();
             services.AddTransient<MenusConsole>();
             services.AddTransient<MenusPOO>();
 

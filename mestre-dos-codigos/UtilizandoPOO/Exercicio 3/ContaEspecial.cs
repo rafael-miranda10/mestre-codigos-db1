@@ -25,7 +25,7 @@ namespace UtilizandoPOO.Exercicio_3
         {
             if (valor > (SaldoConta + LimteCredito))
             {
-                Console.Write($"A conta especial de número: {NumeroConta} possui um limite de crédito de {LimteCredito}, no entanto, não possui o saldo suficiente para o saque de : {valor}\n");
+                Console.Write($"A conta especial de número: {NumeroConta} possui um limite de crédito de R$: {LimteCredito}, no entanto, não possui o saldo suficiente para o saque de R$: {valor}\n");
                 return false;
             }
 

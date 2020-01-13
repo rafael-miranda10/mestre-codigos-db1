@@ -16,7 +16,7 @@ namespace UtilizandoPOO.Exercicio_3
             SaldoConta += (valor - TaxaOperacao);
         }
 
-        public void MostraDados()
+        public  void MostraDados()
         {
             Console.Write($"A conta corrente de número: {NumeroConta} possui o saldo de : {SaldoConta}\n");
         }
@@ -25,7 +25,7 @@ namespace UtilizandoPOO.Exercicio_3
         {
             if ((valor + TaxaOperacao) > SaldoConta)
             {
-                Console.Write($"A conta corrente de número: {NumeroConta} não possui o saldo suficiente para o saque de : {valor}\n");
+                Console.Write($"A conta corrente de número: {NumeroConta} não possui o saldo suficiente para o saque de R$: {valor}\n");
                 return false;
             }
 

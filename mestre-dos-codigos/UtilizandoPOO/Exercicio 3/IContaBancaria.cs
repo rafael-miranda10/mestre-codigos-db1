@@ -2,6 +2,6 @@
 {
     public interface IContaBancaria
     {
-        void MostraDados();
+       void MostraDados();
     }
 }
