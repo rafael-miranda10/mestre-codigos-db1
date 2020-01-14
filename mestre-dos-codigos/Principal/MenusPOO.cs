@@ -291,6 +291,7 @@ namespace Principal
 
         private void CapturarInputTelevisao(out int canal, out int volume)
         {
+            Console.Write("A televisão possui 30 canais e o volume máximo de 100. \n");
             Console.Write("Para ligar a televisão informe o canal e o valume. \n");
             Console.Write("Informe o canal: ");
             int.TryParse(Console.ReadLine(), out canal);

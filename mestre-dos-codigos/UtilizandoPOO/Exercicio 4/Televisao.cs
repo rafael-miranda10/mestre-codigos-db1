@@ -14,7 +14,7 @@
             Canal = canal;
         }
 
-        public abstract bool AumentarVolume();
+        public abstract void AumentarVolume();
         public abstract void DiminuirVolume();
         public abstract void ProximoCanal();
         public abstract void CanalAnterior();
