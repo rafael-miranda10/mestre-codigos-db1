@@ -9,6 +9,7 @@ namespace UtilizandoPOO.Exercicio_1
         private List<Empregado> listaEmpregado;
         private Humano p1, p2;
         private Cachorro[] dogArray;
+        private Forma forma;
 
         public Poo()
         {
@@ -16,6 +17,30 @@ namespace UtilizandoPOO.Exercicio_1
             listaEmpregado = new List<Empregado>();
             p1 = new Humano("Rafael", "(18) 99654-8521", 29);
             dogArray = new Cachorro[3];
+        }
+
+        public void CalcularAreaCirculo(double raio)
+        {
+            forma = new Circulo(raio);
+            ExibirAreaForma(forma, "círculo");
+        }
+
+        public void CalcularAreaQuadrado(double lado)
+        {
+            forma = new Quadrado(lado);
+            ExibirAreaForma(forma, "quadrado");
+        }
+
+        public void CalcularAreaRetangulo(double lado)
+        {
+            forma = new Retangulo(lado);
+            ExibirAreaForma(forma, "retângulo");
+        }
+
+        public void CalcularAreaTriangulo(double _base, double altura)
+        {
+            forma = new Triangulo(_base, altura);
+            ExibirAreaForma(forma, "tringulo");
         }
 
         public void ExecutarICloneable()
@@ -57,6 +82,13 @@ namespace UtilizandoPOO.Exercicio_1
             Canil canilList = new Canil(dogArray);
             foreach (Cachorro c in canilList)
                 Console.Write($"Nome do cachorro: {c.Nome}, raça do cachorro: {c.Raca} \n");
+        }
+
+        private void ExibirAreaForma(Forma forma, string escolha)
+        {
+            Console.Clear();
+            Console.Write($"A área do {escolha} é: {forma.CalcularArea}");
+            Console.ReadKey();
         }
     }
 }

@@ -87,27 +87,23 @@ namespace Principal
                 case "1":
                     Console.Clear();
                     CapturarInputDouble("Informe o lado do quadrado: ", out lado);
-                    forma = new Quadrado(lado);
-                    ExibirAreaForma(forma, "quadrado");
+                    _poo.CalcularAreaQuadrado(lado);
                     return true;
                 case "2":
                     Console.Clear();
                     CapturarInputDouble("Informe o lado do retângulo: ", out lado);
-                    forma = new Retangulo(lado);
-                    ExibirAreaForma(forma, "retângulo");
+                    _poo.CalcularAreaRetangulo(lado);
                     return true;
                 case "3":
                     Console.Clear();
                     CapturarInputDouble("Informe a base do triângulo: ", out _base);
                     CapturarInputDouble("Informe a altura do triângulo: ", out altura);
-                    forma = new Triangulo(_base, altura);
-                    ExibirAreaForma(forma, "tringulo");
+                    _poo.CalcularAreaTriangulo(_base, altura);
                     return true;
                 case "4":
                     Console.Clear();
                     CapturarInputDouble("Informe o raio do círculo: ", out raio);
-                    forma = new Circulo(raio);
-                    ExibirAreaForma(forma, "círculo");
+                    _poo.CalcularAreaCirculo(raio);
                     return true;
                 case "0":
                     return false;
@@ -274,13 +270,6 @@ namespace Principal
         {
             Console.Write("Informe o canal: ");
             int.TryParse(Console.ReadLine(), out canal);
-        }
-
-        private void ExibirAreaForma(Forma forma, string escolha)
-        {
-            Console.Clear();
-            Console.Write($"A área do {escolha} é: {forma.CalcularArea}");
-            Console.ReadKey();
         }
 
         private void CapturarInputPessoa(out string Nome, out double Altura, out DateTime DataNasc)
