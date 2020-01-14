@@ -385,9 +385,9 @@ namespace Principal
             }
         }
 
-        public bool MenuExercicio8Console(List<decimal> decimais)
+        public bool MenuExercicio8Console()
         {
-
+            List<decimal> decimais = new List<decimal>();
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
             Console.WriteLine("1) Inserir N Números Decimais");
@@ -405,35 +405,36 @@ namespace Principal
                 case "1":
                     Console.Clear();
                     CapturarInputListDecimais(decimais, 9999);
+                    _exercicio8.Setlista(decimais);
                     return true;
                 case "2":
                     Console.Clear();
-                    _exercicio8.OrdenacaoManualCrescente(decimais);
+                    _exercicio8.OrdenacaoManualCrescente();
                     Console.ReadKey();
                     return true;
                 case "3":
                     Console.Clear();
-                    _exercicio8.OrdenacaoManualDeCrescente(decimais);
+                    _exercicio8.OrdenacaoManualDeCrescente();
                     Console.ReadKey();
                     return true;
                 case "4":
                     Console.Clear();
-                    _exercicio8.OrdenacaoArraySortCrescente(decimais);
+                    _exercicio8.OrdenacaoArraySortCrescente();
                     Console.ReadKey();
                     return true;
                 case "5":
                     Console.Clear();
-                    _exercicio8.OrdenacaoArraySortDeCrescente(decimais);
+                    _exercicio8.OrdenacaoArraySortDeCrescente();
                     Console.ReadKey();
                     return true;
                 case "6":
                     Console.Clear();
-                    _exercicio8.OrdenacaoLinqCrescente(decimais);
+                    _exercicio8.OrdenacaoLinqCrescente();
                     Console.ReadKey();
                     return true;
                 case "7":
                     Console.Clear();
-                    _exercicio8.OrdenacaoLinqDeCrescente(decimais);
+                    _exercicio8.OrdenacaoLinqDeCrescente();
                     Console.ReadKey();
                     return true;
                 case "0":

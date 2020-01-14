@@ -4,11 +4,12 @@ namespace TrabalhandoNoConsole.Exercicio_8.Interface
 {
     public interface IOrdenacao
     {
-        void OrdenacaoManualCrescente(List<decimal> decimais);
-        void OrdenacaoManualDeCrescente(List<decimal> decimais);
-        void OrdenacaoArraySortCrescente(List<decimal> decimais);
-        void OrdenacaoArraySortDeCrescente(List<decimal> decimais);
-        void OrdenacaoLinqCrescente(List<decimal> decimais);
-        void OrdenacaoLinqDeCrescente(List<decimal> decimais);
+        void OrdenacaoManualCrescente();
+        void OrdenacaoManualDeCrescente();
+        void OrdenacaoArraySortCrescente();
+        void OrdenacaoArraySortDeCrescente();
+        void OrdenacaoLinqCrescente();
+        void OrdenacaoLinqDeCrescente();
+        void Setlista(List<decimal> lista);
     }
 }

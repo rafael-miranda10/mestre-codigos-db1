@@ -76,7 +76,6 @@ namespace Principal
             double valorA = 0, valorB = 0;
             bool ShowMenu = true;
             List<int> inteiros;
-            List<decimal> decimais;
             ServiceProvider container = RegistrarServices();
             var _menuConsole = container.GetRequiredService<MenusConsole>();
 
@@ -141,10 +140,9 @@ namespace Principal
                     }
                     return true;
                 case "8":
-                    decimais = new List<decimal>();
                     while (ShowMenu)
                     {
-                        ShowMenu = _menuConsole.MenuExercicio8Console(decimais);
+                        ShowMenu = _menuConsole.MenuExercicio8Console();
                     }
                     return true;
                 case "9":
