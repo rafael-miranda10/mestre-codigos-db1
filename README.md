@@ -148,7 +148,7 @@
    * Selenium WebDriver
    * SpecFlow
    
-   Um detalhe importante é verificar a disponibilidade desses frameworks para a versão da plataforma .NET utilizada, no caso dos
+   Um detalhe importante é verificar a disponibilidade e compatibilidade desses frameworks para a versão da plataforma .NET utilizada, no caso dos
    frameworks citados são referentes a versão 3.0 e 3.1 do .NET CORE.
    
 
