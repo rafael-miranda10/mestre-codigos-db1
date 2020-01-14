@@ -155,103 +155,6 @@ namespace Principal
             }
         }
 
-        private void CapturarInputFuncionario(out string Nome, out double Salario)
-        {
-            Console.Clear();
-            Console.Write("Informe o nome do funcionário: ");
-            Nome = Console.ReadLine();
-            Console.Write("Informe o salário do funcionário: ");
-            Double.TryParse(Console.ReadLine(), out Salario);
-        }
-
-        private void CapturarInputAluno(out string Nome, out double Nota1, out double Nota2)
-        {
-            // deve-se informar os valores de nota com virgula , para a correta conversão para double
-            Console.Clear();
-            Console.Write("Informe o nome do aluno: ");
-            Nome = Console.ReadLine();
-            Console.Write($"Informe o nota 1 do {Nome}: ");
-            // Nota1 = Convert.ToDouble(Console.ReadLine());
-            var aux1 = Console.ReadLine();
-            Nota1 = string.IsNullOrEmpty(aux1) ? 0 : Convert.ToDouble(aux1);
-            Console.Write($"Informe o nota 2 do {Nome}: ");
-            var aux2 = Console.ReadLine();
-            Nota2 = string.IsNullOrEmpty(aux2) ? 0 : Convert.ToDouble(aux2);
-        }
-
-        private void CapturarInputBhaskara(out double a, out double b, out double c)
-        {
-            // deve-se informar os valores de nota com virgula , para a correta conversão para double
-            Console.Clear();
-            Console.Write("Informe o valor de A: ");
-            var auxA = Console.ReadLine();
-            a = string.IsNullOrEmpty(auxA) ? 0 : Convert.ToDouble(auxA);
-            Console.Write("Informe o valor de B: ");
-            var auxB = Console.ReadLine();
-            b = string.IsNullOrEmpty(auxB) ? 0 : Convert.ToDouble(auxB);
-            Console.Write("Informe o valor de C: ");
-            var auxC = Console.ReadLine();
-            c = string.IsNullOrEmpty(auxC) ? 0 : Convert.ToDouble(auxC);
-
-        }
-
-        private void CapturarInputListInteiros(List<int> inteiros, int tamanho)
-        {
-            for (int i = 0; i < tamanho; i++)
-            {
-                int resultado;
-                do
-                {
-                    Console.WriteLine($"Informe o {i + 1} números inteiro: ");
-                }
-                while (!int.TryParse(Console.ReadLine(), out resultado));
-
-                if (resultado == 0)
-                {
-                    i = tamanho;
-                }
-                else
-                {
-                    inteiros.Add(resultado);
-                }
-
-            }
-
-        }
-
-        private void CapturarInputListDecimais(List<decimal> decimais, int tamanho)
-        {
-            for (int i = 0; i < tamanho; i++)
-            {
-                decimal resultado;
-                do
-                {
-                    Console.WriteLine($"Informe o {i + 1} número decimal: ");
-                }
-                while (!Decimal.TryParse(Console.ReadLine(), out resultado));
-
-                if (resultado == 0)
-                {
-                    i = tamanho;
-                }
-                else
-                {
-                    decimais.Add(resultado);
-                }
-
-            }
-
-        }
-
-        private void CapturarInputInteiro(out int value)
-        {
-            do
-            {
-                Console.WriteLine("Informe o número desejado: ");
-            }
-            while (!int.TryParse(Console.ReadLine(), out value));
-        }
-
         public bool MenuExercicio4Console()
         {
             string Nome = ""; double Nota1 = 0, Nota2 = 0;
@@ -344,9 +247,9 @@ namespace Principal
             }
         }
 
-        public bool MenuExercicio7Console(List<int> inteiros)
+        public bool MenuExercicio7Console()
         {
-
+            List<int> inteiros = new List<int>();
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
             Console.WriteLine("1) Inserir 4 Números Inteiros");
@@ -361,21 +264,21 @@ namespace Principal
                 case "1":
                     Console.Clear();
                     CapturarInputListInteiros(inteiros, 4);
-                    // Console.ReadKey();
+                    _exercicio7.SetLista(inteiros);
                     return true;
                 case "2":
                     Console.Clear();
-                    _exercicio7.SomarParDivisaoExata(inteiros);
+                    _exercicio7.SomarParDivisaoExata();
                     Console.ReadKey();
                     return true;
                 case "3":
                     Console.Clear();
-                    _exercicio7.SomarParDivisao(inteiros);
+                    _exercicio7.SomarParDivisao();
                     Console.ReadKey();
                     return true;
                 case "4":
                     Console.Clear();
-                    _exercicio7.SomarParLinq(inteiros);
+                    _exercicio7.SomarParLinq();
                     Console.ReadKey();
                     return true;
                 case "0":
@@ -535,6 +438,103 @@ namespace Principal
                 default:
                     return true;
             }
+        }
+
+        private void CapturarInputFuncionario(out string Nome, out double Salario)
+        {
+            Console.Clear();
+            Console.Write("Informe o nome do funcionário: ");
+            Nome = Console.ReadLine();
+            Console.Write("Informe o salário do funcionário: ");
+            Double.TryParse(Console.ReadLine(), out Salario);
+        }
+
+        private void CapturarInputAluno(out string Nome, out double Nota1, out double Nota2)
+        {
+            // deve-se informar os valores de nota com virgula , para a correta conversão para double
+            Console.Clear();
+            Console.Write("Informe o nome do aluno: ");
+            Nome = Console.ReadLine();
+            Console.Write($"Informe o nota 1 do {Nome}: ");
+            // Nota1 = Convert.ToDouble(Console.ReadLine());
+            var aux1 = Console.ReadLine();
+            Nota1 = string.IsNullOrEmpty(aux1) ? 0 : Convert.ToDouble(aux1);
+            Console.Write($"Informe o nota 2 do {Nome}: ");
+            var aux2 = Console.ReadLine();
+            Nota2 = string.IsNullOrEmpty(aux2) ? 0 : Convert.ToDouble(aux2);
+        }
+
+        private void CapturarInputBhaskara(out double a, out double b, out double c)
+        {
+            // deve-se informar os valores de nota com virgula , para a correta conversão para double
+            Console.Clear();
+            Console.Write("Informe o valor de A: ");
+            var auxA = Console.ReadLine();
+            a = string.IsNullOrEmpty(auxA) ? 0 : Convert.ToDouble(auxA);
+            Console.Write("Informe o valor de B: ");
+            var auxB = Console.ReadLine();
+            b = string.IsNullOrEmpty(auxB) ? 0 : Convert.ToDouble(auxB);
+            Console.Write("Informe o valor de C: ");
+            var auxC = Console.ReadLine();
+            c = string.IsNullOrEmpty(auxC) ? 0 : Convert.ToDouble(auxC);
+
+        }
+
+        private void CapturarInputListInteiros(List<int> inteiros, int tamanho)
+        {
+            for (int i = 0; i < tamanho; i++)
+            {
+                int resultado;
+                do
+                {
+                    Console.WriteLine($"Informe o {i + 1} números inteiro: ");
+                }
+                while (!int.TryParse(Console.ReadLine(), out resultado));
+
+                if (resultado == 0)
+                {
+                    i = tamanho;
+                }
+                else
+                {
+                    inteiros.Add(resultado);
+                }
+
+            }
+
+        }
+
+        private void CapturarInputListDecimais(List<decimal> decimais, int tamanho)
+        {
+            for (int i = 0; i < tamanho; i++)
+            {
+                decimal resultado;
+                do
+                {
+                    Console.WriteLine($"Informe o {i + 1} número decimal: ");
+                }
+                while (!Decimal.TryParse(Console.ReadLine(), out resultado));
+
+                if (resultado == 0)
+                {
+                    i = tamanho;
+                }
+                else
+                {
+                    decimais.Add(resultado);
+                }
+
+            }
+
+        }
+
+        private void CapturarInputInteiro(out int value)
+        {
+            do
+            {
+                Console.WriteLine("Informe o número desejado: ");
+            }
+            while (!int.TryParse(Console.ReadLine(), out value));
         }
     }
 }

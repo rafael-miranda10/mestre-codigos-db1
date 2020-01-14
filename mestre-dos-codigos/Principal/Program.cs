@@ -133,10 +133,9 @@ namespace Principal
                     }
                     return true;
                 case "7":
-                    inteiros = new List<int>();
                     while (ShowMenu)
                     {
-                        ShowMenu = _menuConsole.MenuExercicio7Console(inteiros);
+                        ShowMenu = _menuConsole.MenuExercicio7Console();
                     }
                     return true;
                 case "8":

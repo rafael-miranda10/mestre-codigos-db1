@@ -7,7 +7,19 @@ namespace TrabalhandoNoConsole.Exercicio_7.Implementacao
 {
     public class SomaPar : ISomaPar
     {
-        public void SomarParDivisao(List<int> inteiros)
+        private List<int> inteiros;
+
+        public SomaPar()
+        {
+            inteiros = new List<int>();
+        }
+
+        public void SetLista(List<int> lista)
+        {
+            inteiros = lista;
+        }
+
+        public void SomarParDivisao()
         {
             int soma = 0;
             foreach (var item in inteiros)
@@ -19,7 +31,7 @@ namespace TrabalhandoNoConsole.Exercicio_7.Implementacao
             Console.WriteLine($"A soma dos números pares é: {soma}");
         }
 
-        public void SomarParDivisaoExata(List<int> inteiros)
+        public void SomarParDivisaoExata()
         {
             int soma = 0;
             foreach (var item in inteiros)
@@ -30,7 +42,7 @@ namespace TrabalhandoNoConsole.Exercicio_7.Implementacao
             Console.WriteLine($"A soma dos números pares é: {soma}");
         }
 
-        public void SomarParLinq(List<int> inteiros)
+        public void SomarParLinq()
         {
             Console.WriteLine($"A soma dos números pares é: {inteiros.Where(x => x % 2 == 0).Sum()}");
         }

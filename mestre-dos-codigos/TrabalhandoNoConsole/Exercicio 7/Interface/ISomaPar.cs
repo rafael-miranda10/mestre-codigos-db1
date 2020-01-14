@@ -4,8 +4,9 @@ namespace TrabalhandoNoConsole.Exercicio_7.Interface
 {
     public interface ISomaPar
     {
-        void SomarParDivisaoExata(List<int> inteiros);
-        void SomarParDivisao(List<int> inteiros);
-        void SomarParLinq(List<int> inteiros);
+        void SomarParDivisaoExata();
+        void SomarParDivisao();
+        void SomarParLinq();
+        void SetLista(List<int> lista);
     }
 }
