@@ -131,7 +131,26 @@
    Não. Herdar muitas classes concretas é um grande problema do ponto de vista do design de uma linguagem de programação. Se as
    superclasses tiverem métodos e variáveis com o mesmo nome? qual versão do método seria chamada? qual variável seria definida?
    Dessa forma, o C# preferiu deixar as coisas mais simples e permitir apenas herança simples de classes concretas.
+   
 
+# Trabalhando com testes
+
+## 1 - Quais os principais frameworks que podemos usar no desenvolvimento de testes?
+   A plataforma .NET conta com várias alternativas para a implementação de testes e muitas das opções são projetos open source de 
+   grande adesão da comunidade técnica. Podemos citas os seguintes frameworks:
+   
+   * XUnit
+   * MS Test
+   * NUnit
+   * Moq
+   * NSubstitute
+   * Fluent Assertions
+   * Selenium WebDriver
+   * SpecFlow
+   
+   Um detalhe importante é verificar a disponibilidade e compatibilidade desses frameworks para a versão da plataforma .NET utilizada, no caso dos
+   frameworks citados são referentes a versão 3.0 e 3.1 do .NET CORE.
+   
 
 
 # Referências
@@ -168,5 +187,15 @@ https://docs.microsoft.com/pt-br/dotnet/api/system.icloneable?view=netframework-
 https://docs.microsoft.com/pt-br/dotnet/api/system.collections.ienumerable?view=netframework-4.8
 
 https://pt.stackoverflow.com/questions/191582/o-que-%C3%A9-e-pra-que-serve-ienumerable-e-ienumerator
+
+### Trabalhando com testes
+
+https://medium.com/@renato.groffe/testes-de-software-com-net-core-3-x-exemplos-de-utiliza%C3%A7%C3%A3o-7174560bc5e0
+
+https://medium.com/@renato.groffe/net-core-2-0-frameworks-de-testes-exemplos-de-utiliza%C3%A7%C3%A3o-846f9e500fb6
+
+https://www.infoq.com/br/articles/testing-aspnet-core-web-api/
+
+https://www.devmedia.com.br/behavior-driven-development-bdd-com-specflow/29405
 
 
