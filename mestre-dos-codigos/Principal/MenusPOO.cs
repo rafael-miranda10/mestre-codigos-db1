@@ -12,11 +12,13 @@ namespace Principal
     {
         private readonly IBanco _banco;
         private readonly ITelespectador _telespectador;
+        private readonly IIndividuo _individuo;
 
-        public MenusPOO(IBanco banco, ITelespectador telespectador)
+        public MenusPOO(IBanco banco, ITelespectador telespectador, IIndividuo individuo)
         {
             _banco = banco;
             _telespectador = telespectador;
+            _individuo = individuo;
         }
         public bool MenuExercicio1POO()
         {
@@ -138,7 +140,7 @@ namespace Principal
             }
         }
 
-        public bool MenuExercicio2POO(Pessoa pessoa)
+        public bool MenuExercicio2POO()
         {
             string Nome;
             DateTime Datanasc;
@@ -155,19 +157,12 @@ namespace Principal
                 case "1":
                     Console.Clear();
                     CapturarInputPessoa(out Nome, out Altura, out Datanasc);
-                    var flag = ValidaPessoa(Nome, Altura, Datanasc);
-                    if (flag)
-                    {
-                        pessoa.Nome = Nome;
-                        pessoa.Altura = Altura;
-                        pessoa.DaTaNasc = Datanasc;
-                    }
+                    _individuo.CriarPessoa(Nome, Altura, Datanasc);
                     Console.ReadKey();
                     return true;
                 case "2":
                     Console.Clear();
-                    if (ValidaPessoa(pessoa.Nome, pessoa.Altura, pessoa.DaTaNasc))
-                        Console.WriteLine(pessoa);
+                    _individuo.ExibirInformacoes();
                     Console.ReadKey();
                     return true;
                 case "0":
@@ -298,6 +293,7 @@ namespace Principal
             Console.Write("Informe o volume: ");
             int.TryParse(Console.ReadLine(), out volume);
         }
+
         private void CapturarInputCanal(out int canal)
         {
             Console.Write("Informe o canal: ");
@@ -322,21 +318,5 @@ namespace Principal
             DateTime.TryParse(Console.ReadLine(), out DataNasc);
         }
 
-        private bool ValidaPessoa(string Nome, double Altura, DateTime DataNasc)
-        {
-            if (string.IsNullOrEmpty(Nome) || Altura <= 0 || !ValidarData(DataNasc.ToString()))
-            {
-                Console.Write("Dados da pessoa incorretos! Volte oa menu e insira novamente!");
-                return false;
-            }
-
-            return true;
-        }
-
-        private bool ValidarData(string data)
-        {
-            Regex r = new Regex(@"(\d{2}\/\d{2}\/\d{4} \d{2}:\d{2}:\d{2})");
-            return r.Match(data).Success;
-        }
     }
 }

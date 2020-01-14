@@ -182,10 +182,9 @@ namespace Principal
                     _menuPOO.MenuExercicio1POO();
                     return true;
                 case "2":
-                    Pessoa pessoa = new Pessoa();
                     while (ShowMenu)
                     {
-                        ShowMenu = _menuPOO.MenuExercicio2POO(pessoa);
+                        ShowMenu = _menuPOO.MenuExercicio2POO();
                     }
                     return true;
                 case "3":
@@ -233,8 +232,11 @@ namespace Principal
             services.AddSingleton<ILinq, Linq>();
             services.AddSingleton<IBanco, Banco>();
             services.AddSingleton<ITelespectador, Telespectador>();
+            services.AddSingleton<IIndividuo, Individuo>();
             services.AddTransient<MenusConsole>();
             services.AddTransient<MenusPOO>();
+            
+
 
             #endregion
 
