@@ -444,9 +444,10 @@ namespace Principal
             }
         }
 
-        public bool MenuExercicio9Console(List<int> inteiros)
+        public bool MenuExercicio9Console()
         {
             int value;
+            List<int> inteiros = new List<int>();
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
             Console.WriteLine("1) Inserir N Números Inteiros");
