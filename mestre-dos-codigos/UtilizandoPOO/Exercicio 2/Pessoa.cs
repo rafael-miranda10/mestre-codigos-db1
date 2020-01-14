@@ -31,10 +31,10 @@ namespace UtilizandoPOO.Exercicio_2
             set => _DataNasc = value;
         }
 
-        private int CalcularIdade(DateTime dataNasc)
+        public int CalcularIdade()
         {
-            int idade = DateTime.Now.Year - dataNasc.Year;
-            if(DateTime.Now.DayOfYear < dataNasc.DayOfYear)
+            int idade = DateTime.Now.Year - _DataNasc.Year;
+            if(DateTime.Now.DayOfYear < _DataNasc.DayOfYear)
             {
                 idade -= 1;
             }
@@ -43,7 +43,7 @@ namespace UtilizandoPOO.Exercicio_2
 
         public override string ToString()
         {
-            return $"Nome: {_Nome} possui a altura de : {_Altura} metros, nascida em: {_DataNasc.ToShortDateString()} com {CalcularIdade(_DataNasc)} anos de idade.";
+            return $"Nome: {_Nome} possui a altura de : {_Altura} metros, nascida em: {_DataNasc.ToShortDateString()} com {CalcularIdade()} anos de idade.";
         }
     }
 }
