@@ -4,7 +4,14 @@ namespace UtilizandoPOO.Exercicio_3
 {
     public class Banco : IBanco
     {
-        public void CapturarInputContaBancaria(ContaBancaria[] bancoDB1)
+        private ContaBancaria[] bancoDB1;
+
+        public Banco()
+        {
+            bancoDB1  = new ContaBancaria[4];
+        }
+
+        public void CapturarInputContaBancaria()
         {
             int numConta = 0;
             double saldo = 0;
@@ -32,9 +39,9 @@ namespace UtilizandoPOO.Exercicio_3
             }
         }
 
-        public bool EfetuarDeposito(ContaBancaria[] bancoDB1)
+        public bool EfetuarDeposito()
         {
-            if (ExisteConta(bancoDB1))
+            if (ExisteConta())
             {
                 double valor = 0;
                 Console.Write($"Informe o valor do depósito:");
@@ -50,9 +57,9 @@ namespace UtilizandoPOO.Exercicio_3
             return false;
         }
 
-        public bool EfetuarSaque(ContaBancaria[] bancoDB1)
+        public bool EfetuarSaque()
         {
-            if (ExisteConta(bancoDB1))
+            if (ExisteConta())
             {
                 double valor = 0;
                 Console.Write($"Informe o valor do saque:");
@@ -68,9 +75,9 @@ namespace UtilizandoPOO.Exercicio_3
             return false;
         }
 
-        public bool ExibirContasBancarias(ContaBancaria[] bancoDB1)
+        public bool ExibirContasBancarias()
         {
-            if (ExisteConta(bancoDB1))
+            if (ExisteConta())
             {
                 for (int i = 0; i < bancoDB1.Length; i++)
                 {
@@ -92,7 +99,7 @@ namespace UtilizandoPOO.Exercicio_3
             return false;
         }
 
-        private bool ExisteConta(ContaBancaria[] bancoDB1)
+        private bool ExisteConta()
         {
             return (bancoDB1[0] != null) ? true : false;
         }

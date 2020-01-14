@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using UtilizandoPOO.Exercicio_1;
 using UtilizandoPOO.Exercicio_2;
 using UtilizandoPOO.Exercicio_3;
@@ -172,7 +171,7 @@ namespace Principal
             }
         }
 
-        public bool MenuExercicio3POO(ContaBancaria[] bancoDB1)
+        public bool MenuExercicio3POO()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
@@ -187,24 +186,24 @@ namespace Principal
             {
                 case "1":
                     Console.Clear();
-                    _banco.CapturarInputContaBancaria(bancoDB1);
+                    _banco.CapturarInputContaBancaria();
                     Console.ReadKey();
                     return true;
                 case "2":
                     Console.Clear();
-                    if (_banco.EfetuarSaque(bancoDB1))
+                    if (_banco.EfetuarSaque())
                         Console.Write("Operação realizada! Por favor consulte o extrato");
                     Console.ReadKey();
                     return true;
                 case "3":
                     Console.Clear();
-                    if (_banco.EfetuarDeposito(bancoDB1))
+                    if (_banco.EfetuarDeposito())
                         Console.Write("Operação realizada! Por favor consulte o extrato");
                     Console.ReadKey();
                     return true;
                 case "4":
                     Console.Clear();
-                    _banco.ExibirContasBancarias(bancoDB1);
+                    _banco.ExibirContasBancarias();
                    Console.ReadKey();
                     return true;
                 case "0":

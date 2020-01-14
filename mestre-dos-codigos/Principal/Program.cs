@@ -188,10 +188,9 @@ namespace Principal
                     }
                     return true;
                 case "3":
-                    ContaBancaria[] bancoDB1 = new ContaBancaria[4];
                     while (ShowMenu)
                     {
-                        ShowMenu = _menuPOO.MenuExercicio3POO(bancoDB1);
+                        ShowMenu = _menuPOO.MenuExercicio3POO();
                     }
                     return true;
                 case "4":
