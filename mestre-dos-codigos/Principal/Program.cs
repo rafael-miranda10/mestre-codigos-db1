@@ -20,6 +20,7 @@ using TrabalhandoNoConsole.Exercicio_8.Implementacao;
 using TrabalhandoNoConsole.Exercicio_8.Interface;
 using TrabalhandoNoConsole.Exercicio_9.Implementacao;
 using TrabalhandoNoConsole.Exercicio_9.Interface;
+using UtilizandoPOO.Exercicio_1;
 using UtilizandoPOO.Exercicio_2;
 using UtilizandoPOO.Exercicio_3;
 using UtilizandoPOO.Exercicio_4;
@@ -228,6 +229,7 @@ namespace Principal
             services.AddSingleton<IBanco, Banco>();
             services.AddSingleton<ITelespectador, Telespectador>();
             services.AddSingleton<IIndividuo, Individuo>();
+            services.AddSingleton<IPoo, Poo>();
             services.AddTransient<MenusConsole>();
             services.AddTransient<MenusPOO>();
             

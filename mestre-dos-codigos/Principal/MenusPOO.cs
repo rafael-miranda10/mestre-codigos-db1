@@ -9,15 +9,17 @@ namespace Principal
 {
     public class MenusPOO
     {
+        private readonly IPoo _poo;
         private readonly IBanco _banco;
         private readonly ITelespectador _telespectador;
         private readonly IIndividuo _individuo;
 
-        public MenusPOO(IBanco banco, ITelespectador telespectador, IIndividuo individuo)
+        public MenusPOO(IBanco banco, ITelespectador telespectador, IIndividuo individuo, IPoo poo)
         {
             _banco = banco;
             _telespectador = telespectador;
             _individuo = individuo;
+            _poo = poo;
         }
         public bool MenuExercicio1POO()
         {
@@ -25,7 +27,7 @@ namespace Principal
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
             Console.WriteLine("1) Abstração/Polimorfismo/Encapsulamento");
-            Console.WriteLine("2) IDisposeble");
+            Console.WriteLine("2) IDisposable");
             Console.WriteLine("3) IComparable");
             Console.WriteLine("4) ICloneable");
             Console.WriteLine("5) INumerable");
@@ -42,47 +44,22 @@ namespace Principal
                     return true;
                 case "2":
                     Console.Clear();
-                    ClasseBaseDispose obj = new ClasseBaseDispose();
-                    obj.ExecutarAlgo();
-                    obj.Dispose();
+                    _poo.ExecutarIDisposable();
                     Console.ReadKey();
                     return true;
                 case "3":
                     Console.Clear();
-                    List<Empregado> listaEmpregado = new List<Empregado>();
-                    listaEmpregado.Add(new Empregado() { Nome = "Rafael", Salario = 4.500 });
-                    listaEmpregado.Add(new Empregado() { Nome = "Djalma Jorge", Salario = 9.365 });
-                    listaEmpregado.Add(new Empregado() { Nome = "Tiringa", Salario = 1.852 });
-                    listaEmpregado.Add(new Empregado() { Nome = "Zobaido", Salario = 1.265 });
-                    listaEmpregado.Add(new Empregado() { Nome = "Ana", Salario = 1.265 });
-
-                    //Utilizando a interface Icomparable
-                    listaEmpregado.Sort();
-
-                    foreach (var empregado in listaEmpregado)
-                    {
-                        Console.Write(empregado + "\n");
-                    }
+                    _poo.ExecutarIComparable();
                     Console.ReadKey();
                     return true;
                 case "4":
                     Console.Clear();
-                    Humano p1 = new Humano("Rafael", "(18) 99654-8521", 29);
-                    Humano p2 = (Humano)p1.Clone();
-                    p2.Nome = "Djalma Jorge";
-                    Console.Write(p1 + "\n");
-                    Console.Write(p2);
+                    _poo.ExecutarICloneable();
                     Console.ReadKey();
                     return true;
                 case "5":
                     Console.Clear();
-                    Cachorro[] dogArray = new Cachorro[3];
-                    dogArray[0] = new Cachorro("Greg", "Shitzu");
-                    dogArray[1] = new Cachorro("Budy", "Golden");
-                    dogArray[2] = new Cachorro("Thor", "PitBull");
-                    Canil canilList = new Canil(dogArray);
-                    foreach (Cachorro c in canilList)
-                        Console.Write($"Nome do cachorro: {c.Nome}, raça do cachorro: {c.Raca} \n");
+                    _poo.ExecutarINumerable();
                     Console.ReadKey();
                     return true;
                 case "0":
@@ -204,7 +181,7 @@ namespace Principal
                 case "4":
                     Console.Clear();
                     _banco.ExibirContasBancarias();
-                   Console.ReadKey();
+                    Console.ReadKey();
                     return true;
                 case "0":
                     return false;
@@ -233,7 +210,7 @@ namespace Principal
                 case "1":
                     Console.Clear();
                     CapturarInputTelevisao(out canal, out volume);
-                    _telespectador.LigarTelevisao( canal, volume);
+                    _telespectador.LigarTelevisao(canal, volume);
                     Console.ReadKey();
                     return true;
                 case "2":
