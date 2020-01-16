@@ -81,5 +81,9 @@ namespace UtilizandoPOO.Exercicio_4
             else
                 Console.Write("A TV não está conectada na tomada!");
         }
+        public int RetornaCanal() => _controle.RetornaCanal();
+
+        public int RetornaVolume() => _controle.RetornaVolume();
+
     }
 }

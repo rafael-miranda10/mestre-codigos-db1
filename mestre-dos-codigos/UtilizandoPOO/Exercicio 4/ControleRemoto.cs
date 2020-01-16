@@ -77,5 +77,10 @@ namespace UtilizandoPOO.Exercicio_4
                 Console.WriteLine("A televisão está no último canal disponível!");
             }
         }
+
+        public int RetornaCanal() => Canal;
+
+        public int RetornaVolume() => Volume;
+        
     }
 }

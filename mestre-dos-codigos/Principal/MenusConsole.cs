@@ -104,6 +104,7 @@ namespace Principal
                     Console.Clear();
                     CapturarInputFuncionario(out Nome, out Salario);
                     _exercicio2.AdicionarFuncionario(Nome, Salario);
+                    Console.ReadKey();
                     return true;
                 case "2":
                     Console.Clear();

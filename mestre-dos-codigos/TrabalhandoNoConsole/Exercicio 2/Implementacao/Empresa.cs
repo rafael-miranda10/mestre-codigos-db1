@@ -13,6 +13,8 @@ namespace TrabalhandoNoConsole.Exercicio_2.Implementacao
         }
 
         public List<Funcionarios> funcionarios { get; private set; }
+        public int PosMenor { get; private set; }
+        public int PosMaior { get; private set; }
 
         public void AdicionarFuncionario(string Nome, double Salario)
         {
@@ -22,8 +24,6 @@ namespace TrabalhandoNoConsole.Exercicio_2.Implementacao
             {
                 foreach (var item in funcionario.Notifications)
                     Console.WriteLine($"Não é possível adicionar o funcionário! Motivo: {item.Message}");
-
-                Console.ReadKey();
             }
 
             if (funcionario.Valid)
@@ -54,6 +54,8 @@ namespace TrabalhandoNoConsole.Exercicio_2.Implementacao
                 Console.WriteLine($"O funcionário: {funcionarios[0].Nome} tem o menor salário: {FormatarStringSalario(funcionarios[0].Salario)}");
                 Console.WriteLine($"O funcionário: {funcionarios[tamanho-1].Nome} tem o maior salário: {FormatarStringSalario(funcionarios[tamanho-1].Salario)}");
             }
+            PosMaior = tamanho - 1;
+            PosMenor = 0;
         }
 
 
@@ -84,7 +86,8 @@ namespace TrabalhandoNoConsole.Exercicio_2.Implementacao
                 Console.WriteLine($"O funcionário: {funcionarios[indexMenor].Nome} tem o menor salário: {FormatarStringSalario(funcionarios[indexMenor].Salario)}");
                 Console.WriteLine($"O funcionário: {funcionarios[indexMaior].Nome} tem o maior salário: {FormatarStringSalario(funcionarios[indexMaior].Salario)}");
             }
-
+            PosMaior = indexMaior;
+            PosMenor = indexMenor;
         }
 
         public void MaiorMenorWhile()
@@ -115,7 +118,8 @@ namespace TrabalhandoNoConsole.Exercicio_2.Implementacao
                 Console.WriteLine($"O funcionário: {funcionarios[indexMenor].Nome} tem o menor salário: {FormatarStringSalario(funcionarios[indexMenor].Salario)}");
                 Console.WriteLine($"O funcionário: {funcionarios[indexMaior].Nome} tem o maior salário: {FormatarStringSalario(funcionarios[indexMaior].Salario)}");
             }
-
+            PosMaior = indexMaior;
+            PosMenor = indexMenor;
         }
 
         private string FormatarStringSalario(double Salario)

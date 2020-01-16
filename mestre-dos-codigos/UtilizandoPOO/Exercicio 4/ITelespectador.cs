@@ -9,5 +9,7 @@
         void CanalAnterior();
         void IrParaCanal(int valor);
         void OQuesEstouAssistindo();
+        int RetornaCanal();
+        int RetornaVolume();
     }
 }
