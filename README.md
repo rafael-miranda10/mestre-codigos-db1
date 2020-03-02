@@ -110,7 +110,7 @@
    * IComparable:
      Essa interface é implementada por tipos cujos valores podem ser ordenados ou classificados. Requer que a implementação defina um
      único método "CompareTo(Object)" que indica se a ordem de classificação anterior, posterior ou igual a um segundo objeto do mesmo 
-     tipo. A implementação de IComparable é chamada automaticamente por métodos Array.Sprt e ArrayList.Sort. 
+     tipo. A implementação de IComparable é chamada automaticamente por métodos Array.Sort e ArrayList.Sort. 
      
    * ICloneable: 
      Cria uma nova instância d uma classe com o mesmo valor de uma instãncia existente. Simplismente requer a implementação do método
