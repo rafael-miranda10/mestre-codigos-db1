@@ -33,12 +33,12 @@ namespace UtilizandoPOO.Exercicio_2
 
         public int CalcularIdade()
         {
-            int idade = DateTime.Now.Year - _DataNasc.Year;
-            if(DateTime.Now.DayOfYear < _DataNasc.DayOfYear)
-            {
-                idade -= 1;
-            }
-            return idade;
+            //int idade = DateTime.Now.Year - _DataNasc.Year;
+            //if (DateTime.Now.Month < _DataNasc.Month || (DateTime.Now.Month == _DataNasc.Month && DateTime.Now.Day < _DataNasc.Day))
+            //    idade--;
+            //return idade;
+
+            return DateTime.Now.Year - _DataNasc.Year - (_DataNasc.DayOfYear < DateTime.Now.DayOfYear ? 0 : 1);
         }
 
         public override string ToString()

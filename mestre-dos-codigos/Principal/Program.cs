@@ -45,7 +45,6 @@ namespace Principal
             Console.WriteLine("*** Menu ***\n");
             Console.WriteLine("1) Trabalhando no console");
             Console.WriteLine("2) Utilizando POO");
-            Console.WriteLine("3) Trabalhando com testes");
             Console.WriteLine("0) Sair");
             Console.Write("\r\nEscolha uma opção: ");
 
