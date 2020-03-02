@@ -11,7 +11,8 @@
  
  Quando solicitado que digite um valor e você desejar informar um valor decimal, o projeto está trabalhando com a cultura brasileira, ou
  seja, utilize virgula para a representação de valores decimais. Ex: 1,2.
-
+ 
+ Para executar os testes utilize a caixa de ferrameta Test Explorer do Visual Studio.
 
 
 # Perguntas teóricas de introdução
