@@ -13,6 +13,8 @@
  seja, utilize virgula para a representação de valores decimais. Ex: 1,2.
  
  Para executar os testes utilize a caixa de ferrameta Test Explorer do Visual Studio.
+ 
+ Para os testes que trabalham com datas e calculo de idade por favor fique atento com os parâmetros (pois dependendo do mês que o projeto for executado, o parâmetro "resultado esperado" pode já não ser mais o mesmo.)
 
 
 # Perguntas teóricas de introdução
