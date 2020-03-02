@@ -66,14 +66,10 @@
    portanto, ele dificilmente poderá ser aplicado em ambinetes legados e suporta ainda quatro tipos de aplicações: console, ASP.NET
    Core, cloud, e Universal Windows Platform (UWP).
 
-### .NET STANDARD
-   A Microsoft padronizou as APIs de runtime da plataforma .NET para possibilitar que um código seja compatível com diferentes runtimes.
-   O nome .net standard é referente as biliotecas do .net e elas garantem uma sintonia maior entre .net core e .net framework. Nem todas
-   as classes existentes foram padronizadas para esse suporte e é ai que o .net standard.
-   
-   Cada implementação do framework tem sua própria coleção de bibliotecas de classes (BCL - Base Class libraries) e o .net standard é
-   é uma especificação para implementar a BCL. A relação entre o .NET Standard e uma implementação .NET é a mesma entre a especificação
-   HTML e um navegador. O segundo é uma implementação da primeira.
+### .NET FRAMEWORK
+  É um framework voltado a aplicações windows e oferece uma variedade de serviços aos aplicativos em execução e também prove a    
+  manipulçao de tais aplicativos. o framework oferece ainda  uma bibilioteca de códigos testados e que podem ser reutilizados por
+  desenvolvedores de software. Não é cross-plataform.
 
 # Perguntas Utilizando POO
 
@@ -161,6 +157,8 @@ https://docs.microsoft.com/pt-br/dotnet/csharp/getting-started/introduction-to-t
 https://www.caelum.com.br/download/caelum-csharp-dotnet-fn13.pdf
 
 https://www.devmedia.com.br/a-evolucao-da-linguagem-de-programacao-csharp/28639
+
+https://docs.microsoft.com/pt-br/dotnet/standard/choosing-core-framework-server
 
 https://www.brunobrito.net.br/asp-net-core/
 
