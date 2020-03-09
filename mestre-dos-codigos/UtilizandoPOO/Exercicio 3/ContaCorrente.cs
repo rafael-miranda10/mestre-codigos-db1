@@ -18,7 +18,7 @@ namespace UtilizandoPOO.Exercicio_3
 
         public  void MostraDados()
         {
-            Console.Write($"A conta corrente de número: {NumeroConta} possui o saldo de : {SaldoConta}\n");
+            Console.Write($"A conta corrente de número: {NumeroConta} possui o saldo de : {SaldoConta.ToString("C")}\n");
         }
 
         public override bool Sacar(double valor)

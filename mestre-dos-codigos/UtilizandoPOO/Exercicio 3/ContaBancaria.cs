@@ -14,6 +14,5 @@
 
         public abstract bool Sacar(double valor);
         public abstract void Depositar(double valor);
-
     }
 }
