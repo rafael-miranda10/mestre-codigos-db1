@@ -14,7 +14,9 @@
  
  Para executar os testes utilize a caixa de ferrameta Test Explorer do Visual Studio.
  
- Para os testes que trabalham com datas e calculo de idade por favor fique atento com os parâmetros (pois dependendo do mês que o projeto for executado, o parâmetro "resultado esperado" pode já não ser mais o mesmo.)
+ Para os testes que trabalham com datas e calculo de idade por favor fique atento com os parâmetros (pois dependendo do mês que o projeto for executado, o parâmetro "resultado esperado" pode já não ser mais o mesmo.).
+ 
+ Alguns trechos e código comentados são para exemplificar mais de uma forma de se fazer determinada tarefa.
 
 
 # Perguntas teóricas de introdução
