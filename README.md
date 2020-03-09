@@ -14,7 +14,9 @@
  
  Para executar os testes utilize a caixa de ferrameta Test Explorer do Visual Studio.
  
- Para os testes que trabalham com datas e calculo de idade por favor fique atento com os parâmetros (pois dependendo do mês que o projeto for executado, o parâmetro "resultado esperado" pode já não ser mais o mesmo.)
+ Para os testes que trabalham com datas e calculo de idade por favor fique atento com os parâmetros (pois dependendo do mês que o projeto for executado, o parâmetro "resultado esperado" pode já não ser mais o mesmo.).
+ 
+ Alguns trechos e código comentados são para exemplificar mais de uma forma de se fazer determinada tarefa.
 
 
 # Perguntas teóricas de introdução
@@ -51,7 +53,7 @@
      populares
     
    * Multiplataforma:
-     Independente de ambiente windows e está disponível em diferentes plataformas como Linus e macOS. Pode ser desenvolvido utilizando
+     Independente de ambiente windows e está disponível em diferentes plataformas como Linux e macOS. Pode ser desenvolvido utilizando
      o Visual Studio Code, uma IDE multiplataforma.
      
    * OpenSource:
@@ -98,8 +100,8 @@
    
 ## 5 - Quando usar uma classe abstrata e quando devo usar uma interface?
    Resumidamente utilizamos uma interface quando necessitamos que classes de diferentes origens (Herança) tenham em comum métodos e que
-   possam ser acessados através de uma mesma variável. Uma classe abstrata é usada quando ha a necessidade que uma classe herde dela e
-   implemente alguns métodos, mas que também poassma ter métodos implementados na própria classe abstrata.
+   possam ser acessados através de uma mesma variável. Uma classe abstrata é usada quando há a necessidade que uma classe herde dela e
+   implemente alguns métodos, mas que também possam ter métodos implementados na própria classe abstrata.
    
    
 ## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
@@ -170,6 +172,8 @@ https://docs.microsoft.com/pt-br/aspnet/core/?view=aspnetcore-3.1
 https://www.infoq.com/br/news/2017/11/dotnet-core-standard-difference/
 
 https://luizpauloprado.com.br/2017/03/24/net-framework-ou-net-core/
+
+https://www.todamateria.com.br/formula-de-bhaskara/
 
 ### Perguntas utilizando POO
 
