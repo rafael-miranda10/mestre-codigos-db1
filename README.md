@@ -51,7 +51,7 @@
      populares
     
    * Multiplataforma:
-     Independente de ambiente windows e está disponível em diferentes plataformas como Linus e macOS. Pode ser desenvolvido utilizando
+     Independente de ambiente windows e está disponível em diferentes plataformas como Linux e macOS. Pode ser desenvolvido utilizando
      o Visual Studio Code, uma IDE multiplataforma.
      
    * OpenSource:
