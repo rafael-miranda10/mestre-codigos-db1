@@ -98,8 +98,8 @@
    
 ## 5 - Quando usar uma classe abstrata e quando devo usar uma interface?
    Resumidamente utilizamos uma interface quando necessitamos que classes de diferentes origens (Herança) tenham em comum métodos e que
-   possam ser acessados através de uma mesma variável. Uma classe abstrata é usada quando ha a necessidade que uma classe herde dela e
-   implemente alguns métodos, mas que também poassma ter métodos implementados na própria classe abstrata.
+   possam ser acessados através de uma mesma variável. Uma classe abstrata é usada quando há a necessidade que uma classe herde dela e
+   implemente alguns métodos, mas que também possam ter métodos implementados na própria classe abstrata.
    
    
 ## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
