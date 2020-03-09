@@ -173,6 +173,8 @@ https://www.infoq.com/br/news/2017/11/dotnet-core-standard-difference/
 
 https://luizpauloprado.com.br/2017/03/24/net-framework-ou-net-core/
 
+https://www.todamateria.com.br/formula-de-bhaskara/
+
 ### Perguntas utilizando POO
 
 https://www.devmedia.com.br/os-4-pilares-da-programacao-orientada-a-objetos/9264
