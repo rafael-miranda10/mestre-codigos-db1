@@ -10,7 +10,7 @@
  o número zero não fará parte da lista.
  
  Quando solicitado que digite um valor e você desejar informar um valor decimal, o projeto está trabalhando com a cultura brasileira, ou
- seja, utilize virgula para a representação de valores decimais. Ex: 1,2.
+ seja, utilize virgula para a representação de valores decimais. Ex: 1,2 e/ou 5.365,45.
  
  Para executar os testes utilize a caixa de ferrameta Test Explorer do Visual Studio.
  
@@ -22,15 +22,15 @@
 # Perguntas teóricas de introdução
 
 ## 1 - Em quais linguagens o C# foi inspirado?
-   A microsoft contratou o engenheiro Anders Heijlsberg (um dos principais nomes por trás do Delphi) para liderar um novo 
+   A Microsoft contratou o engenheiro Anders Heijlsberg (um dos principais nomes por trás do Delphi) para liderar um novo 
    projeto de linguagem de programação, inicialmente chamado de COOL (C-Like Object Oriented Language). Tal projeto teve o 
-   seu design baseado em outras liguagens do mercado como Java, C, C++, Smalltalk, Delphi e VB. A ideia era estudar os problemas
+   seu design baseado em outras linguagens do mercado como Java, C, C++, Smalltalk, Delphi e VB. A ideia era estudar os problemas
    existentes e incorporar soluções. 
    Assim, no ano de 2002, o projeto COOL foi rebatizado e lançado como linguagem C# 1.0
    
 ## 2 - Inicialmente o C# foi criado para qual finalidade?
-   Inicialmente a microsoft tinha um projeto chamado de J++ (uma versão Java que só podia ser executado no ambiente microsoft), porém 
-   por motivos de violação de licenciamento, a microsoft foi obrigada a repensar sobre como lidar com diferentes linguagens e tecnologias
+   Inicialmente a Microsoft tinha um projeto chamado de J++ (uma versão Java que só podia ser executado em ambinetes da empresa), porém 
+   por motivos de violação de licenciamento, a microsoft foi obrigada a repensar sobre como lidar com diferentes linguagens e    tecnologias
    e assim começou a trabalhar em uma nova plataforma que seria base de todas as suas soluções, que posteriormente foi chamada de .NET.
    
    O C# surgiu com a finalidade de possibilitar a criação de soluções executáveis sobre a plataforma .NET Framework, com o intuito de
@@ -38,15 +38,15 @@
    eletrônico específico, e sim para a plataforma .NET Framework.
    
 ## 3 - Quais os principais motivos para a Microsoft ter migrado para o Core?
-   O Core é um framework completamente novo, é outra arquitetura. A microsoft ampliou o alcance do .Net e tornou possível implantar
+   O Core é um framework completamente novo, é outra arquitetura. A Microsoft ampliou o alcance do .Net e tornou possível implantar
    aplicativos ASP.NET Core em um conjunto maior de ambientes com uma ampla variedade de distribuições Linux, macOS e containers.
    
    Os principais motivos para a mudança são:
    
    * Extensível: 
-      Foi construido por uma série de componentes e interfaces independentes e com características bem definidas. Os
-      componentes core implementam uma interface ou herdam de classes abstratas. É possível substituir os principais componentes ou 
-      extender seu comportamentos por outros de sua própria implementação.
+      Foi construído por uma série de componentes e interfaces independentes e com características bem definidas. Os
+      componentes "core" implementam uma interface ou herdam de classes abstratas. É possível substituir os principais componentes ou 
+      estender seus comportamentos por outros de sua própria implementação.
     
    * Testável:
      Por ter mantido sua arquitetura MVC o ASP.NET Core, a controller pode ser facilmente isolada. Facilmente testável por frameworks
@@ -60,20 +60,20 @@
      O Core passou a ser open source e é possível baixar o código-fonte no GitHub.
      
    * Performance:
-     O pipeline de solicitação HTTP é leve e de alto desenpenho.
+     O pipeline de solicitação HTTP é leve e de alto desempenho.
      
    
 ## 4 - Cite as principais diferenças entre .Net Full Framework e .Net Core.
 
 ### .NET CORE
-   O Core é um framework completamente novo, é outra arquitetura e sua caracteristica mais marcante é ser cross-plataform, ou seja, 
+   O Core é um framework completamente novo, é outra arquitetura e sua característica mais marcante é ser cross-plataform, ou seja, 
    é possível implantar aplicativos em windows, linux e macOS. Ele não possui alguns dos recursos mais comuns do .Net Framework, 
-   portanto, ele dificilmente poderá ser aplicado em ambinetes legados e suporta ainda quatro tipos de aplicações: console, ASP.NET
+   portanto, ele dificilmente poderá ser aplicado em ambientes legados e suporta ainda quatro tipos de aplicações: console, ASP.NET
    Core, cloud, e Universal Windows Platform (UWP).
 
 ### .NET FRAMEWORK
-  É um framework voltado a aplicações windows e oferece uma variedade de serviços aos aplicativos em execução e também prove a    
-  manipulçao de tais aplicativos. o framework oferece ainda  uma bibilioteca de códigos testados e que podem ser reutilizados por
+  É um framework voltado a aplicações windows e oferece uma variedade de serviços aos aplicativos em execução e prove a    
+  manipulação de tais aplicativos. o framework oferece ainda  uma biblioteca de códigos testados e que podem ser reutilizados por
   desenvolvedores de software. Não é cross-plataform.
 
 # Perguntas Utilizando POO
@@ -86,12 +86,12 @@
 ## 2 - O que é polimorfismo?
    É um dos quatro pilares da programação orientada a objetos. A palavra polimorfismo é um substantivo masculino que se refere a
    qualidade ou estado de ser capaz de assumir diferentes formas e isso é lavado para dentro da programação. Objetos filhos herdam as
-   as características e ações de seus "ancestrais" e em alguns casos, é necessário que as ações para um mesmo método seja diferente, ou
+   características e ações de seus "ancestrais" e em alguns casos, é necessário que as ações para um mesmo método sejam diferentes, ou
    seja, consiste na alteração do funcionamento interno de um método herdado de um objeto pai.
 
 ## 3 - O que é abstração?
    Faz parte dos quatro pilares da POO e é a representação de um objeto real. Tal objeto deve conter uma identidade única,
-   caracteristicas prórias (propriedades) e por fim, as ações ou eventos (métodos).
+   características próprias (propriedades) e por fim, as ações ou eventos (métodos).
    
 ## 4 - O que é encapsulamento?
    Também é um dos quatro pilares da POO. Podemos dizer que é o elemento que adiciona segurança a uma aplicação escondendo as 
@@ -106,8 +106,8 @@
    
 ## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
    * IDisposable: 
-     O principal objetivo dessa interface é fornecer um mecanismo para liberar recursos não gerenciaveis. Existe um coletor de lixo que
-     liberar automaticamente a memória alocada para um objeto, porém, não é possivel saber quando essa liberação irá ocorrer. Assim, 
+     O principal objetivo dessa interface é fornecer um mecanismo para liberar recursos não gerenciáveis. Existe um coletor de lixo que
+     liberar automaticamente a memória alocada para um objeto, porém, não é possível saber quando essa liberação irá ocorrer. Assim, 
      utilize o método Dispose dessa interface para liberar o recurso quando o mesmo não for mais utilizado. O consumidor do objeto deve
      realizar essa ação.
      
@@ -117,8 +117,8 @@
      tipo. A implementação de IComparable é chamada automaticamente por métodos Array.Sort e ArrayList.Sort. 
      
    * ICloneable: 
-     Cria uma nova instância d uma classe com o mesmo valor de uma instãncia existente. Simplismente requer a implementação do método
-     Clone() para retornrar uma cópia da instâancia do objeto atual.
+     Cria uma nova instância de uma classe com o mesmo valor de uma instãncia existente. Simplesmente requer a implementação do método
+     Clone() para retornar  uma cópia da instância do objeto atual.
    
    * IEnumerable:
      Dá suporte a uma iteração simples em uma coleção não genérica. É uma interface que marca as classes que desejam implementá-la para
