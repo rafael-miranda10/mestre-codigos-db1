@@ -10,7 +10,7 @@
  o número zero não fará parte da lista.
  
  Quando solicitado que digite um valor e você desejar informar um valor decimal, o projeto está trabalhando com a cultura brasileira, ou
- seja, utilize virgula para a representação de valores decimais. Ex: 1,2.
+ seja, utilize virgula para a representação de valores decimais. Ex: 1,2 e/ou 5.365,45.
  
  Para executar os testes utilize a caixa de ferrameta Test Explorer do Visual Studio.
  
