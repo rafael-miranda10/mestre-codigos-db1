@@ -71,7 +71,6 @@ namespace Principal
 
         private bool MenuCalcularArea()
         {
-            Forma forma = null;
             double lado = 0, altura = 0, _base = 0, raio = 0;
             Console.Clear();
             Console.WriteLine("*** Calcular Área ***\n");

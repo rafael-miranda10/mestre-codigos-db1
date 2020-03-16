@@ -75,7 +75,6 @@ namespace Principal
         {
             double valorA = 0, valorB = 0;
             bool ShowMenu = true;
-            List<int> inteiros;
             ServiceProvider container = RegistrarServices();
             var _menuConsole = container.GetRequiredService<MenusConsole>();
 
