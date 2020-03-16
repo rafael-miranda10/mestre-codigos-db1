@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
 using TrabalhandoNoConsole.Exercicio_1.Implementacao;
 using TrabalhandoNoConsole.Exercicio_1.Interface;
@@ -205,9 +204,9 @@ namespace Principal
         {
             Console.Clear();
             Console.Write("Informe o valor de a: ");
-            Double.TryParse(Console.ReadLine(), out valorA);
+            Double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out valorA);
             Console.Write("Informe o valor de b: ");
-            Double.TryParse(Console.ReadLine(), out valorB);
+            Double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out valorB);
         }
 
         private static ServiceProvider RegistrarServices()
@@ -230,8 +229,6 @@ namespace Principal
             services.AddSingleton<IPoo, Poo>();
             services.AddTransient<MenusConsole>();
             services.AddTransient<MenusPOO>();
-            
-
 
             #endregion
 

@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Globalization;
 using UtilizandoPOO.Exercicio_1;
 using UtilizandoPOO.Exercicio_2;
 using UtilizandoPOO.Exercicio_3;
@@ -252,7 +252,7 @@ namespace Principal
             {
                 Console.WriteLine(prompt);
             }
-            while (!double.TryParse(Console.ReadLine(), out valor));
+            while (!Double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out valor));
         }
 
         private void CapturarInputTelevisao(out int canal, out int volume)
@@ -277,9 +277,9 @@ namespace Principal
             Console.Write("Informe o nome da pessoa: ");
             Nome = Console.ReadLine();
             Console.Write("Informe a altura da pessoa (em metros. ex: 1,80): ");
-            Double.TryParse(Console.ReadLine(), out Altura);
+            Double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out Altura);
             Console.Write("Informe a data de nascimento (ex: 03/05/1985): ");
-            DateTime.TryParse(Console.ReadLine(), out DataNasc);
+            DateTime.TryParse(Console.ReadLine(), new CultureInfo("pt-BR"), DateTimeStyles.None, out DataNasc);
         }
 
     }

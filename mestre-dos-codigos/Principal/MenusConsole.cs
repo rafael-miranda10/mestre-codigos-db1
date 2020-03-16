@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using TrabalhandoNoConsole.Exercicio_1.Interface;
 using TrabalhandoNoConsole.Exercicio_2.Interface;
 using TrabalhandoNoConsole.Exercicio_3.Interface;
@@ -446,7 +447,7 @@ namespace Principal
             Console.Write("Informe o nome do funcionário: ");
             Nome = Console.ReadLine();
             Console.Write("Informe o salário do funcionário: ");
-            Double.TryParse(Console.ReadLine(), out Salario);
+            Double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out Salario);
         }
 
         private void CapturarInputAluno(out string Nome, out double Nota1, out double Nota2)
@@ -513,7 +514,7 @@ namespace Principal
                 {
                     Console.WriteLine($"Informe o {i + 1} número decimal: ");
                 }
-                while (!Decimal.TryParse(Console.ReadLine(), out resultado));
+                while (!Decimal.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out resultado));
 
                 if (resultado == 0)
                 {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace UtilizandoPOO.Exercicio_3
 {
@@ -23,7 +24,7 @@ namespace UtilizandoPOO.Exercicio_3
                     Console.Write($"Informe o número da conta corrente {i + 1}:");
                     int.TryParse(Console.ReadLine(), out numConta);
                     Console.Write($"Informe o saldo da conta corrente {i + 1}:");
-                    double.TryParse(Console.ReadLine(), out saldo);
+                    double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out saldo);
                     var contaC = new ContaCorrente(numConta, saldo);
                     bancoDB1[i] = contaC;
                 }
@@ -32,7 +33,7 @@ namespace UtilizandoPOO.Exercicio_3
                     Console.Write($"Informe o número da conta especial {i - 1}:");
                     int.TryParse(Console.ReadLine(), out numConta);
                     Console.Write($"Informe o saldo da conta especial {i - 1}:");
-                    double.TryParse(Console.ReadLine(), out saldo);
+                    double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out saldo);
                     var contaE = new ContaEspecial(numConta, saldo);
                     bancoDB1[i] = contaE;
                 }
@@ -45,7 +46,7 @@ namespace UtilizandoPOO.Exercicio_3
             {
                 double valor = 0;
                 Console.Write($"Informe o valor do depósito:");
-                double.TryParse(Console.ReadLine(), out valor);
+                double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out valor);
 
                 for (int i = 0; i < bancoDB1.Length; i++)
                 {
@@ -63,7 +64,7 @@ namespace UtilizandoPOO.Exercicio_3
             {
                 double valor = 0;
                 Console.Write($"Informe o valor do saque:");
-                double.TryParse(Console.ReadLine(), out valor);
+                double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out valor);
 
                 for (int i = 0; i < bancoDB1.Length; i++)
                 {
