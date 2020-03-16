@@ -7,14 +7,14 @@
  Quando estiver em um menu de opções e desejar sair ou voltar ao menu anterior basta digitar a opção 0 (zero).
  
  Quando estiver digitando uma lista de valores e desejar parar o processo de inserção basta digitar 0 (zero). Lembre-se que dessa forma
- o núemro zero não fará parte da lista.
+ o número zero não fará parte da lista.
  
  Quando solicitado que digite um valor e você desejar informar um valor decimal, o projeto está trabalhando com a cultura brasileira, ou
  seja, utilize virgula para a representação de valores decimais. Ex: 1,2.
  
  Para executar os testes utilize a caixa de ferrameta Test Explorer do Visual Studio.
  
- Para os testes que trabalham com datas e calculo de idade por favor fique atento com os parâmetros (pois dependendo do mês que o projeto for executado, o parâmetro "resultado esperado" pode já não ser mais o mesmo.).
+ Para os testes que trabalham com datas e cálculo de idade por favor fique atento com os parâmetros (pois dependendo do mês que o projeto for executado, o parâmetro "resultado esperado" pode já não ser mais o mesmo.).
  
  Alguns trechos e código comentados são para exemplificar mais de uma forma de se fazer determinada tarefa.
 
