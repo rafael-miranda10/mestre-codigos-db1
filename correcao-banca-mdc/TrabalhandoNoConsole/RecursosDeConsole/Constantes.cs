@@ -26,5 +26,11 @@
         public const string MsgFuncionarioMenorSalario = "O funcionário: {0} tem o menor salário: {1}";
 
         #endregion
+
+        #region NumerosMultiplos
+        public const string MsgNumerosMultiplosPorProgressao = "O primeiro múltiplo de um número sempre será ele mesmo. Para descobrir os outros valores múltiplos de um número,\nbasta apenas somar o mesmo ao valor inicial, formando uma progressão aritmética.\n\n";
+        public const string MsgNumerosMultiplosPorDivisao = "Os múltiplos de um determinado número são todos os valores que, quando divididos por aquele número, resultam em uma divisão exata e sem resto.\n\n";
+        public const string MsgNumerosMultiplos = "O números multiplos de 3 entre 1 e 100 são: ";
+        #endregion
     }
 }

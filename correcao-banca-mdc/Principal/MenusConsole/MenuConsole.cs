@@ -6,10 +6,12 @@ namespace Principal.MenusConsole
     {
         private MenuCalculadora _menuCalculadora;
         private MenuEmpresa _menuEmpresa;
+        private MenuNumeroMultiplo _menuNumeroMultiplo;
         public MenuConsole()
         {
             _menuCalculadora = new MenuCalculadora();
             _menuEmpresa = new MenuEmpresa();
+            _menuNumeroMultiplo = new MenuNumeroMultiplo();
         }
 
         public void ExibirMenuConsole()
@@ -26,6 +28,9 @@ namespace Principal.MenusConsole
                         break;
                     case "2":
                         _menuEmpresa.ExibirMenuEmpresa();
+                        break;
+                    case "3":
+                        _menuNumeroMultiplo.ExibirMenuNumeroMultiplo();
                         break;
                     default:
                         break;
