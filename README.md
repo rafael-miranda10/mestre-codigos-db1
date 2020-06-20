@@ -87,22 +87,23 @@
    É um dos quatro pilares da programação orientada a objetos. A palavra polimorfismo é um substantivo masculino que se refere a
    qualidade ou estado de ser capaz de assumir diferentes formas e isso é lavado para dentro da programação. Objetos filhos herdam as
    características e ações de seus "ancestrais" e em alguns casos, é necessário que as ações para um mesmo método sejam diferentes, ou
-   seja, consiste na alteração do funcionamento interno de um método herdado de um objeto pai.
+   seja, consiste na alteração do funcionamento interno de características herdadas de um objeto pai.
 
 ## 3 - O que é abstração?
-   Faz parte dos quatro pilares da POO e é a representação de um objeto real. Tal objeto deve conter uma identidade única,
-   características próprias (propriedades) e por fim, as ações ou eventos (métodos).
+   A abstração é a forma de analisar algo retirando assim a riqueza dos detalhes ou seja, uma forma generalista de representação
+   para descrever algo sem dar detalhes. uma classe abstrata é uma forma de representar isso na programação.
    
 ## 4 - O que é encapsulamento?
-   Também é um dos quatro pilares da POO. Podemos dizer que é o elemento que adiciona segurança a uma aplicação escondendo as 
-   propriedades, e criando uma "caixa preta". O encapsulamento é baseado em propriedades privadas ligadas a métodos especiais chamados
-   de getters e setters, evitando assim o acesso direto a propriedade do objeto, com uma camada de segurança na aplicação.
+   Também é um dos quatro pilares da POO. Podemos dizer que o encapsulamento esconde a riqueza dos detalhes, e criando uma 
+   "caixa  preta". Está muito ligado a abstração, uma vez que no encapsulamento eu não quero ou preciso saber os detalhes de 
+   funcionamento, apenas utilizo sabendo que será executado a tarefa desejada.
    
 ## 5 - Quando usar uma classe abstrata e quando devo usar uma interface?
-   Resumidamente utilizamos uma interface quando necessitamos que classes de diferentes origens (Herança) tenham em comum métodos e que
-   possam ser acessados através de uma mesma variável. Uma classe abstrata é usada quando há a necessidade que uma classe herde dela e
-   implemente alguns métodos, mas que também possam ter métodos implementados na própria classe abstrata.
-   
+   Resumidamente utilizamos uma interface quando necessitamos  de "contratos" abstratos ou seja, não preciso saber os detalhes de 
+   uma funcionalidade apenas utilizo ela sabendo será executado. Por exemplo uma interface de IRepository onde existe o método
+   adicionar, eu não preciso saber como, apenas que será adicionado. Devo utilizar classe abstrata quando desejo que qualquer coisa
+   que derive dela tenha um comportamento em comum (um comportamento por inferência). Por exemplo uma classe cachorro que herda de 
+   animal onde cada animal deve respirar ou seja, um comportamento por inferência.
    
 ## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
    * IDisposable: 
