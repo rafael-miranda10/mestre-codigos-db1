@@ -3,6 +3,7 @@ using TrabalhandoNoConsole._1_Calculadora;
 using TrabalhandoNoConsole._2_Empresa;
 using TrabalhandoNoConsole._3__NumeroMultiplo;
 using TrabalhandoNoConsole._4_Escola;
+using TrabalhandoNoConsole._5_Bhaskara;
 
 namespace Principal.MenusConsole
 {
@@ -13,6 +14,7 @@ namespace Principal.MenusConsole
         private MenuEmpresa _menuEmpresa;
         private MenuNumeroMultiplo _menuNumeroMultiplo;
         private MenuEscola _menuEscola;
+        private MenuEquacao _menuEquacao;
         public MenuConsole()
         {
             _calculadora = new Calculadora(new Calculo());
@@ -20,6 +22,7 @@ namespace Principal.MenusConsole
             _menuEmpresa = new MenuEmpresa(new Empresa());
             _menuNumeroMultiplo = new MenuNumeroMultiplo(new NumeroMultiplo());
             _menuEscola = new MenuEscola(new Escola());
+            _menuEquacao = new MenuEquacao(new Equacao());
         }
 
         public void ExibirMenuConsole()
@@ -42,6 +45,9 @@ namespace Principal.MenusConsole
                         break;
                     case "4":
                         _menuEscola.ExibirMenuEscola();
+                        break;
+                    case "5":
+                        _menuEquacao.ExibirMenuCalculadora();
                         break;
                     default:
                         break;

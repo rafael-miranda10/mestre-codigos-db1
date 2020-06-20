@@ -1,0 +1,30 @@
+﻿using System;
+using TrabalhandoNoConsole.RecursosDeConsole;
+
+namespace TrabalhandoNoConsole._5_Bhaskara
+{
+    public class Equacao
+    {
+        private Bhaskara _bhaskara;
+        public Equacao()
+        {
+        }
+
+        public void CalcularEquacao(double a, double b, double c)
+        {
+            _bhaskara = new Bhaskara(a, b, c);
+
+            if (_bhaskara.Invalid)
+            {
+                foreach (var item in _bhaskara.Notifications)
+                    Console.WriteLine(Constantes.MsgValidacaoCalcularEquacao, item.Message);
+            }
+
+            if (_bhaskara.Valid)
+            {
+                _bhaskara.CalcularFormulaBhaskara();
+                _bhaskara.ExibirValoresDeR1eR2();
+            }
+        }
+    }
+}

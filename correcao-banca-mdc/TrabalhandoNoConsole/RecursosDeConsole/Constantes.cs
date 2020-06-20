@@ -49,5 +49,13 @@
         public const string MsgErroValidacaoAlunoNomeMin = "O nome do aluno deve conter pelo menos 3 caracteres";
         public const string MsgErroValidacaoAlunoNomeMax = "Nome do aluno deve conter até 50 caracteres";
         #endregion
+
+        #region Equação
+        public const string BaskaraA = "Bhaskara.A";
+        public const string MsgValidacaoValorA = "O valor de A deve ser diferente de 0 para que seja uma equação do 2º Grau.";
+        public const string MsgExibirResultadoFormula = "A formula de Bhaskara calculada com A: {0} B: {1} e C: {2} apresenta o resultado:\n";
+        public const string MsgExibirR = "R{0}: {1}";
+        public const string MsgValidacaoCalcularEquacao = "Não é possível calcular a formula de Bhaskara! Motivo: {0}";
+        #endregion
     }
 }
