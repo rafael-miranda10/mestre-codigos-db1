@@ -87,11 +87,11 @@
    É um dos quatro pilares da programação orientada a objetos. A palavra polimorfismo é um substantivo masculino que se refere a
    qualidade ou estado de ser capaz de assumir diferentes formas e isso é lavado para dentro da programação. Objetos filhos herdam as
    características e ações de seus "ancestrais" e em alguns casos, é necessário que as ações para um mesmo método sejam diferentes, ou
-   seja, consiste na alteração do funcionamento interno de um método herdado de um objeto pai.
+   seja, consiste na alteração do funcionamento interno de características herdadas de um objeto pai.
 
 ## 3 - O que é abstração?
-   Faz parte dos quatro pilares da POO e é a representação de um objeto real. Tal objeto deve conter uma identidade única,
-   características próprias (propriedades) e por fim, as ações ou eventos (métodos).
+   A abstração é a forma de analisar algo retirando assim a riqueza dos detalhes ou seja, uma forma generalista de representação
+   para descrever algo sem dar detalhes. uma classe abstrata é uma forma de representar isso na programação.
    
 ## 4 - O que é encapsulamento?
    Também é um dos quatro pilares da POO. Podemos dizer que é o elemento que adiciona segurança a uma aplicação escondendo as 
