@@ -1,7 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrabalhandoNoConsole\TrabalhandoNoConsole.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MenusPOO\" />
+  </ItemGroup>
 
 </Project>
