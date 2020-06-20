@@ -6,9 +6,9 @@ namespace Principal.MenusConsole
     public class MenuNumeroMultiplo
     {
         private NumeroMultiplo _numeroMultiplo;
-        public MenuNumeroMultiplo()
+        public MenuNumeroMultiplo(NumeroMultiplo numeroMultiplo)
         {
-            _numeroMultiplo = new NumeroMultiplo();
+            _numeroMultiplo = numeroMultiplo;
         }
 
         public void ExibirMenuNumeroMultiplo()

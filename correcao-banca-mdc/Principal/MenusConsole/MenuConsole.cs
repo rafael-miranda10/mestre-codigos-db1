@@ -1,17 +1,25 @@
 ﻿using System;
+using TrabalhandoNoConsole._1_Calculadora;
+using TrabalhandoNoConsole._2_Empresa;
+using TrabalhandoNoConsole._3__NumeroMultiplo;
+using TrabalhandoNoConsole._4_Escola;
 
 namespace Principal.MenusConsole
 {
     public class MenuConsole
     {
         private MenuCalculadora _menuCalculadora;
+        private Calculadora _calculadora;
         private MenuEmpresa _menuEmpresa;
         private MenuNumeroMultiplo _menuNumeroMultiplo;
+        private MenuEscola _menuEscola;
         public MenuConsole()
         {
-            _menuCalculadora = new MenuCalculadora();
-            _menuEmpresa = new MenuEmpresa();
-            _menuNumeroMultiplo = new MenuNumeroMultiplo();
+            _calculadora = new Calculadora(new Calculo());
+            _menuCalculadora = new MenuCalculadora(_calculadora);
+            _menuEmpresa = new MenuEmpresa(new Empresa());
+            _menuNumeroMultiplo = new MenuNumeroMultiplo(new NumeroMultiplo());
+            _menuEscola = new MenuEscola(new Escola());
         }
 
         public void ExibirMenuConsole()
@@ -31,6 +39,9 @@ namespace Principal.MenusConsole
                         break;
                     case "3":
                         _menuNumeroMultiplo.ExibirMenuNumeroMultiplo();
+                        break;
+                    case "4":
+                        _menuEscola.ExibirMenuEscola();
                         break;
                     default:
                         break;

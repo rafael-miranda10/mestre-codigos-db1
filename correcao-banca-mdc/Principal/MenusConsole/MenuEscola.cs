@@ -1,0 +1,64 @@
+﻿using System;
+using TrabalhandoNoConsole._4_Escola;
+
+namespace Principal.MenusConsole
+{
+    public class MenuEscola
+    {
+        private Escola _escola;
+        private string _nome;
+        private double _nota1;
+        private double _nota2;
+        public MenuEscola(Escola escola)
+        {
+            _escola = escola;
+        }
+
+        public void ExibirMenuEscola()
+        {
+            ConsoleKeyInfo cki;
+            do
+            {
+                OpcoesMenuEscola();
+                cki = Console.ReadKey(false);
+                Console.Clear();
+                switch (cki.KeyChar.ToString())
+                {
+                    case "1":
+                        CapturarDadosDoAluno();
+                        _escola.AdicionarAluno(_nome, _nota1, _nota2);
+                        Console.ReadKey();
+                        break;
+                    case "2":
+                        _escola.ExibirAlunosAprovados();
+                        Console.ReadKey();
+                        break;
+                    default:
+                        break;
+                }
+            } while (cki.Key != ConsoleKey.Escape);
+        }
+
+        private void OpcoesMenuEscola()
+        {
+            Console.Clear();
+            Console.WriteLine("*** Menu ***\n");
+            Console.WriteLine("1) Adicionar Aluno");
+            Console.WriteLine("2) Exibir Alunos Com Média Superior a 7");
+            Console.WriteLine("Esc) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
+        }
+        private void CapturarDadosDoAluno()
+        {
+            Console.Clear();
+            Console.Write("Informe o nome do aluno: ");
+            _nome = Console.ReadLine();
+            Console.Write($"Informe o nota 1 do {_nome}: ");
+            var aux1 = Console.ReadLine();
+            _nota1 = string.IsNullOrEmpty(aux1) ? 0 : Convert.ToDouble(aux1);
+            Console.Write($"Informe o nota 2 do {_nome}: ");
+            var aux2 = Console.ReadLine();
+            _nota2 = string.IsNullOrEmpty(aux2) ? 0 : Convert.ToDouble(aux2);
+        }
+    }
+}

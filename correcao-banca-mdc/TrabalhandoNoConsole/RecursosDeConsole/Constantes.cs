@@ -32,5 +32,22 @@
         public const string MsgNumerosMultiplosPorDivisao = "Os múltiplos de um determinado número são todos os valores que, quando divididos por aquele número, resultam em uma divisão exata e sem resto.\n\n";
         public const string MsgNumerosMultiplos = "O números multiplos de 3 entre 1 e 100 são: ";
         #endregion
+
+        #region Escola
+        public const string AlunoNome = "Aluno.Nome";
+        public const string AlunoNota1 = "Aluno.Nota1";
+        public const string AlunoNota2 = "Aluno.Nota2";
+        public const string MsgListaAlunosVazia = "A lista de alunos está vazia!";
+        public const string AlunosAprovados = "Os alunos aprovados com média superior a 7 são: \n\n";
+        public const string CorpoMensagemAlunosAprovados = "Nome: {0} Nota 1: {1} Nota 2: {2} Média: {3}\n";
+        public const string MsgValidacaoAdicionarAluno = "Não é possível adicionar o aluno! Motivo: {0}";
+
+        public const string MsgErroValidacaoAlunoNotaUmMaiorQueZero = "A nota 1 do aluno deve ser maior que 0 (zero)";
+        public const string MsgErroValidacaoAlunoNotaDoisMaiorQueZero = "A nota 2 do aluno deve ser maior que 0 (zero)";
+        public const string MsgErroValidacaoAlunoNotaUmMenorQueDez = "A nota 1 do aluno deve ser menor que 10";
+        public const string MsgErroValidacaoAlunoNotaDoisMenorQueDez = "A nota 2 do aluno deve ser menor que 10 ";
+        public const string MsgErroValidacaoAlunoNomeMin = "O nome do aluno deve conter pelo menos 3 caracteres";
+        public const string MsgErroValidacaoAlunoNomeMax = "Nome do aluno deve conter até 50 caracteres";
+        #endregion
     }
 }

@@ -3,7 +3,7 @@ using TrabalhandoNoConsole.RecursosDeConsole;
 
 namespace TrabalhandoNoConsole._3__NumeroMultiplo
 {
-    public class NumeroMultiplo : INumeroMultiplo
+    public class NumeroMultiplo 
     {
         private int _index;
         private string _numerosMultiplosParaExibir;

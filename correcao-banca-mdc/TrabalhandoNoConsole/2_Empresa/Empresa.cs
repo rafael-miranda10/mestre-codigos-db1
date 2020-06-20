@@ -5,7 +5,7 @@ using TrabalhandoNoConsole.RecursosDeConsole;
 
 namespace TrabalhandoNoConsole._2_Empresa
 {
-    public class Empresa : IEmpresa
+    public class Empresa 
     {
         private int _indexMenor;
         private int _indexMaior;

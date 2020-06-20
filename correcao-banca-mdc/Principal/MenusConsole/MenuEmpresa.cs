@@ -10,9 +10,9 @@ namespace Principal.MenusConsole
         private string _nome;
         private double _salario;
 
-        public MenuEmpresa()
+        public MenuEmpresa(Empresa empresa)
         {
-            _empresa = new Empresa();
+            _empresa = empresa;
         }
 
         public void ExibirMenuEmpresa()

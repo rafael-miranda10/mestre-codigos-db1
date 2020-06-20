@@ -9,9 +9,9 @@ namespace Principal.MenusConsole
         private Calculadora _calculadora;
         private double _valorA;
         private double _valorB;
-        public MenuCalculadora()
+        public MenuCalculadora(Calculadora calculadora)
         {
-            _calculadora = new Calculadora(new Calculo());
+            _calculadora = calculadora;
         }
 
         public void ExibirMenuCalculadora()
