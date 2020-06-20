@@ -5,9 +5,11 @@ namespace Principal.MenusConsole
     public class MenuConsole
     {
         private MenuCalculadora _menuCalculadora;
+        private MenuEmpresa _menuEmpresa;
         public MenuConsole()
         {
             _menuCalculadora = new MenuCalculadora();
+            _menuEmpresa = new MenuEmpresa();
         }
 
         public void ExibirMenuConsole()
@@ -23,7 +25,7 @@ namespace Principal.MenusConsole
                         _menuCalculadora.ExibirMenuCalculadora();
                         break;
                     case "2":
-                        // MyCode.DisplayTeams();
+                        _menuEmpresa.ExibirMenuEmpresa();
                         break;
                     default:
                         break;
