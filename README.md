@@ -94,15 +94,14 @@
    para descrever algo sem dar detalhes. uma classe abstrata é uma forma de representar isso na programação.
    
 ## 4 - O que é encapsulamento?
-   Também é um dos quatro pilares da POO. Podemos dizer que é o elemento que adiciona segurança a uma aplicação escondendo as 
-   propriedades, e criando uma "caixa preta". O encapsulamento é baseado em propriedades privadas ligadas a métodos especiais chamados
-   de getters e setters, evitando assim o acesso direto a propriedade do objeto, com uma camada de segurança na aplicação.
+   Também é um dos quatro pilares da POO. Podemos dizer que o encapsulamento esconde a riqueza dos detalhes, e criando uma 
+   "caixa  preta". Está muito ligado a abstração, uma vez que no encapsulamento eu não quero ou preciso saber os detalhes de 
+   funcionamento, apenas utilizo sabendo que será executado a tarefa desejada.
    
 ## 5 - Quando usar uma classe abstrata e quando devo usar uma interface?
    Resumidamente utilizamos uma interface quando necessitamos que classes de diferentes origens (Herança) tenham em comum métodos e que
    possam ser acessados através de uma mesma variável. Uma classe abstrata é usada quando há a necessidade que uma classe herde dela e
    implemente alguns métodos, mas que também possam ter métodos implementados na própria classe abstrata.
-   
    
 ## 6 - O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
    * IDisposable: 
