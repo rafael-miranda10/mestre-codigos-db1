@@ -81,5 +81,20 @@
         public const string MsgOrdenacaoNumerosListaVazia = "A lista de números decimais está vazia!";
         public const string MsgOrdenacaoNumerosOrdenada = "Lista de números decimais ordenada  ";
         #endregion
+
+        #region Biblioteca Linq
+        public const string MsgLINQListaDeinteiros = "Lista de números inteiros: ";
+        public const string MsgLINQListaEmOrdemCrescente = "Lista de Inteiros em Ordem Crescente: ";
+        public const string MsgLINQListaEmOrdemDecrescente = "Lista de Inteiros em Ordem Decrescente: ";
+        public const string MsgLINQPrimeiroElemento = "O primeiro elemento da lista é: {0}";
+        public const string MsgLINQUltimoElemento = "O ultimo elemento da lista é: {0}";
+        public const string MsgLINQInserirNoInicio = "Lista com o primeiro eLemento adicionado: ";
+        public const string MsgLINQInserirNoFinal = "Lista com o ultimo eLemento adicionado: ";
+        public const string MsgLINQPesquisaElemento = "Elemento pesquisado: {0} - O Elemento encontrado: {1}";
+        public const string MsgLINQRemoverPrimeiroElemento = "Primeiro elemento da lista removido: ";
+        public const string MsgLINQRemoverUltimoElemento = "Ultimo elemento da lista removido: ";
+        public const string MsgLINQApenasNumerosPares = "Apenas os números pares da lista: ";
+        public const string MsgLINQTransformadaArray = "A lista tranformada em Array: ";
+        #endregion
     }
 }
