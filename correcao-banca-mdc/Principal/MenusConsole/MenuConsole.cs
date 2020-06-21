@@ -6,6 +6,7 @@ using TrabalhandoNoConsole._4_Escola;
 using TrabalhandoNoConsole._5_Bhaskara;
 using TrabalhandoNoConsole._6_ModificadorParametro;
 using TrabalhandoNoConsole._7_SomaNumerosPares;
+using TrabalhandoNoConsole._8_OrdenacaoDeNumeros;
 
 namespace Principal.MenusConsole
 {
@@ -19,6 +20,7 @@ namespace Principal.MenusConsole
         private MenuEquacao _menuEquacao;
         private MenuModificadorParametro _menuModificador;
         private MenuSomaNumerosPares _menuSomaNumerosPares;
+        private MenuOrdenacaoNumeros _menuOrdenacaoNumeros;
         public MenuConsole()
         {
             _calculadora = new Calculadora(new Calculo());
@@ -29,6 +31,7 @@ namespace Principal.MenusConsole
             _menuEquacao = new MenuEquacao(new Equacao());
             _menuModificador = new MenuModificadorParametro(new ModificadorParametro());
             _menuSomaNumerosPares = new MenuSomaNumerosPares(new SomaNumeroPar());
+            _menuOrdenacaoNumeros = new MenuOrdenacaoNumeros(new OrdenacaoDeNumeros());
         }
 
         public void ExibirMenuConsole()
@@ -60,6 +63,9 @@ namespace Principal.MenusConsole
                         break;
                     case "7":
                         _menuSomaNumerosPares.ExibirMenuSomaNumerosPares();
+                        break;
+                    case "8":
+                        _menuOrdenacaoNumeros.ExibirMenuOrdenacaoDeNumeros();
                         break;
                     default:
                         break;

@@ -76,5 +76,10 @@
         public const string MsgSomaNumerosPares = "A soma dos números pares é: {0}";
         public const string MsgNumerosParesListaVazia = "A lista de números inteiros está vazia!";
         #endregion
+
+        #region Ordenação de Números
+        public const string MsgOrdenacaoNumerosListaVazia = "A lista de números decimais está vazia!";
+        public const string MsgOrdenacaoNumerosOrdenada = "Lista de números decimais ordenada  ";
+        #endregion
     }
 }
