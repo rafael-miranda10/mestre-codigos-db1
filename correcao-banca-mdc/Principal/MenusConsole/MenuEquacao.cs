@@ -48,15 +48,9 @@ namespace Principal.MenusConsole
         private void CapturarDadosEquacao()
         {
             Console.Clear();
-            Console.Write("Informe o valor de A: ");
-            var auxA = Console.ReadLine();
-            _a = string.IsNullOrEmpty(auxA) ? 0 : Convert.ToDouble(auxA);
-            Console.Write("Informe o valor de B: ");
-            var auxB = Console.ReadLine();
-            _b = string.IsNullOrEmpty(auxB) ? 0 : Convert.ToDouble(auxB);
-            Console.Write("Informe o valor de C: ");
-            var auxC = Console.ReadLine();
-            _c = string.IsNullOrEmpty(auxC) ? 0 : Convert.ToDouble(auxC);
+            _a = CapturaDeDados.CapturarNumeroDouble("Informe o valor de A: ");
+            _b = CapturaDeDados.CapturarNumeroDouble("Informe o valor de B: ");
+            _c = CapturaDeDados.CapturarNumeroDouble("Informe o valor de C: ");
         }
     }
 }
