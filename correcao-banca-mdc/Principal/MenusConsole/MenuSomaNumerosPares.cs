@@ -61,20 +61,11 @@ namespace Principal.MenusConsole
             Console.Write("\r\nEscolha uma opção: ");
         }
 
-        private int CapturarNumeroInteiro()
-        {
-            int numero;
-            Console.Clear();
-            Console.Write("Informe o número inteiro desejado: ");
-            int.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out numero);
-            return numero;
-        }
-
         private void PreencherListaDeNumeros()
         {
             for (int i = 0; i < _tamanhoDaLista; i++)
             {
-                _numerosInteiros.Add(CapturarNumeroInteiro());
+                _numerosInteiros.Add(CapturaDeDados.CapturarNumeroInteiro("Informe o número inteiro desejado: "));
             }
         }
     }
