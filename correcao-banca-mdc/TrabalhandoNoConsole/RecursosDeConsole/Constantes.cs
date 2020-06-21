@@ -71,5 +71,10 @@
         public const string MsgExecucaoRef = "O valor da variavel foi alterada pelo modificador 'Ref' recebendo um número inteiro, cujo valor é: {0}";
         public const string MsgExecucaoOut = "O valor da variavel foi alterada pelo modificador 'Out' recebendo um número inteiro, cujo valor é: {0}";
         #endregion
+
+        #region Soma de Números Pares
+        public const string MsgSomaNumerosPares = "A soma dos números pares é: {0}";
+        public const string MsgNumerosParesListaVazia = "A lista de números inteiros está vazia!";
+        #endregion
     }
 }
