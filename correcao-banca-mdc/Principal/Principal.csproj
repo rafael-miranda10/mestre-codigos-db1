@@ -7,10 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TrabalhandoNoConsole\TrabalhandoNoConsole.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="MenusPOO\" />
+    <ProjectReference Include="..\UtilizandoPOO\UtilizandoPOO.csproj" />
   </ItemGroup>
 
 </Project>

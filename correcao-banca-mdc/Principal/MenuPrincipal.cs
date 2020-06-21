@@ -1,4 +1,5 @@
 ﻿using Principal.MenusConsole;
+using Principal.MenusPOO;
 using System;
 
 namespace Principal
@@ -6,9 +7,11 @@ namespace Principal
     public class MenuPrincipal
     {
         private MenuConsole _menuConsole;
+        private MenuPOO _menuPoo;
         public MenuPrincipal()
         {
             _menuConsole = new MenuConsole();
+            _menuPoo = new MenuPOO();
         }
 
         public void ExibirMenuPrincipal()
@@ -24,7 +27,7 @@ namespace Principal
                         _menuConsole.ExibirMenuConsole();
                         break;
                     case "2":
-                        // MyCode.DisplayTeams();
+                        _menuPoo.ExibirMenuPOO();
                         break;
                     default:
                         break;
