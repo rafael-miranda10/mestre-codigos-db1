@@ -63,10 +63,8 @@ namespace Principal.MenusConsole
         private void CapturarDadosFuncionario()
         {
             Console.Clear();
-            Console.Write("Informe o nome do funcionário: ");
-            _nome = Console.ReadLine();
-            Console.Write("Informe o salário do funcionário: ");
-            Double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out _salario);
+            _nome = CapturaDeDados.CapturarTextoDigitado("Informe o nome do funcionário: ");
+            _salario = CapturaDeDados.CapturarNumeroDouble("Informe o salário do funcionário: ");
         }
     }
 }

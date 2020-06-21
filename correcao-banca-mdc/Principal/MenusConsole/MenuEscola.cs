@@ -51,7 +51,7 @@ namespace Principal.MenusConsole
         private void CapturarDadosDoAluno()
         {
             Console.Clear();
-            _nome = CapturaDeDados.CapturarString("Informe o nome do aluno: ");
+            _nome = CapturaDeDados.CapturarTextoDigitado("Informe o nome do aluno: ");
             _nota1 = CapturaDeDados.CapturarNumeroDouble($"Informe o nota 1 do {_nome}: ");
             _nota2 = CapturaDeDados.CapturarNumeroDouble($"Informe o nota 2 do {_nome}: ");
         }
