@@ -63,15 +63,15 @@ namespace Principal.MenusConsole
                         Console.ReadKey();
                         break;
                     case "j":
-                        _bibliotecaLinq.PesquisarElemento(CapturarNumero());
+                        _bibliotecaLinq.PesquisarElemento(CapturaDeDados.CapturarNumeroInteiro("\n Informe o número desejado: "));
                         Console.ReadKey();
                         break;
                     case "k":
-                        _bibliotecaLinq.InserirPrimeiroDaLista(CapturarNumero());
+                        _bibliotecaLinq.InserirPrimeiroDaLista(CapturaDeDados.CapturarNumeroInteiro("\n Informe o número desejado: "));
                         Console.ReadKey();
                         break;
                     case "m":
-                        _bibliotecaLinq.InserirUltimoDaLista(CapturarNumero());
+                        _bibliotecaLinq.InserirUltimoDaLista(CapturaDeDados.CapturarNumeroInteiro("\n Informe o número desejado: "));
                         Console.ReadKey();
                         break;
                     default:
@@ -100,14 +100,6 @@ namespace Principal.MenusConsole
             Console.Write("\r\nEscolha uma opção: ");
         }
 
-        private int CapturarNumero()
-        {
-            int numero;
-            Console.Clear();
-            Console.Write("\n Informe o número desejado: ");
-            int.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out numero);
-            return numero;
-        }
         private void PreencherListaDeNumeros()
         {
             Console.Clear();
@@ -116,8 +108,7 @@ namespace Principal.MenusConsole
             int indice = 1;
             do
             {
-                Console.Write($"Informe o {indice++} número desejado: ");
-                int.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out numero);
+                numero = CapturaDeDados.CapturarNumeroInteiro($"Informe o {indice++} número desejado: ");
                 if (numero > 0)
                     _NumerosInteiros.Add(numero);
             } while (numero != 0);
