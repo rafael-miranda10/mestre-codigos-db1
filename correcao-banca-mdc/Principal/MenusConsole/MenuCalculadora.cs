@@ -69,10 +69,8 @@ namespace Principal.MenusConsole
         private void CapturarDados()
         {
             Console.Clear();
-            Console.Write("Informe o valor de a: ");
-            Double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out _valorA);
-            Console.Write("Informe o valor de b: ");
-            Double.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out _valorB);
+            _valorA = CapturaDeDados.CapturarNumeroDouble("Informe o valor de A: ");
+            _valorB = CapturaDeDados.CapturarNumeroDouble("Informe o valor de B: ");
         }
     }
 }
