@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using TrabalhandoNoConsole._8_OrdenacaoDeNumeros;
 
 namespace Principal.MenusConsole
@@ -9,7 +8,6 @@ namespace Principal.MenusConsole
     {
         private OrdenacaoDeNumeros _ordenacaoNumeros;
         private List<decimal> _numerosDecimais;
-        private int _tamanhoDaLista = 9999;
         public MenuOrdenacaoNumeros(OrdenacaoDeNumeros ordenacaoNumeros)
         {
             _ordenacaoNumeros = ordenacaoNumeros;
@@ -76,24 +74,15 @@ namespace Principal.MenusConsole
             Console.Write("\r\nEscolha uma opção: ");
         }
 
-        private decimal CapturarNumeroDecimal()
-        {
-            decimal numero;
-            Console.Clear();
-            Console.Write("\n Informe o número desejado: ");
-            decimal.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out numero);
-            return numero;
-        }
         private void PreencherListaDeNumeros()
         {
             Console.Clear();
-            Console.Write("Para encerrar pressione 0 (zero) - Infome números decimais por exemplo : 2,1' \n\n");
+            Console.Write("Para encerrar pressione 0 (zero) - Infome números decimais por exemplo : 2,1 \n\n");
             decimal numero;
             int indice = 1;
             do
             {
-                Console.Write($"Informe o {indice++} número desejado: ");
-                decimal.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out numero);
+                numero = CapturaDeDados.CapturarNumeroDecimal($"Informe o {indice++} número desejado: ");
                 if(numero > 0)
                 _numerosDecimais.Add(numero);
             } while (numero != 0);
