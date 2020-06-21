@@ -51,14 +51,9 @@ namespace Principal.MenusConsole
         private void CapturarDadosDoAluno()
         {
             Console.Clear();
-            Console.Write("Informe o nome do aluno: ");
-            _nome = Console.ReadLine();
-            Console.Write($"Informe o nota 1 do {_nome}: ");
-            var aux1 = Console.ReadLine();
-            _nota1 = string.IsNullOrEmpty(aux1) ? 0 : Convert.ToDouble(aux1);
-            Console.Write($"Informe o nota 2 do {_nome}: ");
-            var aux2 = Console.ReadLine();
-            _nota2 = string.IsNullOrEmpty(aux2) ? 0 : Convert.ToDouble(aux2);
+            _nome = CapturaDeDados.CapturarString("Informe o nome do aluno: ");
+            _nota1 = CapturaDeDados.CapturarNumeroDouble($"Informe o nota 1 do {_nome}: ");
+            _nota2 = CapturaDeDados.CapturarNumeroDouble($"Informe o nota 2 do {_nome}: ");
         }
     }
 }
