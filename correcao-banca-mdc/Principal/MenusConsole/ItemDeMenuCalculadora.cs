@@ -4,23 +4,23 @@ using TrabalhandoNoConsole._1_Calculadora;
 
 namespace Principal.MenusConsole
 {
-    public class MenuCalculadora
+    public class ItemDeMenuCalculadora
     {
         private Calculadora _calculadora;
         private double _valorA;
         private double _valorB;
-        public MenuCalculadora(Calculadora calculadora)
+        public ItemDeMenuCalculadora(Calculadora calculadora)
         {
             _calculadora = calculadora;
         }
 
-        public void ExibirMenuCalculadora()
+        public void ExibirItemDeMenuCalculadora()
         {
             ConsoleKeyInfo cki;
             CapturarDados();
             do
             {
-                OpcoesMenuCalculadora();
+                OpcoesItemDeMenuCalculadora();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -52,7 +52,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuCalculadora()
+        private void OpcoesItemDeMenuCalculadora()
         {
             Console.Clear();
             Console.WriteLine($"*** Os números informados são {_valorA} e {_valorB} ***\n\n");

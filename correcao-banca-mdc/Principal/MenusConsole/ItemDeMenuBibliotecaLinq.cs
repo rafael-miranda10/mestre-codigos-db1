@@ -5,22 +5,22 @@ using TrabalhandoNoConsole._9_BibliotecaLinq;
 
 namespace Principal.MenusConsole
 {
-    public class MenuBibliotecaLinq
+    public class ItemDeMenuBibliotecaLinq
     {
         private BibliotecaLinq _bibliotecaLinq;
         private List<int> _NumerosInteiros;
-        public MenuBibliotecaLinq(BibliotecaLinq bibliotecaLinq)
+        public ItemDeMenuBibliotecaLinq(BibliotecaLinq bibliotecaLinq)
         {
             _bibliotecaLinq = bibliotecaLinq;
             _NumerosInteiros = new List<int>();
         }
 
-        public void ExibirMenubibliotecaLinq()
+        public void ExibirItemDeMenubibliotecaLinq()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuBibliotecaLinq();
+                OpcoesItemDeMenuBibliotecaLinq();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -80,7 +80,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuBibliotecaLinq()
+        private void OpcoesItemDeMenuBibliotecaLinq()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");

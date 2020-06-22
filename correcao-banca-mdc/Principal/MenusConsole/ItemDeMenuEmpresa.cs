@@ -3,23 +3,23 @@ using TrabalhandoNoConsole._2_Empresa;
 
 namespace Principal.MenusConsole
 {
-    public class MenuEmpresa
+    public class ItemDeMenuEmpresa
     {
         private Empresa _empresa;
         private string _nome;
         private double _salario;
 
-        public MenuEmpresa(Empresa empresa)
+        public ItemDeMenuEmpresa(Empresa empresa)
         {
             _empresa = empresa;
         }
 
-        public void ExibirMenuEmpresa()
+        public void ExibirItemDeMenuEmpresa()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuEmpresa();
+                OpcoesItemDeMenuEmpresa();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -47,7 +47,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuEmpresa()
+        private void OpcoesItemDeMenuEmpresa()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
