@@ -5,12 +5,12 @@ namespace Principal.MenusPOO
 {
     public class MenuPOO
     {
-        private MenuProgramacaoOrientadaobjeto _menuProgramacaoOrientadaobjeto;
+        private ItemDeMenuProgramacaoOrientadaobjeto _menuProgramacaoOrientadaobjeto;
         private ProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
         public MenuPOO()
         {
             _programacaoOrientadaObjeto = new ProgramacaoOrientadaObjeto();
-            _menuProgramacaoOrientadaobjeto = new MenuProgramacaoOrientadaobjeto(_programacaoOrientadaObjeto);
+            _menuProgramacaoOrientadaobjeto = new ItemDeMenuProgramacaoOrientadaobjeto(_programacaoOrientadaObjeto);
         }
 
         public void ExibirMenuPOO()
@@ -23,7 +23,7 @@ namespace Principal.MenusPOO
                 switch (cki.KeyChar.ToString())
                 {
                     case "1":
-                        _menuProgramacaoOrientadaobjeto.ExibirMenuProgramacaoOrientadaObjeto();
+                        _menuProgramacaoOrientadaobjeto.ExibirItemDeMenuProgramacaoOrientadaObjeto();
                         break;
                     case "2":
                         break;

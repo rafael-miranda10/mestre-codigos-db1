@@ -3,24 +3,24 @@ using UtilizandoPOO._1_POO;
 
 namespace Principal.MenusPOO
 {
-    public class MenuFormaGeometrica
+    public class ItemDeMenuFormaGeometrica
     {
         private double _lado;
         private double _raio;
         private double _alturaTriangulo;
         private double _baseTriangulo;
         private ProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
-        public MenuFormaGeometrica(ProgramacaoOrientadaObjeto programacaoOrientadaObjeto)
+        public ItemDeMenuFormaGeometrica(ProgramacaoOrientadaObjeto programacaoOrientadaObjeto)
         {
             _programacaoOrientadaObjeto = programacaoOrientadaObjeto;
         }
 
-        public void ExibirMenuFormaGeometrica()
+        public void ExibirItemDeMenuFormaGeometrica()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuFormaGeometrica();
+                OpcoesItemDeMenuFormaGeometrica();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -52,7 +52,7 @@ namespace Principal.MenusPOO
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuFormaGeometrica()
+        private void OpcoesItemDeMenuFormaGeometrica()
         {
             Console.Clear();
             Console.WriteLine("*** Calcular Área ***\n");

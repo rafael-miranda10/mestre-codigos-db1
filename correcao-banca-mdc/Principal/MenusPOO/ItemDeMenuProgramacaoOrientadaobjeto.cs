@@ -3,29 +3,29 @@ using UtilizandoPOO._1_POO;
 
 namespace Principal.MenusPOO
 {
-    public class MenuProgramacaoOrientadaobjeto
+    public class ItemDeMenuProgramacaoOrientadaobjeto
     {
         private ProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
-        private MenuFormaGeometrica _menuFormaGeometrica;
+        private ItemDeMenuFormaGeometrica _itemDeMenuFormaGeometrica;
         
-        public MenuProgramacaoOrientadaobjeto(ProgramacaoOrientadaObjeto programacaoOrientadaObjeto)
+        public ItemDeMenuProgramacaoOrientadaobjeto(ProgramacaoOrientadaObjeto programacaoOrientadaObjeto)
         {
             _programacaoOrientadaObjeto = programacaoOrientadaObjeto;
         }
 
-        public void ExibirMenuProgramacaoOrientadaObjeto()
+        public void ExibirItemDeMenuProgramacaoOrientadaObjeto()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuProgramacaoOrientadaObjeto();
+                OpcoesItemDeMenuProgramacaoOrientadaObjeto();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
                 {
                     case "1":
-                        _menuFormaGeometrica = new MenuFormaGeometrica(_programacaoOrientadaObjeto);
-                        _menuFormaGeometrica.ExibirMenuFormaGeometrica();
+                        _itemDeMenuFormaGeometrica = new ItemDeMenuFormaGeometrica(_programacaoOrientadaObjeto);
+                        _itemDeMenuFormaGeometrica.ExibirItemDeMenuFormaGeometrica();
                         Console.ReadKey();
                         break;
                     case "2":
@@ -50,7 +50,7 @@ namespace Principal.MenusPOO
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuProgramacaoOrientadaObjeto()
+        private void OpcoesItemDeMenuProgramacaoOrientadaObjeto()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
