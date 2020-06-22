@@ -9,6 +9,7 @@ namespace Principal
         private static int _numeroInteiro;
         private static decimal _numeroDecimal;
         private static string _textoDigitado;
+        private static DateTime _data;
         public static double CapturarNumeroDouble(string texto)
         {
             Console.Write(texto);
@@ -28,10 +29,17 @@ namespace Principal
             decimal.TryParse(Console.ReadLine(), NumberStyles.Number, new CultureInfo("pt-BR"), out _numeroDecimal);
             return _numeroDecimal;
         }
+
+        public static DateTime CapturarData(string texto)
+        {
+            Console.Write(texto);
+            DateTime.TryParse(Console.ReadLine(), new CultureInfo("pt-BR"), DateTimeStyles.None, out _data);
+            return _data;
+        }
         public static string CapturarTextoDigitado(string texto)
         {
             Console.Write(texto);
-            _textoDigitado =  Console.ReadLine();
+            _textoDigitado = Console.ReadLine();
             return _textoDigitado;
         }
     }

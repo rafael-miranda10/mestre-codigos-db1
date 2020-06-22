@@ -1,5 +1,6 @@
 ﻿using System;
 using UtilizandoPOO._1_POO;
+using UtilizandoPOO._2_RepresentarPessoa;
 
 namespace Principal.MenusPOO
 {
@@ -7,10 +8,15 @@ namespace Principal.MenusPOO
     {
         private ItemDeMenuProgramacaoOrientadaobjeto _itemDeMenuProgramacaoOrientadaObjeto;
         private ProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
+        private ItemDeMenuRepresentarPessoa _itemDeMenuRepresentarPessoa;
+        private Individuo _individuo;
+
         public MenuPOO()
         {
             _programacaoOrientadaObjeto = new ProgramacaoOrientadaObjeto();
             _itemDeMenuProgramacaoOrientadaObjeto = new ItemDeMenuProgramacaoOrientadaobjeto(_programacaoOrientadaObjeto);
+            _individuo = new Individuo();
+            _itemDeMenuRepresentarPessoa = new ItemDeMenuRepresentarPessoa(_individuo);
         }
 
         public void ExibirMenuPOO()
@@ -26,6 +32,7 @@ namespace Principal.MenusPOO
                         _itemDeMenuProgramacaoOrientadaObjeto.ExibirItemDeMenuProgramacaoOrientadaObjeto();
                         break;
                     case "2":
+                        _itemDeMenuRepresentarPessoa.ExibirItemDeMenuRepresentarPessoa();
                         break;
                     case "3":
                         break;

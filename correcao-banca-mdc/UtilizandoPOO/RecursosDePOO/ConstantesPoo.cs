@@ -33,5 +33,11 @@
         public const string DadosCachorro = "Nome do cachorro: {0}, raça do cachorro {1}";
 
         #endregion
+
+        #region Representar Pessoa
+        public const string ExibirDadosPessoa = "Nome: {0} possui a altura de: {1} metros, nascida em: {2} com {3} anos de idade.";
+        public const string MsgErroValidacaoPessoa = "Dados da pessoa incorretos! Volte ao menu e insira novamente!";
+        public const string MsgPessoaNaoNasceu = " A pessoa ainda não nasceu!";
+        #endregion
     }
 }
