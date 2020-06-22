@@ -16,24 +16,24 @@ namespace Principal.MenusConsole
         private ItemDeMenuCalculadora _itemDeMenuCalculadora;
         private Calculadora _calculadora;
         private ItemDeMenuEmpresa _itemDeMenuEmpresa;
-        private MenuNumeroMultiplo _menuNumeroMultiplo;
+        private ItemDeMenuNumeroMultiplo _menuNumeroMultiplo;
         private ItemDeMenuEscola _itemDeMenuEscola;
         private ItemDeMenuEquacao _itemDeMenuEquacao;
         private ItemDeMenuModificadorParametro _itemDeMenuModificador;
-        private MenuSomaNumerosPares _menuSomaNumerosPares;
-        private MenuOrdenacaoNumeros _menuOrdenacaoNumeros;
+        private ItemDeMenuSomaNumerosPares _itemDeMenuSomaNumerosPares;
+        private ItemDeMenuOrdenacaoNumeros _itemDeMenuOrdenacaoNumeros;
         private ItemDeMenuBibliotecaLinq _itemDeMenuBibliotecaLinq;
         public MenuConsole()
         {
             _calculadora = new Calculadora(new Calculo());
             _itemDeMenuCalculadora = new ItemDeMenuCalculadora(_calculadora);
             _itemDeMenuEmpresa = new ItemDeMenuEmpresa(new Empresa());
-            _menuNumeroMultiplo = new MenuNumeroMultiplo(new NumeroMultiplo());
+            _menuNumeroMultiplo = new ItemDeMenuNumeroMultiplo(new NumeroMultiplo());
             _itemDeMenuEscola = new ItemDeMenuEscola(new Escola());
             _itemDeMenuEquacao = new ItemDeMenuEquacao(new Equacao());
             _itemDeMenuModificador = new ItemDeMenuModificadorParametro(new ModificadorParametro());
-            _menuSomaNumerosPares = new MenuSomaNumerosPares(new SomaNumeroPar());
-            _menuOrdenacaoNumeros = new MenuOrdenacaoNumeros(new OrdenacaoDeNumeros());
+            _itemDeMenuSomaNumerosPares = new ItemDeMenuSomaNumerosPares(new SomaNumeroPar());
+            _itemDeMenuOrdenacaoNumeros = new ItemDeMenuOrdenacaoNumeros(new OrdenacaoDeNumeros());
             _itemDeMenuBibliotecaLinq = new ItemDeMenuBibliotecaLinq(new BibliotecaLinq());
         }
 
@@ -53,7 +53,7 @@ namespace Principal.MenusConsole
                         _itemDeMenuEmpresa.ExibirItemDeMenuEmpresa();
                         break;
                     case "3":
-                        _menuNumeroMultiplo.ExibirMenuNumeroMultiplo();
+                        _menuNumeroMultiplo.ExibirItemDeMenuNumeroMultiplo();
                         break;
                     case "4":
                         _itemDeMenuEscola.ExibirItemDeMenuEscola();
@@ -65,10 +65,10 @@ namespace Principal.MenusConsole
                         _itemDeMenuModificador.ExibirItemDeMenuModificadorParametro();
                         break;
                     case "7":
-                        _menuSomaNumerosPares.ExibirMenuSomaNumerosPares();
+                        _itemDeMenuSomaNumerosPares.ExibirItemDeMenuSomaNumerosPares();
                         break;
                     case "8":
-                        _menuOrdenacaoNumeros.ExibirMenuOrdenacaoDeNumeros();
+                        _itemDeMenuOrdenacaoNumeros.ExibirItemDeMenuOrdenacaoDeNumeros();
                         break;
                     case "9":
                         _itemDeMenuBibliotecaLinq.ExibirItemDeMenubibliotecaLinq();

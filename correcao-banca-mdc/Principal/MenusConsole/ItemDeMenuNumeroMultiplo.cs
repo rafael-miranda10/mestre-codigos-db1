@@ -3,20 +3,20 @@ using TrabalhandoNoConsole._3__NumeroMultiplo;
 
 namespace Principal.MenusConsole
 {
-    public class MenuNumeroMultiplo
+    public class ItemDeMenuNumeroMultiplo
     {
         private NumeroMultiplo _numeroMultiplo;
-        public MenuNumeroMultiplo(NumeroMultiplo numeroMultiplo)
+        public ItemDeMenuNumeroMultiplo(NumeroMultiplo numeroMultiplo)
         {
             _numeroMultiplo = numeroMultiplo;
         }
 
-        public void ExibirMenuNumeroMultiplo()
+        public void ExibirItemDeMenuNumeroMultiplo()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuNumeroMultiplo();
+                OpcoesItemDeMenuNumeroMultiplo();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -35,7 +35,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuNumeroMultiplo()
+        private void OpcoesItemDeMenuNumeroMultiplo()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");

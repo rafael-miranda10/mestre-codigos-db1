@@ -5,23 +5,23 @@ using TrabalhandoNoConsole._7_SomaNumerosPares;
 
 namespace Principal.MenusConsole
 {
-    public class MenuSomaNumerosPares
+    public class ItemDeMenuSomaNumerosPares
     {
         private SomaNumeroPar _somaNumeroPar;
         private List<int> _numerosInteiros;
         private int _tamanhoDaLista = 4;
-        public MenuSomaNumerosPares(SomaNumeroPar somaNumeroPar)
+        public ItemDeMenuSomaNumerosPares(SomaNumeroPar somaNumeroPar)
         {
             _somaNumeroPar = somaNumeroPar;
             _numerosInteiros = new List<int>();
         }
 
-        public void ExibirMenuSomaNumerosPares()
+        public void ExibirItemDeMenuSomaNumerosPares()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuSomaNumerosPares();
+                OpcoesItemDeMenuSomaNumerosPares();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -49,7 +49,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuSomaNumerosPares()
+        private void OpcoesItemDeMenuSomaNumerosPares()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");

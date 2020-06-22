@@ -4,22 +4,22 @@ using TrabalhandoNoConsole._8_OrdenacaoDeNumeros;
 
 namespace Principal.MenusConsole
 {
-    public class MenuOrdenacaoNumeros
+    public class ItemDeMenuOrdenacaoNumeros
     {
         private OrdenacaoDeNumeros _ordenacaoNumeros;
         private List<decimal> _numerosDecimais;
-        public MenuOrdenacaoNumeros(OrdenacaoDeNumeros ordenacaoNumeros)
+        public ItemDeMenuOrdenacaoNumeros(OrdenacaoDeNumeros ordenacaoNumeros)
         {
             _ordenacaoNumeros = ordenacaoNumeros;
             _numerosDecimais = new List<decimal>();
         }
 
-        public void ExibirMenuOrdenacaoDeNumeros()
+        public void ExibirItemDeMenuOrdenacaoDeNumeros()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuOrdenacao();
+                OpcoesItemDeMenuOrdenacao();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -59,7 +59,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuOrdenacao()
+        private void OpcoesItemDeMenuOrdenacao()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
