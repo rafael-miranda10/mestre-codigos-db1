@@ -29,15 +29,19 @@ namespace Principal.MenusPOO
                         Console.ReadKey();
                         break;
                     case "2":
+                        _programacaoOrientadaObjeto.ExecutarDescartavel();
                         Console.ReadKey();
                         break;
                     case "3":
+                        _programacaoOrientadaObjeto.ExecutarComparavel();
                         Console.ReadKey();
                         break;
                     case "4":
+                        _programacaoOrientadaObjeto.ExecutarClonavel();
                         Console.ReadKey();
                         break;
                     case "5":
+                        _programacaoOrientadaObjeto.ExecutarEnumeravel();
                         Console.ReadKey();
                         break;
                     default:

@@ -6,9 +6,11 @@ namespace Principal.MenusPOO
     public class MenuPOO
     {
         private MenuProgramacaoOrientadaobjeto _menuProgramacaoOrientadaobjeto;
+        private ProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
         public MenuPOO()
         {
-            _menuProgramacaoOrientadaobjeto = new MenuProgramacaoOrientadaobjeto(new ProgramacaoOrientadaObjeto());
+            _programacaoOrientadaObjeto = new ProgramacaoOrientadaObjeto();
+            _menuProgramacaoOrientadaobjeto = new MenuProgramacaoOrientadaobjeto(_programacaoOrientadaObjeto);
         }
 
         public void ExibirMenuPOO()
