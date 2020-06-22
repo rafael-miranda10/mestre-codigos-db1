@@ -4,22 +4,22 @@ using TrabalhandoNoConsole.RecursosDeConsole;
 
 namespace Principal.MenusConsole
 {
-    public class MenuModificadorParametro
+    public class ItemDeMenuModificadorParametro
     {
         private int _valorReferencia = 5;
         private int _valorOut;
         private ModificadorParametro _modificadorParametro;
-        public MenuModificadorParametro(ModificadorParametro modificadorParametro)
+        public ItemDeMenuModificadorParametro(ModificadorParametro modificadorParametro)
         {
             _modificadorParametro = modificadorParametro;
         }
 
-        public void ExibirMenuModificadorParametro()
+        public void ExibirItemDeMenuModificadorParametro()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuModificadorParametro();
+                OpcoesItemDeMenuModificadorParametro();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -44,7 +44,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuModificadorParametro()
+        private void OpcoesItemDeMenuModificadorParametro()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");

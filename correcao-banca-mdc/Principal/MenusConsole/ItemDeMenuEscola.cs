@@ -3,23 +3,23 @@ using TrabalhandoNoConsole._4_Escola;
 
 namespace Principal.MenusConsole
 {
-    public class MenuEscola
+    public class ItemDeMenuEscola
     {
         private Escola _escola;
         private string _nome;
         private double _nota1;
         private double _nota2;
-        public MenuEscola(Escola escola)
+        public ItemDeMenuEscola(Escola escola)
         {
             _escola = escola;
         }
 
-        public void ExibirMenuEscola()
+        public void ExibirItemDeMenuEscola()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuEscola();
+                OpcoesItemDeMenuEscola();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -39,7 +39,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuEscola()
+        private void OpcoesItemDeMenuEscola()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");

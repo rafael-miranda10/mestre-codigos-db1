@@ -17,9 +17,9 @@ namespace Principal.MenusConsole
         private Calculadora _calculadora;
         private ItemDeMenuEmpresa _itemDeMenuEmpresa;
         private MenuNumeroMultiplo _menuNumeroMultiplo;
-        private MenuEscola _menuEscola;
-        private MenuEquacao _menuEquacao;
-        private MenuModificadorParametro _menuModificador;
+        private ItemDeMenuEscola _itemDeMenuEscola;
+        private ItemDeMenuEquacao _itemDeMenuEquacao;
+        private ItemDeMenuModificadorParametro _itemDeMenuModificador;
         private MenuSomaNumerosPares _menuSomaNumerosPares;
         private MenuOrdenacaoNumeros _menuOrdenacaoNumeros;
         private ItemDeMenuBibliotecaLinq _itemDeMenuBibliotecaLinq;
@@ -29,9 +29,9 @@ namespace Principal.MenusConsole
             _itemDeMenuCalculadora = new ItemDeMenuCalculadora(_calculadora);
             _itemDeMenuEmpresa = new ItemDeMenuEmpresa(new Empresa());
             _menuNumeroMultiplo = new MenuNumeroMultiplo(new NumeroMultiplo());
-            _menuEscola = new MenuEscola(new Escola());
-            _menuEquacao = new MenuEquacao(new Equacao());
-            _menuModificador = new MenuModificadorParametro(new ModificadorParametro());
+            _itemDeMenuEscola = new ItemDeMenuEscola(new Escola());
+            _itemDeMenuEquacao = new ItemDeMenuEquacao(new Equacao());
+            _itemDeMenuModificador = new ItemDeMenuModificadorParametro(new ModificadorParametro());
             _menuSomaNumerosPares = new MenuSomaNumerosPares(new SomaNumeroPar());
             _menuOrdenacaoNumeros = new MenuOrdenacaoNumeros(new OrdenacaoDeNumeros());
             _itemDeMenuBibliotecaLinq = new ItemDeMenuBibliotecaLinq(new BibliotecaLinq());
@@ -56,13 +56,13 @@ namespace Principal.MenusConsole
                         _menuNumeroMultiplo.ExibirMenuNumeroMultiplo();
                         break;
                     case "4":
-                        _menuEscola.ExibirMenuEscola();
+                        _itemDeMenuEscola.ExibirItemDeMenuEscola();
                         break;
                     case "5":
-                        _menuEquacao.ExibirMenuCalculadora();
+                        _itemDeMenuEquacao.ExibirItemDeMenuCalculadora();
                         break;
                     case "6":
-                        _menuModificador.ExibirMenuModificadorParametro();
+                        _itemDeMenuModificador.ExibirItemDeMenuModificadorParametro();
                         break;
                     case "7":
                         _menuSomaNumerosPares.ExibirMenuSomaNumerosPares();

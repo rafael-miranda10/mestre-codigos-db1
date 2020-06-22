@@ -3,23 +3,23 @@ using TrabalhandoNoConsole._5_Bhaskara;
 
 namespace Principal.MenusConsole
 {
-    public class MenuEquacao
+    public class ItemDeMenuEquacao
     {
         private double _a;
         private double _b;
         private double _c;
         private Equacao _equacao;
-        public MenuEquacao(Equacao equacao)
+        public ItemDeMenuEquacao(Equacao equacao)
         {
             _equacao = equacao;
         }
 
-        public void ExibirMenuCalculadora()
+        public void ExibirItemDeMenuCalculadora()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesMenuEquacao();
+                OpcoesItemDeMenuEquacao();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
@@ -36,7 +36,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesMenuEquacao()
+        private void OpcoesItemDeMenuEquacao()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");
