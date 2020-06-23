@@ -44,6 +44,10 @@
         public const string MsgDadosContaCorrente = "A conta corrente de número: {0} possui o saldo de : {1}";
         public const string MsgDadosContaEspecial = "A conta especial de número: {0} possui o saldo de : {1}";
         public const string MsgSemSaldoContaBancaria = "A conta {0} de número: {1} não possui o saldo suficiente para o saque de R$: {2}";
+        public const string MsgBancoInformeValorDeposito = "Informe o valor do depósito: ";
+        public const string MsgBancoContaNaoExiste = "Não existe nenhum conta para ser exibida!";
+        public const string MsgBancoOperacaoSucesso = "Operação realizada! Por favor consulte o extrato!";
+
         #endregion
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using UtilizandoPOO._1_POO;
 using UtilizandoPOO._2_RepresentarPessoa;
+using UtilizandoPOO._3_RepresentacaoBancaria;
 
 namespace Principal.MenusPOO
 {
@@ -10,6 +11,8 @@ namespace Principal.MenusPOO
         private ProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
         private ItemDeMenuRepresentarPessoa _itemDeMenuRepresentarPessoa;
         private Individuo _individuo;
+        private ItemDeMenuBanco _itemDeMenuBanco;
+        private Banco _banco;
 
         public MenuPOO()
         {
@@ -17,6 +20,8 @@ namespace Principal.MenusPOO
             _itemDeMenuProgramacaoOrientadaObjeto = new ItemDeMenuProgramacaoOrientadaobjeto(_programacaoOrientadaObjeto);
             _individuo = new Individuo();
             _itemDeMenuRepresentarPessoa = new ItemDeMenuRepresentarPessoa(_individuo);
+            _banco = new Banco();
+            _itemDeMenuBanco = new ItemDeMenuBanco(_banco);
         }
 
         public void ExibirMenuPOO()
@@ -35,6 +40,7 @@ namespace Principal.MenusPOO
                         _itemDeMenuRepresentarPessoa.ExibirItemDeMenuRepresentarPessoa();
                         break;
                     case "3":
+                        _itemDeMenuBanco.ExibirItemDeMenuBanco();
                         break;
                     case "4":
                         break;
