@@ -1,4 +1,4 @@
-﻿namespace TrabalhandoNoConsole.RecursosDeConsole
+﻿namespace RecursosCompartilhados
 {
     public class Constantes
     {

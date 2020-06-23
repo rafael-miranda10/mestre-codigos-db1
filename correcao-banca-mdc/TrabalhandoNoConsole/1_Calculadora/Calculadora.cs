@@ -1,5 +1,5 @@
-﻿using System;
-using TrabalhandoNoConsole.RecursosDeConsole;
+﻿using RecursosCompartilhados;
+using System;
 
 namespace TrabalhandoNoConsole._1_Calculadora
 {

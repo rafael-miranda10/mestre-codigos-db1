@@ -1,6 +1,6 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
-using TrabalhandoNoConsole.RecursosDeConsole;
+using RecursosCompartilhados;
 
 namespace TrabalhandoNoConsole._4_Escola
 {

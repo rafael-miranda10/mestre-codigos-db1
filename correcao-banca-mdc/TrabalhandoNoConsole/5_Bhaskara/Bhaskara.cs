@@ -1,9 +1,7 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
+using RecursosCompartilhados;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using TrabalhandoNoConsole.RecursosDeConsole;
 
 namespace TrabalhandoNoConsole._5_Bhaskara
 {

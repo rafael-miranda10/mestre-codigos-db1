@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using TrabalhandoNoConsole._6_ModificadorParametro;
-using TrabalhandoNoConsole.RecursosDeConsole;
 
 namespace Principal.MenusConsole
 {

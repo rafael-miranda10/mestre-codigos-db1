@@ -1,7 +1,7 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
-using TrabalhandoNoConsole.RecursosDeConsole;
 
 namespace TrabalhandoNoConsole._2_Empresa
 {

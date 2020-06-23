@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using System.Collections.Generic;
-using TrabalhandoNoConsole.RecursosDeConsole;
 
 namespace TrabalhandoNoConsole._4_Escola
 {
