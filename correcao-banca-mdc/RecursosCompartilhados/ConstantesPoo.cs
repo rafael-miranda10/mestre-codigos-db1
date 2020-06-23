@@ -49,5 +49,25 @@
         public const string MsgBancoOperacaoSucesso = "Operação realizada! Por favor consulte o extrato!";
 
         #endregion
+
+        #region Controle remoto
+        public const string MsgNaoEhPermitidoAumentarVolume = "Não é permitido aumentar o volume da televisão!";
+        public const string MsgNaoEhPermitidoDiminuirVolume = "Não é permitido diminuir o volume da televisão!";
+        public const string MsgVolumeAumentado = "Volume incrementado em uma unidade!";
+        public const string MsgVolumeDiminuido = "Volume decrementado em uma unidade!";
+
+        public const string MsgNaoEhPermitidoProximoCanal = "Não é permitido trocar para o próximo canal!";
+        public const string MsgNaoEhPermitidoCanalAnterior = "Não é permitido trocar para o canal anterior!";
+        public const string MsgProximoCanal= "Canal incrementado em uma unidade!";
+        public const string MsgCanalAnterior = "Canal decrementado em uma unidade!";
+
+        public const string MsgCanalEspecifico = "Informe o canal desejado: ";
+        public const string MsgVolumeEspecifico = "Informe o volume desejado: ";
+        public const string MsgErroCanalEspecifico = "Não é possível ir para o canal especifico!";
+
+        public const string MsgEstadoControlavel = "A televisão está no canal {0} com o volume de som de {1}";
+        public const string MsgNaoEhPossivelLigarControlavel = "Não é possivel ligar a televisão";
+        public const string MsgControlavelDesligado = "A televisão está desligada!";
+        #endregion
     }
 }

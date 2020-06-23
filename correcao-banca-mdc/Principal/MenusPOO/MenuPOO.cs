@@ -2,6 +2,7 @@
 using UtilizandoPOO._1_POO;
 using UtilizandoPOO._2_RepresentarPessoa;
 using UtilizandoPOO._3_RepresentacaoBancaria;
+using UtilizandoPOO._4_Controle;
 
 namespace Principal.MenusPOO
 {
@@ -13,6 +14,9 @@ namespace Principal.MenusPOO
         private Individuo _individuo;
         private ItemDeMenuBanco _itemDeMenuBanco;
         private Banco _banco;
+        private ItemDeMenuControleRemoto _itemDeMenuControleRemoto;
+        private ControleRemoto _controleRemoto;
+        private Televisao _televisao;
 
         public MenuPOO()
         {
@@ -22,6 +26,9 @@ namespace Principal.MenusPOO
             _itemDeMenuRepresentarPessoa = new ItemDeMenuRepresentarPessoa(_individuo);
             _banco = new Banco();
             _itemDeMenuBanco = new ItemDeMenuBanco(_banco);
+            _televisao = null;
+            _controleRemoto = new ControleRemoto(_televisao);
+            _itemDeMenuControleRemoto = new ItemDeMenuControleRemoto(_controleRemoto);
         }
 
         public void ExibirMenuPOO()
@@ -43,6 +50,7 @@ namespace Principal.MenusPOO
                         _itemDeMenuBanco.ExibirItemDeMenuBanco();
                         break;
                     case "4":
+                        _itemDeMenuControleRemoto.ExibirItemDeMenuControleRemoto();
                         break;
                     default:
                         break;
