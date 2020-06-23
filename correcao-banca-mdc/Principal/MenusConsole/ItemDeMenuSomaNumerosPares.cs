@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using System.Collections.Generic;
-using System.Globalization;
 using TrabalhandoNoConsole._7_SomaNumerosPares;
 
 namespace Principal.MenusConsole

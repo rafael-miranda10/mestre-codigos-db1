@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Principal
+namespace RecursosCompartilhados
 {
     public class CapturaDeDados
     {

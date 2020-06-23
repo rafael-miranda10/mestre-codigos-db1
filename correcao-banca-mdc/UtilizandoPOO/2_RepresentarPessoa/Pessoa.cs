@@ -1,5 +1,5 @@
-﻿using System;
-using UtilizandoPOO.RecursosDePOO;
+﻿using RecursosCompartilhados;
+using System;
 
 namespace UtilizandoPOO._2_RepresentarPessoa
 {

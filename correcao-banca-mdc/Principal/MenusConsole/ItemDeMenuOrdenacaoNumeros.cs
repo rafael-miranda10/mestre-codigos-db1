@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using System.Collections.Generic;
 using TrabalhandoNoConsole._8_OrdenacaoDeNumeros;
 

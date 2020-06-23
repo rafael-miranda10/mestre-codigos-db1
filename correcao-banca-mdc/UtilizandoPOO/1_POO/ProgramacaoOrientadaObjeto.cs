@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using System.Collections.Generic;
-using UtilizandoPOO.RecursosDePOO;
 
 namespace UtilizandoPOO._1_POO
 {

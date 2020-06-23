@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using System.Text.RegularExpressions;
-using UtilizandoPOO.RecursosDePOO;
 
 namespace UtilizandoPOO._2_RepresentarPessoa
 {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using UtilizandoPOO._2_RepresentarPessoa;
 
 namespace Principal.MenusPOO

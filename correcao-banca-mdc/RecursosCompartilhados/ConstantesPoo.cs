@@ -1,4 +1,4 @@
-﻿namespace UtilizandoPOO.RecursosDePOO
+﻿namespace RecursosCompartilhados
 {
     public class ConstantesPoo
     {
@@ -38,6 +38,12 @@
         public const string ExibirDadosPessoa = "Nome: {0} possui a altura de: {1} metros, nascida em: {2} com {3} anos de idade.";
         public const string MsgErroValidacaoPessoa = "Dados da pessoa incorretos! Volte ao menu e insira novamente!";
         public const string MsgPessoaNaoNasceu = " A pessoa ainda não nasceu!";
+        #endregion
+
+        #region Conta Bancaria
+        public const string MsgDadosContaCorrente = "A conta corrente de número: {0} possui o saldo de : {1}";
+        public const string MsgDadosContaEspecial = "A conta especial de número: {0} possui o saldo de : {1}";
+        public const string MsgSemSaldoContaBancaria = "A conta {0} de número: {1} não possui o saldo suficiente para o saque de R$: {2}";
         #endregion
     }
 }

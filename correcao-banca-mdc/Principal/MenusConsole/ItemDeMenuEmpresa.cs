@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using TrabalhandoNoConsole._2_Empresa;
 
 namespace Principal.MenusConsole

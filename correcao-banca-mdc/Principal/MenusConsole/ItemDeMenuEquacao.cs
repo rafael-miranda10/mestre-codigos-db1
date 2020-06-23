@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecursosCompartilhados;
+using System;
 using TrabalhandoNoConsole._5_Bhaskara;
 
 namespace Principal.MenusConsole
