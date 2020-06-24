@@ -1,6 +1,6 @@
 ﻿namespace UtilizandoPOO._1_POO
 {
-    class Triangulo : FormaGeometrica
+    public class Triangulo : FormaGeometrica
     {
         public Triangulo(double baseTriagulo, double alturaTriangulo)
         {
