@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursosCompartilhados", "R
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{93EE7604-DED9-48A0-B9AE-798EA2BE66AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSTestTestes", "MSTestTestes\MSTestTestes.csproj", "{5D57D002-5339-4FD0-9CBF-A22826242626}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSTestTestes", "MSTestTestes\MSTestTestes.csproj", "{5D57D002-5339-4FD0-9CBF-A22826242626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestes", "XUnitTestes\XUnitTestes.csproj", "{627B4CA1-69A5-41B2-8A26-45C33AE61E24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +43,17 @@ Global
 		{5D57D002-5339-4FD0-9CBF-A22826242626}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D57D002-5339-4FD0-9CBF-A22826242626}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D57D002-5339-4FD0-9CBF-A22826242626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{627B4CA1-69A5-41B2-8A26-45C33AE61E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{627B4CA1-69A5-41B2-8A26-45C33AE61E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{627B4CA1-69A5-41B2-8A26-45C33AE61E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{627B4CA1-69A5-41B2-8A26-45C33AE61E24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5D57D002-5339-4FD0-9CBF-A22826242626} = {93EE7604-DED9-48A0-B9AE-798EA2BE66AE}
+		{627B4CA1-69A5-41B2-8A26-45C33AE61E24} = {93EE7604-DED9-48A0-B9AE-798EA2BE66AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8AFBF531-408A-4FDF-B84A-9F359C039298}
