@@ -1,9 +1,8 @@
 ﻿using RecursosCompartilhados;
-using System;
 
 namespace UtilizandoPOO._3_RepresentacaoBancaria
 {
-    public class ContaEspecial : ContaBancaria, IContaBancaria
+    public class ContaEspecial : ContaBancaria, IImprimivel, IContaBancaria
     {
         private const double _limteCredito = 100;
         public ContaEspecial(int numConta, double saldoInicial) 
@@ -11,26 +10,23 @@ namespace UtilizandoPOO._3_RepresentacaoBancaria
         {
 
         }
-        public override void Depositar(double valor)
+
+        public string MostrarDados()
         {
-            SaldoConta += valor;
+            return string.Format(ConstantesPoo.MsgDadosContaEspecial, RetornarNumeroDaConta(), RetornarSaldoDaConta().ToString("C"));
         }
 
-        public void MostrarDados()
+        public override void Sacar(double valorDoSaque)
         {
-            Console.WriteLine(ConstantesPoo.MsgDadosContaEspecial, NumeroConta, SaldoConta.ToString("C"));
+            if (PermiteSacarValor(valorDoSaque))
+                base.Sacar(valorDoSaque);
         }
-
-        public override bool Sacar(double valor)
+        private bool PermiteSacarValor(double valorDoSaque)
         {
-            if (valor > (SaldoConta + _limteCredito))
-            {
-                Console.Write(ConstantesPoo.MsgSemSaldoContaBancaria, "especial", NumeroConta, valor);
+            if (valorDoSaque > (SaldoConta + _limteCredito))
                 return false;
-            }
-
-            SaldoConta -= valor;
-            return true;
+            else
+                return true;
         }
     }
 }

@@ -48,6 +48,13 @@
         public const string MsgBancoContaNaoExiste = "Não existe nenhum conta para ser exibida!";
         public const string MsgBancoOperacaoSucesso = "Operação realizada! Por favor consulte o extrato!";
 
+        public const string MsgInformarNumeroContaCorrente = "Informe o número da conta corrente: ";
+        public const string MsgInformarSaldoContaCorrente = "Informe o saldo da conta corrente: ";
+
+        public const string MsgInformarNumeroContaEspecial = "Informe o número da conta especial: ";
+        public const string MsgInformarSaldoContaEspecial = "Informe o saldo da conta especial: ";
+
+
         #endregion
 
         #region Controle remoto
