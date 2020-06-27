@@ -28,7 +28,7 @@ namespace XUnitTestes
         public void RealizarDeposito()
         {
             _mock.Object.Depositar(VALOR_DEPOSITO);
-            _mock.Verify(s => s.Sacar(It.IsAny<double>()), Times.Once);
+            _mock.Verify(s => s.Depositar(It.IsAny<double>()), Times.Once);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace XUnitTestes
     {
         [Theory]
         [InlineData("Rafael", 1.75, "03/03/1990", 30)]
-        [InlineData("Mariele", 1.65, "27/06/1989", 30)]
+        [InlineData("Mariele", 1.65, "27/06/1989", 31)]
         [InlineData("Djalma Jorge", 1.82, "23/05/1980", 40)]
         public void CalculoDeveRetornarAIdadeCalculada(string nome, double altura, string dataNascimento, int idadeEsperada)
         {
