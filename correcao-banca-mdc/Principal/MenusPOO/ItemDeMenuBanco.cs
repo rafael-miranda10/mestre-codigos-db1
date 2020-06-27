@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using UtilizandoPOO._3_RepresentacaoBancaria;
 
 namespace Principal.MenusPOO
 {
     public class ItemDeMenuBanco
     {
-        private Banco _banco;
-
-        public ItemDeMenuBanco(Banco banco)
+        private RepresentacaoBanco _representacaoBanco;
+        public ItemDeMenuBanco(RepresentacaoBanco representacaoBanco)
         {
-            _banco = banco;
+            _representacaoBanco = representacaoBanco;
         }
         public void ExibirItemDeMenuBanco()
         {
@@ -24,20 +21,20 @@ namespace Principal.MenusPOO
                 switch (cki.KeyChar.ToString())
                 {
                     case "1":
-                        _banco.CriarContasBancarias();
+                        _representacaoBanco.CriarContasBancarias();
                         Console.ReadKey();
                         break;
                     case "2":
-                        _banco.EfetuarSaque();
-                        Console.ReadKey();
+                        _representacaoBanco.EfetuarSaque();
+                         Console.ReadKey();
                         break;
                     case "3":
-                        _banco.EfetuarDeposito();
-                        Console.ReadKey();
+                        _representacaoBanco.EfetuarDeposito();
+                         Console.ReadKey();
                         break;
                     case "4":
-                        _banco.ExibirContasBancarias();
-                        Console.ReadKey();
+                        _representacaoBanco.ExibirContasBancarias();
+                         Console.ReadKey();
                         break;
                     default:
                         break;

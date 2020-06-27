@@ -5,16 +5,15 @@ namespace UtilizandoPOO._3_RepresentacaoBancaria
     public class ContaEspecial : ContaBancaria, IImprimivel, IContaBancaria
     {
         private const double _limteCredito = 100;
-        public ContaEspecial(int numConta, double saldoInicial) 
+        public ContaEspecial(int numConta, double saldoInicial)
                             : base(numConta, saldoInicial)
         {
 
         }
 
-        public string MostrarDados()
-        {
-            return string.Format(ConstantesPoo.MsgDadosContaEspecial, RetornarNumeroDaConta(), RetornarSaldoDaConta().ToString("C"));
-        }
+        public string MostrarDados() => string.Format(ConstantesPoo.MsgDadosContaEspecial,
+                                                     RetornarNumeroDaConta(), 
+                                                     RetornarSaldoDaConta().ToString("C"));
 
         public override void Sacar(double valorDoSaque)
         {
@@ -25,8 +24,8 @@ namespace UtilizandoPOO._3_RepresentacaoBancaria
         {
             if (valorDoSaque > (SaldoConta + _limteCredito))
                 return false;
-            else
-                return true;
+
+            return true;
         }
     }
 }

@@ -13,20 +13,17 @@ namespace UtilizandoPOO._3_RepresentacaoBancaria
         public string MostrarDados() => string.Format(ConstantesPoo.MsgDadosContaCorrente,
                                                       RetornarNumeroDaConta(),
                                                       RetornarSaldoDaConta().ToString("C"));
-        //{
-        //    //return string.Format(ConstantesPoo.MsgDadosContaCorrente, RetornarNumeroDaConta(), RetornarSaldoDaConta().ToString("C"));
-
-        //}
 
         public override void Sacar(double valorDoSaque)
         {
-            if (PermiteSacarValor(valorDoSaque))
-                base.Sacar(valorDoSaque);
+            double valorSaqueAjustado = valorDoSaque + _taxaOperacao;
+            if (PermiteSacarValor(valorSaqueAjustado))
+                base.Sacar(valorSaqueAjustado);
         }
 
         private bool PermiteSacarValor(double valorDoSaque)
         {
-            if ((valorDoSaque + _taxaOperacao) > SaldoConta)
+            if (valorDoSaque > SaldoConta)
                 return false;
 
             return true;
