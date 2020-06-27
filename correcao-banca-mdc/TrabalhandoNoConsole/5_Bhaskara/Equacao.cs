@@ -12,7 +12,6 @@ namespace TrabalhandoNoConsole._5_Bhaskara
 
         public void CalcularEquacao(double a, double b, double c)
         {
-            //_bhaskara = new Bhaskara(a, b, c);
             _bhaskara = FabricaBhaskara.Criar(a, b, c);
 
             if (_bhaskara.Invalid)
