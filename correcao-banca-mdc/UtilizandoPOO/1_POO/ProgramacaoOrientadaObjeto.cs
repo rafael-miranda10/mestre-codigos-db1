@@ -16,35 +16,34 @@ namespace UtilizandoPOO._1_POO
         private double _areaCalculada;
         public ProgramacaoOrientadaObjeto()
         {
-            _descartavel = new Descartavel();
-            _listaDeEmpregados = new List<Empregado>();
-            _humano = new Humano(ConstantesPoo.NomeHumano, ConstantesPoo.TelefoneHumano, 54);
-            _listacachorros = new Cachorro[3];
+            _descartavel = FabricaPOO.CriarDescartavel();
+            _humano = FabricaPOO.CriarHumano(ConstantesPoo.NomeHumano, ConstantesPoo.TelefoneHumano, 54);
+            _listacachorros = FabricaPOO.GerarListaDeCachorros();
         }
 
         public void CalcularAreaCirculo(double raio)
         {
-            _formaGeometrica = new Circulo(raio);
+            _formaGeometrica = FabricaPOO.CriarCirculo(raio);
             _areaCalculada = _formaGeometrica.CalcularArea;
             ExibirAreaForma(_areaCalculada, ConstantesPoo.NomeCirculo);
         }
 
         public void CalcularAreaQuadrado(double lado)
         {
-            _formaGeometrica = new Quadrado(lado);
+            _formaGeometrica = FabricaPOO.CriarQuadrado(lado);
             _areaCalculada = _formaGeometrica.CalcularArea;
             ExibirAreaForma(_areaCalculada, ConstantesPoo.NomeQuadrado);
         }
         public void CalcularAreaRetangulo(double lado)
         {
-            _formaGeometrica = new Retangulo(lado);
+            _formaGeometrica = FabricaPOO.CriarRetangulo(lado);
             _areaCalculada = _formaGeometrica.CalcularArea;
             ExibirAreaForma(_areaCalculada, ConstantesPoo.NomeRetangulo);
         }
 
         public void CalcularAreaTriangulo(double baseTriagulo, double alturaTriangulo)
         {
-            _formaGeometrica = new Triangulo(baseTriagulo, alturaTriangulo);
+            _formaGeometrica = FabricaPOO.CriarTriangulo(baseTriagulo, alturaTriangulo);
             _areaCalculada = _formaGeometrica.CalcularArea;
             ExibirAreaForma(_areaCalculada, ConstantesPoo.NomeTriangulo);
         }
@@ -64,8 +63,7 @@ namespace UtilizandoPOO._1_POO
 
         public void ExecutarComparavel()
         {
-            GerarListaEmpregados();
-
+            _listaDeEmpregados = FabricaPOO.GerarListaEmpregados();
             //Utilizando a interface Icomparable
             _listaDeEmpregados.Sort();
 
@@ -73,15 +71,6 @@ namespace UtilizandoPOO._1_POO
             {
                 Console.Write(empregado + "\n");
             }
-        }
-
-        private void GerarListaEmpregados()
-        {
-            _listaDeEmpregados.Add(new Empregado() { Nome = ConstantesPoo.EmpregadoRafael, Salario = 4.652 });
-            _listaDeEmpregados.Add(new Empregado() { Nome = ConstantesPoo.EmpregadoDjalmaJorge, Salario = 9.365 });
-            _listaDeEmpregados.Add(new Empregado() { Nome = ConstantesPoo.EmpregadoTiringa, Salario = 1.852 });
-            _listaDeEmpregados.Add(new Empregado() { Nome = ConstantesPoo.EmpregadoZobaido, Salario = 1.265 });
-            _listaDeEmpregados.Add(new Empregado() { Nome = ConstantesPoo.EmpregadoAna, Salario = 1.478 });
         }
 
         public void ExecutarClonavel()
@@ -94,17 +83,9 @@ namespace UtilizandoPOO._1_POO
 
         public void ExecutarEnumeravel()
         {
-            GerarListaDeCachorros();
             _listaCanil = new Canil(_listacachorros);
             foreach (Cachorro cachorro in _listaCanil)
                 Console.WriteLine(ConstantesPoo.DadosCachorro, cachorro.Nome, cachorro.Raca);
-        }
-
-        private void GerarListaDeCachorros()
-        {
-            _listacachorros[0] = new Cachorro(ConstantesPoo.CachorroNomeGreg, ConstantesPoo.CachorroRacGreg);
-            _listacachorros[1] = new Cachorro(ConstantesPoo.CachorroNomeBudy, ConstantesPoo.CachorroRacaBudy);
-            _listacachorros[2] = new Cachorro(ConstantesPoo.CachorroNomeThor, ConstantesPoo.CachorroRacaThor);
         }
     }
 }

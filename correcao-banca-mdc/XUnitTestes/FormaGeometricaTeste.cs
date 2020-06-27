@@ -13,7 +13,7 @@ namespace XUnitTestes
         [InlineData(10, 100)]
         public void Calculo_DeveRetornarAreaCalculadaDoQuadrado(double lado, double AreaEsperada)
         {
-            _formaGeometrica = new Quadrado(lado);
+            _formaGeometrica = FabricaPOO.CriarQuadrado(lado); 
             double area = _formaGeometrica.CalcularArea;
             Assert.Equal(area, AreaEsperada);
         }
@@ -23,7 +23,7 @@ namespace XUnitTestes
         [InlineData(10, 100)]
         public void Calculo_DeveRetornarAreaCalculadaDoRetangulo(double lado, double AreaEsperada)
         {
-            _formaGeometrica = new Retangulo(lado);
+            _formaGeometrica = FabricaPOO.CriarRetangulo(lado);
             double area = _formaGeometrica.CalcularArea;
             Assert.Equal(area, AreaEsperada);
         }
@@ -32,7 +32,7 @@ namespace XUnitTestes
         [InlineData(6, 10, 30)]
         public void Calculo_DeveRetornarAreaCalculadaDoTrianguloangulo(double baseTriangulo, double alturaTriangulo, double AreaEsperada)
         {
-            _formaGeometrica = new Triangulo(baseTriangulo, alturaTriangulo);
+            _formaGeometrica = FabricaPOO.CriarTriangulo(baseTriangulo, alturaTriangulo); 
             double area = _formaGeometrica.CalcularArea;
             Assert.Equal(area, AreaEsperada);
         }
@@ -41,7 +41,7 @@ namespace XUnitTestes
         [InlineData(5, 78.54)]
         public void Calculo_DeveRetornarAreaCalculadaDoCirculo(double raio, double AreaEsperada)
         {
-            _formaGeometrica = new Circulo(raio);
+            _formaGeometrica = FabricaPOO.CriarCirculo(raio);
             double area = _formaGeometrica.CalcularArea;
             Assert.Equal(Math.Round(area, 2), AreaEsperada);
         }
