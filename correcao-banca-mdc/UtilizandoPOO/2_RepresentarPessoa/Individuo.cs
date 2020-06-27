@@ -14,10 +14,7 @@ namespace UtilizandoPOO._2_RepresentarPessoa
         {
             if (ValidaPessoa(nome, altura, dataNasc))
             {
-                _pessoa = new Pessoa();
-                _pessoa.Nome = nome;
-                _pessoa.Altura = altura;
-                _pessoa.DaTaNascimento = dataNasc;
+                _pessoa = FabricaPessoa.Criar(nome, altura, dataNasc);
             }
         }
 

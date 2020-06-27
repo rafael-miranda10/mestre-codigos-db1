@@ -12,10 +12,7 @@ namespace XUnitTestes
         [InlineData("Djalma Jorge", 1.82, "23/05/1980", 40)]
         public void CalculoDeveRetornarAIdadeCalculada(string nome, double altura, string dataNascimento, int idadeEsperada)
         {
-            Pessoa pessoa = new Pessoa();
-            pessoa.Nome = nome;
-            pessoa.Altura = altura;
-            pessoa.DaTaNascimento = DateTime.Parse(dataNascimento);
+            var pessoa = FabricaPessoa.Criar(nome, altura, DateTime.Parse(dataNascimento));
 
             var idade = pessoa.CalcularIdade();
             Assert.Equal(idadeEsperada, idade);
