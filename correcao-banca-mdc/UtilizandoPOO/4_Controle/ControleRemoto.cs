@@ -66,6 +66,12 @@ namespace UtilizandoPOO._4_Controle
         }
         public void TrocarParaCanalEspecifico()
         {
+            if (!ValidarSeControlavelExiste())
+            {
+                Console.WriteLine(ConstantesPoo.MsgErroCanalEspecifico);
+                return;
+            }
+
             _canal = CapturaDeDados.CapturarNumeroInteiro(ConstantesPoo.MsgCanalEspecifico);
             if (ValidarCanal())
             {
@@ -89,14 +95,16 @@ namespace UtilizandoPOO._4_Controle
         {
             _canal = CapturaDeDados.CapturarNumeroInteiro(ConstantesPoo.MsgCanalEspecifico);
             _volume = CapturaDeDados.CapturarNumeroInteiro(ConstantesPoo.MsgVolumeEspecifico);
+            _controlavel = FabricaTelevisao.Criar();
+
             if (ValidarCanal() && ValidarVolume())
             {
-                _controlavel = new Televisao();
                 _controlavel.LigarControlavel(_canal, _volume);
                 Console.WriteLine(ConstantesPoo.MsgEstadoControlavel, _canal, _volume);
             }
             else
             {
+                _controlavel = null;
                 Console.WriteLine(ConstantesPoo.MsgNaoEhPossivelLigarControlavel);
             }
         }
@@ -147,20 +155,14 @@ namespace UtilizandoPOO._4_Controle
 
         private bool ValidarCanal()
         {
-            if (!ValidarSeControlavelExiste())
-                return false;
-
-            if (_canal > 0 && _canal < _controlavel.RetornarlimiteDeCanais())
+            if (_canal > 0 && _canal <= _controlavel.RetornarlimiteDeCanais())
                 return true;
             return false;
         }
 
         private bool ValidarVolume()
         {
-            if (!ValidarSeControlavelExiste())
-                return false;
-
-            if (_volume > 0 && _volume < _controlavel.RetornarLimiteVolume())
+            if (_volume > 0 && _volume <= _controlavel.RetornarLimiteVolume())
                 return true;
             return false;
         }
