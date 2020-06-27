@@ -24,7 +24,7 @@ namespace TrabalhandoNoConsole._2_Empresa
 
         public void AdicionarFuncionario(string nome, double salario)
         {
-            var funcionario = new Funcionario(nome, salario);
+            var funcionario = FabricaFuncionario.Criar(nome, salario);
 
             if (funcionario.Notifications.Count > 0)
             {

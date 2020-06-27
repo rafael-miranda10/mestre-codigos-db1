@@ -72,14 +72,14 @@ namespace MSTestTestes
         [TestMethod]
         public void FuncionarioValido()
         {
-            _funcionario = new Funcionario(FUNC_NAME_VALIDO, FUNC_SALARIO_VALIDO);
+            _funcionario = FabricaFuncionario.Criar(FUNC_NAME_VALIDO, FUNC_SALARIO_VALIDO);
             Assert.IsTrue(_funcionario.Valid);
         }
 
         [TestMethod]
         public void FuncionarioInvalido()
         {
-            _funcionario = new Funcionario(FUNC_NAME_INVALIDO_MAX, FUNC_SALARIO_INVALIDO);
+            _funcionario = FabricaFuncionario.Criar(FUNC_NAME_INVALIDO_MAX, FUNC_SALARIO_INVALIDO);
             Assert.IsFalse(_funcionario.Valid);
         }
 
