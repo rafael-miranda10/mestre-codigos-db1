@@ -6,13 +6,11 @@ namespace UtilizandoPOO._3_RepresentacaoBancaria
 {
     public class RepresentacaoBanco
     {
-        private readonly IFabricaContaBancaria _fabricaContaBancaria;
         private ContaBancaria[] _listaDeContasBancarias;
         private int _numeroConta;
         private double _saldoConta;
-        public RepresentacaoBanco(IFabricaContaBancaria fabricaContaBancaria)
+        public RepresentacaoBanco()
         {
-            _fabricaContaBancaria = fabricaContaBancaria;
             _listaDeContasBancarias = new ContaBancaria[4];
         }
 
@@ -81,7 +79,7 @@ namespace UtilizandoPOO._3_RepresentacaoBancaria
                 string.Format(ConstantesPoo.MsgInformarNumeroContaCorrente, posicao + 1));
             _saldoConta = CapturaDeDados.CapturarNumeroDouble(
                 string.Format(ConstantesPoo.MsgInformarSaldoContaCorrente, posicao + 1));
-            _listaDeContasBancarias[posicao] = _fabricaContaBancaria.CriarContaCorrente(_numeroConta, _saldoConta);
+            _listaDeContasBancarias[posicao] = FabricaContaBancaria.CriarContaCorrente(_numeroConta, _saldoConta);
         }
         private void AbrirContaEspecial(int posicao)
         {
@@ -89,7 +87,7 @@ namespace UtilizandoPOO._3_RepresentacaoBancaria
                 string.Format(ConstantesPoo.MsgInformarNumeroContaEspecial, posicao));
             _saldoConta = CapturaDeDados.CapturarNumeroDouble(
                 string.Format(ConstantesPoo.MsgInformarSaldoContaEspecial, posicao));
-            _listaDeContasBancarias[posicao] = _fabricaContaBancaria.CriarContaEspecial(_numeroConta, _saldoConta);
+            _listaDeContasBancarias[posicao] = FabricaContaBancaria.CriarContaEspecial(_numeroConta, _saldoConta);
         }
         private bool ExisteConta()
         {

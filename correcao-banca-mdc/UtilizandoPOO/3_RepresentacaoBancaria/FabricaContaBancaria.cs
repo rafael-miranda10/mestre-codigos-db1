@@ -1,13 +1,13 @@
 ﻿namespace UtilizandoPOO._3_RepresentacaoBancaria
 {
-    public class FabricaContaBancaria : IFabricaContaBancaria
+    public class FabricaContaBancaria 
     {
-        public ContaCorrente CriarContaCorrente(int numeroDaConta, double saldoInicial)
+        public static ContaCorrente CriarContaCorrente(int numeroDaConta, double saldoInicial)
         {
             return new ContaCorrente(numeroDaConta, saldoInicial);
         }
 
-        public ContaEspecial CriarContaEspecial(int numeroDaConta, double saldoInicial)
+        public static ContaEspecial CriarContaEspecial(int numeroDaConta, double saldoInicial)
         {
             return new ContaEspecial(numeroDaConta, saldoInicial);
         }

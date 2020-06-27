@@ -17,7 +17,6 @@ namespace Principal.MenusPOO
         private ItemDeMenuControleRemoto _itemDeMenuControleRemoto;
         private ControleRemoto _controleRemoto;
         private Televisao _televisao;
-        private FabricaContaBancaria _fabricaConta;
 
         public MenuPOO()
         {
@@ -25,8 +24,7 @@ namespace Principal.MenusPOO
             _itemDeMenuProgramacaoOrientadaObjeto = new ItemDeMenuProgramacaoOrientadaobjeto(_programacaoOrientadaObjeto);
             _individuo = new Individuo();
             _itemDeMenuRepresentarPessoa = new ItemDeMenuRepresentarPessoa(_individuo);
-            _fabricaConta = new FabricaContaBancaria();
-            _representacaoBanco = new RepresentacaoBanco(_fabricaConta);
+            _representacaoBanco = new RepresentacaoBanco();
             _itemDeMenuBanco = new ItemDeMenuBanco(_representacaoBanco);
             _televisao = null;
             _controleRemoto = new ControleRemoto(_televisao);
