@@ -3,7 +3,7 @@ using System;
 
 namespace TrabalhandoNoConsole._6_ModificadorParametro
 {
-    public class ModificadorParametro
+    public class ModificadorParametro : IModificadorParametro
     {
         public ModificadorParametro()
         {

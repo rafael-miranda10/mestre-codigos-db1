@@ -8,8 +8,8 @@ namespace Principal.MenusConsole
     {
         private int _valorReferencia = 5;
         private int _valorOut;
-        private ModificadorParametro _modificadorParametro;
-        public ItemDeMenuModificadorParametro(ModificadorParametro modificadorParametro)
+        private IModificadorParametro _modificadorParametro;
+        public ItemDeMenuModificadorParametro(IModificadorParametro modificadorParametro)
         {
             _modificadorParametro = modificadorParametro;
         }
