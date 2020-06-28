@@ -7,9 +7,9 @@ namespace Principal.MenusConsole
 {
     public class ItemDeMenuConsultaIntegrada
     {
-        private ConsultaIntegrada _consultaIntegrada;
+        private IConsultaIntegrada _consultaIntegrada;
         private List<int> _NumerosInteiros;
-        public ItemDeMenuConsultaIntegrada(ConsultaIntegrada consultaIntegrada)
+        public ItemDeMenuConsultaIntegrada(IConsultaIntegrada consultaIntegrada)
         {
             _consultaIntegrada = consultaIntegrada;
             _NumerosInteiros = new List<int>();

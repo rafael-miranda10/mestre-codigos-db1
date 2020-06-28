@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace TrabalhandoNoConsole._9_BibliotecaLinq
 {
-    public class ConsultaIntegrada
+    public class ConsultaIntegrada : IConsultaIntegrada
     {
         public ConsultaIntegrada()
         {
