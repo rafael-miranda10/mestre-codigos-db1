@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace TrabalhandoNoConsole._9_BibliotecaLinq
 {
-    public class BibliotecaLinq
+    public class ConsultaIntegrada
     {
-        public BibliotecaLinq()
+        public ConsultaIntegrada()
         {
             NumerosInteiros = new List<int>();
         }

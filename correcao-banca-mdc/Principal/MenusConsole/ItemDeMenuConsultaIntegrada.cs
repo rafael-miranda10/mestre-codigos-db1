@@ -5,73 +5,73 @@ using TrabalhandoNoConsole._9_BibliotecaLinq;
 
 namespace Principal.MenusConsole
 {
-    public class ItemDeMenuBibliotecaLinq
+    public class ItemDeMenuConsultaIntegrada
     {
-        private BibliotecaLinq _bibliotecaLinq;
+        private ConsultaIntegrada _consultaIntegrada;
         private List<int> _NumerosInteiros;
-        public ItemDeMenuBibliotecaLinq(BibliotecaLinq bibliotecaLinq)
+        public ItemDeMenuConsultaIntegrada(ConsultaIntegrada consultaIntegrada)
         {
-            _bibliotecaLinq = bibliotecaLinq;
+            _consultaIntegrada = consultaIntegrada;
             _NumerosInteiros = new List<int>();
         }
 
-        public void ExibirItemDeMenubibliotecaLinq()
+        public void ExibirItemDeMenuConsultaIntegrada()
         {
             ConsoleKeyInfo cki;
             do
             {
-                OpcoesItemDeMenuBibliotecaLinq();
+                OpcoesItemDeMenuConsultaIntegrada();
                 cki = Console.ReadKey(false);
                 Console.Clear();
                 switch (cki.KeyChar.ToString())
                 {
                     case "a":
                         PreencherListaDeNumeros();
-                        _bibliotecaLinq.AdicionarLista(_NumerosInteiros);
+                        _consultaIntegrada.AdicionarLista(_NumerosInteiros);
                         Console.ReadKey();
                         break;
                     case "b":
-                        _bibliotecaLinq.ExibirOrdemCrescente();
+                        _consultaIntegrada.ExibirOrdemCrescente();
                         Console.ReadKey();
                         break;
                     case "c":
-                        _bibliotecaLinq.ExibirOrdemDecrescente();
+                        _consultaIntegrada.ExibirOrdemDecrescente();
                         Console.ReadKey();
                         break;
                     case "d":
-                        _bibliotecaLinq.ExibirPrimeiroDaLista();
+                        _consultaIntegrada.ExibirPrimeiroDaLista();
                         Console.ReadKey();
                         break;
                     case "e":
-                        _bibliotecaLinq.ExibirUltimoDaLista();
+                        _consultaIntegrada.ExibirUltimoDaLista();
                         Console.ReadKey();
                         break;
                     case "f":
-                        _bibliotecaLinq.RemoverPrimeiroDaLista();
+                        _consultaIntegrada.RemoverPrimeiroDaLista();
                         Console.ReadKey();
                         break;
                     case "g":
-                        _bibliotecaLinq.RemoverUltimoDaLista();
+                        _consultaIntegrada.RemoverUltimoDaLista();
                         Console.ReadKey();
                         break;
                     case "h":
-                        _bibliotecaLinq.ExibirSomenteNumerosPares();
+                        _consultaIntegrada.ExibirSomenteNumerosPares();
                         Console.ReadKey();
                         break;
                     case "i":
-                        _bibliotecaLinq.TransformarLista();
+                        _consultaIntegrada.TransformarLista();
                         Console.ReadKey();
                         break;
                     case "j":
-                        _bibliotecaLinq.PesquisarElemento(CapturaDeDados.CapturarNumeroInteiro("\n Informe o número desejado: "));
+                        _consultaIntegrada.PesquisarElemento(CapturaDeDados.CapturarNumeroInteiro("\n Informe o número desejado: "));
                         Console.ReadKey();
                         break;
                     case "k":
-                        _bibliotecaLinq.InserirPrimeiroDaLista(CapturaDeDados.CapturarNumeroInteiro("\n Informe o número desejado: "));
+                        _consultaIntegrada.InserirPrimeiroDaLista(CapturaDeDados.CapturarNumeroInteiro("\n Informe o número desejado: "));
                         Console.ReadKey();
                         break;
                     case "m":
-                        _bibliotecaLinq.InserirUltimoDaLista(CapturaDeDados.CapturarNumeroInteiro("\n Informe o número desejado: "));
+                        _consultaIntegrada.InserirUltimoDaLista(CapturaDeDados.CapturarNumeroInteiro("\n Informe o número desejado: "));
                         Console.ReadKey();
                         break;
                     default:
@@ -80,7 +80,7 @@ namespace Principal.MenusConsole
             } while (cki.Key != ConsoleKey.Escape);
         }
 
-        private void OpcoesItemDeMenuBibliotecaLinq()
+        private void OpcoesItemDeMenuConsultaIntegrada()
         {
             Console.Clear();
             Console.WriteLine("*** Menu ***\n");

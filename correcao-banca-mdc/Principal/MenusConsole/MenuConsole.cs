@@ -22,7 +22,7 @@ namespace Principal.MenusConsole
         private ItemDeMenuModificadorParametro _itemDeMenuModificador;
         private ItemDeMenuSomaNumerosPares _itemDeMenuSomaNumerosPares;
         private ItemDeMenuOrdenacaoNumeros _itemDeMenuOrdenacaoNumeros;
-        private ItemDeMenuBibliotecaLinq _itemDeMenuBibliotecaLinq;
+        private ItemDeMenuConsultaIntegrada _itemDeMenuConsultaIntegrada;
         public MenuConsole()
         {
             _calculadora = new Calculadora(new Calculo());
@@ -34,7 +34,7 @@ namespace Principal.MenusConsole
             _itemDeMenuModificador = new ItemDeMenuModificadorParametro(new ModificadorParametro());
             _itemDeMenuSomaNumerosPares = new ItemDeMenuSomaNumerosPares(new SomaNumeroPar());
             _itemDeMenuOrdenacaoNumeros = new ItemDeMenuOrdenacaoNumeros(new OrdenacaoDeNumeros());
-            _itemDeMenuBibliotecaLinq = new ItemDeMenuBibliotecaLinq(new BibliotecaLinq());
+            _itemDeMenuConsultaIntegrada = new ItemDeMenuConsultaIntegrada(new ConsultaIntegrada());
         }
 
         public void ExibirMenuConsole()
@@ -71,7 +71,7 @@ namespace Principal.MenusConsole
                         _itemDeMenuOrdenacaoNumeros.ExibirItemDeMenuOrdenacaoDeNumeros();
                         break;
                     case "9":
-                        _itemDeMenuBibliotecaLinq.ExibirItemDeMenubibliotecaLinq();
+                        _itemDeMenuConsultaIntegrada.ExibirItemDeMenuConsultaIntegrada();
                         break;
                     default:
                         break;
