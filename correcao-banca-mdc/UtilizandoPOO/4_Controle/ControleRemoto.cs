@@ -3,7 +3,7 @@ using System;
 
 namespace UtilizandoPOO._4_Controle
 {
-    public class ControleRemoto
+    public class ControleRemoto : IControleRemoto
     {
         private IControlavel _controlavel;
         private int _canal;
@@ -99,7 +99,7 @@ namespace UtilizandoPOO._4_Controle
 
             if (ValidarCanal() && ValidarVolume())
             {
-                _controlavel.LigarControlavel(_canal, _volume);
+                _controlavel.LigarControlavel(_volume, _canal);
                 Console.WriteLine(ConstantesPoo.MsgEstadoControlavel, _canal, _volume);
             }
             else

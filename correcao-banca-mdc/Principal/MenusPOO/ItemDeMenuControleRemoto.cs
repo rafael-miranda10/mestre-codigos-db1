@@ -5,9 +5,9 @@ namespace Principal.MenusPOO
 {
     public class ItemDeMenuControleRemoto
     {
-        private ControleRemoto _controleRemoto;
+        private IControleRemoto _controleRemoto;
 
-        public ItemDeMenuControleRemoto(ControleRemoto controleRemoto)
+        public ItemDeMenuControleRemoto(IControleRemoto controleRemoto)
         {
             _controleRemoto = controleRemoto;
         }
