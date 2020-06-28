@@ -3,7 +3,7 @@ using System;
 
 namespace TrabalhandoNoConsole._1_Calculadora
 {
-    public class Calculadora
+    public class Calculadora : ICalculadora
     {
         private readonly Calculo _calculo;
         public Calculadora(Calculo calculo)

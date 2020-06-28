@@ -1,6 +1,6 @@
 ﻿namespace TrabalhandoNoConsole._1_Calculadora
 {
-    public class Calculo 
+    public class Calculo : ICalculo
     {
         public double Dividir(double a, double b) => b / a;
 

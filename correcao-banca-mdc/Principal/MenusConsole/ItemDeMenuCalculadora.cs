@@ -6,10 +6,10 @@ namespace Principal.MenusConsole
 {
     public class ItemDeMenuCalculadora
     {
-        private Calculadora _calculadora;
+        private ICalculadora _calculadora;
         private double _valorA;
         private double _valorB;
-        public ItemDeMenuCalculadora(Calculadora calculadora)
+        public ItemDeMenuCalculadora(ICalculadora calculadora)
         {
             _calculadora = calculadora;
         }
