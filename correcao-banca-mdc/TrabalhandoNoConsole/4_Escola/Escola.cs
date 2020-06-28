@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace TrabalhandoNoConsole._4_Escola
 {
-    public class Escola
+    public class Escola : IEscola
     {
         public Escola()
         {
@@ -36,7 +36,6 @@ namespace TrabalhandoNoConsole._4_Escola
 
         public void AdicionarAluno(string nome, double nota1, double nota2)
         {
-            //var aluno = new Aluno(nome, nota1, nota2);
             var aluno = FabricaAluno.Criar(nome, nota1, nota2);
 
             if (aluno.Invalid)

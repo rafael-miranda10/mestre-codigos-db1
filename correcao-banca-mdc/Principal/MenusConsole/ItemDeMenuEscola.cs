@@ -6,11 +6,11 @@ namespace Principal.MenusConsole
 {
     public class ItemDeMenuEscola
     {
-        private Escola _escola;
+        private IEscola _escola;
         private string _nome;
         private double _nota1;
         private double _nota2;
-        public ItemDeMenuEscola(Escola escola)
+        public ItemDeMenuEscola(IEscola escola)
         {
             _escola = escola;
         }
