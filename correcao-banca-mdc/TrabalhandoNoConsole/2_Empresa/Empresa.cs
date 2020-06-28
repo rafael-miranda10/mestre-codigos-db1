@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace TrabalhandoNoConsole._2_Empresa
 {
-    public class Empresa 
+    public class Empresa : IEmpresa
     {
         private int _indexMenor;
         private int _indexMaior;
