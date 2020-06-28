@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace UtilizandoPOO._2_RepresentarPessoa
 {
-    public class Individuo
+    public class Individuo : IIndividuo
     {
         private Pessoa _pessoa;
         public Individuo()

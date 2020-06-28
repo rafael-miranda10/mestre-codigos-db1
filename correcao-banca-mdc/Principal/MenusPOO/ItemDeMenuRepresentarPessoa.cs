@@ -9,8 +9,8 @@ namespace Principal.MenusPOO
         private string _nome;
         private double _altura;
         private DateTime _dataNascimento;
-        private Individuo _individuo;
-        public ItemDeMenuRepresentarPessoa(Individuo individuo)
+        private IIndividuo _individuo;
+        public ItemDeMenuRepresentarPessoa(IIndividuo individuo)
         {
             _individuo = individuo;
         }
