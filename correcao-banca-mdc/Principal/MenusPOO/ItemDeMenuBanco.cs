@@ -5,8 +5,8 @@ namespace Principal.MenusPOO
 {
     public class ItemDeMenuBanco
     {
-        private RepresentacaoBanco _representacaoBanco;
-        public ItemDeMenuBanco(RepresentacaoBanco representacaoBanco)
+        private IRepresentacaoBanco _representacaoBanco;
+        public ItemDeMenuBanco(IRepresentacaoBanco representacaoBanco)
         {
             _representacaoBanco = representacaoBanco;
         }

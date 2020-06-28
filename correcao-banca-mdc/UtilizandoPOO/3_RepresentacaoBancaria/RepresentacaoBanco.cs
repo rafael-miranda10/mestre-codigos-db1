@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace UtilizandoPOO._3_RepresentacaoBancaria
 {
-    public class RepresentacaoBanco
+    public class RepresentacaoBanco : IRepresentacaoBanco
     {
         private ContaBancaria[] _listaDeContasBancarias;
         private int _numeroConta;
@@ -104,7 +104,5 @@ namespace UtilizandoPOO._3_RepresentacaoBancaria
             var contaEspecial = (ContaEspecial)_listaDeContasBancarias[posicao];
             Console.WriteLine(contaEspecial.MostrarDados());
         }
-
-
     }
 }
