@@ -7,9 +7,9 @@ namespace Principal.MenusConsole
 {
     public class ItemDeMenuOrdenacaoNumeros
     {
-        private OrdenacaoDeNumeros _ordenacaoNumeros;
+        private IOrdenacaoDeNumeros _ordenacaoNumeros;
         private List<decimal> _numerosDecimais;
-        public ItemDeMenuOrdenacaoNumeros(OrdenacaoDeNumeros ordenacaoNumeros)
+        public ItemDeMenuOrdenacaoNumeros(IOrdenacaoDeNumeros ordenacaoNumeros)
         {
             _ordenacaoNumeros = ordenacaoNumeros;
             _numerosDecimais = new List<decimal>();

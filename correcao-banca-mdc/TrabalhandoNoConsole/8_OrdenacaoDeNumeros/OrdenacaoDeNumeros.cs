@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace TrabalhandoNoConsole._8_OrdenacaoDeNumeros
 {
-    public class OrdenacaoDeNumeros
+    public class OrdenacaoDeNumeros : IOrdenacaoDeNumeros
     {
         public OrdenacaoDeNumeros()
         {
