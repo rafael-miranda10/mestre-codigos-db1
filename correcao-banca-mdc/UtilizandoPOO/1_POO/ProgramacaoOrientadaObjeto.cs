@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace UtilizandoPOO._1_POO
 {
-    public class ProgramacaoOrientadaObjeto
+    public class ProgramacaoOrientadaObjeto : IProgramacaoOrientadaObjeto
     {
         private FormaGeometrica _formaGeometrica;
         private List<Empregado> _listaDeEmpregados;

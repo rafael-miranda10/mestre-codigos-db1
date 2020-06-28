@@ -10,8 +10,8 @@ namespace Principal.MenusPOO
         private double _raio;
         private double _alturaTriangulo;
         private double _baseTriangulo;
-        private ProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
-        public ItemDeMenuFormaGeometrica(ProgramacaoOrientadaObjeto programacaoOrientadaObjeto)
+        private IProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
+        public ItemDeMenuFormaGeometrica(IProgramacaoOrientadaObjeto programacaoOrientadaObjeto)
         {
             _programacaoOrientadaObjeto = programacaoOrientadaObjeto;
         }

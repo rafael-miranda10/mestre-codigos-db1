@@ -5,10 +5,10 @@ namespace Principal.MenusPOO
 {
     public class ItemDeMenuProgramacaoOrientadaobjeto
     {
-        private ProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
+        private IProgramacaoOrientadaObjeto _programacaoOrientadaObjeto;
         private ItemDeMenuFormaGeometrica _itemDeMenuFormaGeometrica;
         
-        public ItemDeMenuProgramacaoOrientadaobjeto(ProgramacaoOrientadaObjeto programacaoOrientadaObjeto)
+        public ItemDeMenuProgramacaoOrientadaobjeto(IProgramacaoOrientadaObjeto programacaoOrientadaObjeto)
         {
             _programacaoOrientadaObjeto = programacaoOrientadaObjeto;
         }
