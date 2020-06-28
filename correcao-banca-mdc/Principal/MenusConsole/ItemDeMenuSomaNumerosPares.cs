@@ -7,10 +7,10 @@ namespace Principal.MenusConsole
 {
     public class ItemDeMenuSomaNumerosPares
     {
-        private SomaNumeroPar _somaNumeroPar;
+        private ISomaNumeroPar _somaNumeroPar;
         private List<int> _numerosInteiros;
         private int _tamanhoDaLista = 4;
-        public ItemDeMenuSomaNumerosPares(SomaNumeroPar somaNumeroPar)
+        public ItemDeMenuSomaNumerosPares(ISomaNumeroPar somaNumeroPar)
         {
             _somaNumeroPar = somaNumeroPar;
             _numerosInteiros = new List<int>();

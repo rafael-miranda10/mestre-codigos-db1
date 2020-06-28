@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace TrabalhandoNoConsole._7_SomaNumerosPares
 {
-    public class SomaNumeroPar
+    public class SomaNumeroPar : ISomaNumeroPar
     {
         private int _soma;
         public SomaNumeroPar()
