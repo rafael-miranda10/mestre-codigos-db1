@@ -3,7 +3,7 @@ using System;
 
 namespace TrabalhandoNoConsole._5_Bhaskara
 {
-    public class Equacao
+    public class Equacao : IEquacao
     {
         private Bhaskara _bhaskara;
         public Equacao()

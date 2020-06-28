@@ -9,8 +9,8 @@ namespace Principal.MenusConsole
         private double _a;
         private double _b;
         private double _c;
-        private Equacao _equacao;
-        public ItemDeMenuEquacao(Equacao equacao)
+        private IEquacao _equacao;
+        public ItemDeMenuEquacao(IEquacao equacao)
         {
             _equacao = equacao;
         }
