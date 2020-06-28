@@ -3,7 +3,7 @@ using System;
 
 namespace TrabalhandoNoConsole._3__NumeroMultiplo
 {
-    public class NumeroMultiplo 
+    public class NumeroMultiplo : INumeroMultiplo
     {
         private int _index;
         private string _numerosMultiplosParaExibir;

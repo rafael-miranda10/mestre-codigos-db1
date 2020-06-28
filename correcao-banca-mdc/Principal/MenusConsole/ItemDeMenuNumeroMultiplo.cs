@@ -5,8 +5,8 @@ namespace Principal.MenusConsole
 {
     public class ItemDeMenuNumeroMultiplo
     {
-        private NumeroMultiplo _numeroMultiplo;
-        public ItemDeMenuNumeroMultiplo(NumeroMultiplo numeroMultiplo)
+        private INumeroMultiplo _numeroMultiplo;
+        public ItemDeMenuNumeroMultiplo(INumeroMultiplo numeroMultiplo)
         {
             _numeroMultiplo = numeroMultiplo;
         }
